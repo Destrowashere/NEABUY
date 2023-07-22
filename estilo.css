@@ -59,7 +59,7 @@ article {
 .footer .social {
   text-align: center;
   padding-bottom: 25px;
-  color: #f1f1f1;
+  color: #636363;
 }
 
 .footer .social a {
@@ -77,7 +77,8 @@ article {
 }
 
 .footer .social a:hover {
-  opacity: 0.9;
+  opacity:20;
+  color: #fff;
 }
 
 .footer .Copyright {
