@@ -180,8 +180,9 @@ footer {
 
 img {
   position: relative;
-  width: 1800px;
+  width: 1170px;
   height: 400px;
+  border-radius: 15px;
 }
 
 .card img {
