@@ -54,6 +54,7 @@ article {
   padding: 40px 0;
   background-color: #333;
   border-radius: 15px;
+  cursor: default;
 }
 
 .footer .social {
@@ -174,6 +175,7 @@ footer {
   transform: translate(-50%, -50%);
   color: #DAFFFB;
   text-shadow: 1px 1px 30px black;
+  cursor: default;
 }
 
 .imagen {
@@ -358,4 +360,24 @@ form .usuario {
   text-align: center;
   font-size: 15px;
   color: #a6a6a6;
+}
+.QSS{ 
+   display: flex;
+   text-align: center;
+   cursor: default;
+}
+.izq{
+    width: 50%;
+}
+
+.imagendere{
+  background-size: cover;
+  background-position: center;
+  width: 500px;
+  height: 500px;
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+    cursor: default;
 }
