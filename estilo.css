@@ -1,5 +1,5 @@
 header {
-  background: #001c30;
+  background: #176B87;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,7 @@ header {
 body {
   font-family: 'Oswald', sans-serif;
   text-align: left;
-  background-color: #f1f1f1;
+  background-color: #001C30;
 }
 
 nav ul {
@@ -52,7 +52,7 @@ article {
 
 .footer {
   padding: 40px 0;
-  background-color: #DAFFFB;
+  background-color: #64CCC5;
   border-radius: 15px;
 }
 
@@ -78,7 +78,7 @@ article {
 
 .footer .social a:hover {
   opacity:20;
-  color: #001c30;
+  color: #ffffff;
 }
 
 .footer .Copyright {
@@ -132,14 +132,13 @@ p {
   border-radius: 6px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 15px rgba(255, 255, 255, 0.688);
   cursor: default;
   transition: all 400ms ease;
-
 }
 
 .card:hover {
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 20px rgb(255, 255, 255);
   transform: translateY(-3%);
 
 }
