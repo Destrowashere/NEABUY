@@ -1,6 +1,6 @@
 
 header {
-  background: #333;
+  background: #001c30;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@ nav li a {
 }
 
 nav li a:hover {
-  background-color: #111;
+  background-color: #64ccc5;
   border-radius: 15px;
 }
 
@@ -53,20 +53,20 @@ article {
 
 .footer {
   padding: 40px 0;
-  background-color: #333;
+  background-color: #DAFFFB;
   border-radius: 15px;
 }
 
 .footer .social {
   text-align: center;
   padding-bottom: 25px;
-  color: #636363;
+  color: #001c30;
 }
 
 .footer .social a {
   font-size: 24px;
   color: inherit;
-  border: 1px solid #2fb4cc;
+  border: 1px solid #001c30;
   width: 40px;
   height: 40px;
   line-height: 38px;
@@ -79,14 +79,14 @@ article {
 
 .footer .social a:hover {
   opacity:20;
-  color: #fff;
+  color: #001c30;
 }
 
 .footer .Copyright {
   margin-top: 15 px;
   text-align: center;
   font-size: 15px;
-  color: #adadad;
+  color: #001c30;
 }
 
 .footer .contacto {
@@ -94,7 +94,7 @@ article {
   line-height: 1.6px;
   text-align: center;
   font-size: 18px;
-  color: #adadad;
+  color: #001c30;
   padding: 0.15px;
 
 }
@@ -118,13 +118,6 @@ h3 {
 p {
   font-size: 18px;
   line-height: 1.5;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
 }
 
 .container {
@@ -360,3 +353,28 @@ form .usuario {
   font-size: 15px;
   color: #a6a6a6;
 }
+
+
+.QSS{ 
+   display: flex;
+   text-align: center;
+   cursor: default;
+}
+.izq{
+    width: 50%;
+}
+
+.imagendere{
+  background-size: cover;
+  background-position: center;
+  width: 500px;
+  height: 500px;
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+    cursor: default;
+}
+
+
+
