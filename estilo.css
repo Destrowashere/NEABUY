@@ -65,7 +65,7 @@ article {
 .footer .social a {
   font-size: 24px;
   color: inherit;
-  border: 1px solid #2fb4cc;
+  border: 1px solid #001c30;
   width: 40px;
   height: 40px;
   line-height: 38px;
@@ -352,3 +352,28 @@ form .usuario {
   font-size: 15px;
   color: #a6a6a6;
 }
+
+
+.QSS{ 
+   display: flex;
+   text-align: center;
+   cursor: default;
+}
+.izq{
+    width: 50%;
+}
+
+.imagendere{
+  background-size: cover;
+  background-position: center;
+  width: 500px;
+  height: 500px;
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+    cursor: default;
+}
+
+
+
