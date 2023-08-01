@@ -1,6 +1,10 @@
 
 header {
+<<<<<<< Updated upstream
   background: #001c30;
+=======
+  background: #64CCC5;
+>>>>>>> Stashed changes
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +12,7 @@ header {
 }
 
 .img-logo {
-  width: 100px;
+  width: 300px;
   height: 100px;
 }
 
