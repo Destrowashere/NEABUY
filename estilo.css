@@ -1,5 +1,5 @@
 header {
-  background: #176B87;
+  background: #64CCC5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +7,7 @@ header {
 }
 
 .img-logo {
-  width: 100px;
+  width: 300px;
   height: 100px;
 }
 
@@ -35,11 +35,13 @@ nav li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  margin-right: 5px;
 }
 
 nav li a:hover {
-  background-color: #64ccc5;
+  background-color: #176B87;
   border-radius: 15px;
+
 }
 
 article {
