@@ -1,10 +1,5 @@
-
 header {
-<<<<<<< Updated upstream
-  background: #001c30;
-=======
-  background: #64CCC5;
->>>>>>> Stashed changes
+  background: #176B87;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +14,7 @@ header {
 body {
   font-family: 'Oswald', sans-serif;
   text-align: left;
-  background-color: #f1f1f1;
+  background-color: #001C30;
 }
 
 nav ul {
@@ -57,7 +52,7 @@ article {
 
 .footer {
   padding: 40px 0;
-  background-color: #DAFFFB;
+  background-color: #64CCC5;
   border-radius: 15px;
 }
 
@@ -83,7 +78,7 @@ article {
 
 .footer .social a:hover {
   opacity:20;
-  color: #001c30;
+  color: #ffffff;
 }
 
 .footer .Copyright {
@@ -91,6 +86,7 @@ article {
   text-align: center;
   font-size: 15px;
   color: #001c30;
+  cursor: default;
 }
 
 .footer .contacto {
@@ -100,7 +96,7 @@ article {
   font-size: 18px;
   color: #001c30;
   padding: 0.15px;
-
+cursor: default;
 }
 
 h1 {
@@ -137,14 +133,13 @@ p {
   border-radius: 6px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 15px rgba(255, 255, 255, 0.688);
   cursor: default;
   transition: all 400ms ease;
-
 }
 
 .card:hover {
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 20px rgb(255, 255, 255);
   transform: translateY(-3%);
 
 }
@@ -167,15 +162,18 @@ p {
 
 .centrado {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 86%;
+  left: 86%;
   transform: translate(-50%, -50%);
-  color: #DAFFFB;
-  text-shadow: 1px 1px 30px black;
+  color:#176b87;
+  text-shadow: 1px 1px 30px rgb(158, 158, 158);
+  cursor: default;
+  margin: 0;
 }
 
+
 .imagen {
-  font-size: 100px;
+  font-size: 90px;
   border-bottom: transparent;
 }
 
@@ -183,8 +181,7 @@ p {
   position: relative;
   width: 1160px;
   height: 400px;
-  border-radius: 15px;
-  filter: blur(5px);  
+  border-radius: 5px;
 }
 
 .card img {
@@ -371,14 +368,34 @@ form .usuario {
 .imagendere{
   background-size: cover;
   background-position: center;
-  width: 500px;
+  width: 550px;
   height: 500px;
-  margin-left: 50px;
-  margin-top: 50px;
+  margin-left: 30px;
+  margin-top: 55px;
   border-radius: 15px;
   box-shadow: 0px 1px 10px rgb(0, 0, 0);
     cursor: default;
 }
 
-
-
+.gal{
+  margin-left: 230px;
+  display: flex ;
+  width: 600px;
+  height: 430px;
+}
+.gal img {
+  width: 100px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+  border-radius: 15px;
+ box-shadow: 0px 3px 15px #64CCC5;
+}
+.gal img:hover{
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(110%);
+  box-shadow:  1px 6px 20px #DAFFFB;
+}
