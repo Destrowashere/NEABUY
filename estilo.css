@@ -1,5 +1,5 @@
 header {
-  background: #176B87;
+  background: #64CCC5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +38,7 @@ nav li a {
 }
 
 nav li a:hover {
-  background-color: #64ccc5;
+  background-color: #001C30;
   border-radius: 15px;
 }
 
