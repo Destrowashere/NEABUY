@@ -217,6 +217,7 @@ p {
   height: 210px;
  min-height: 50px;
  min-width: 100px;
+ border-radius: 10px;
 }
 
 .card .contenido {
