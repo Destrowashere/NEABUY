@@ -36,7 +36,7 @@ header{
 }
 
 .logo{
-    width: 250px;
+    width: 150px;
 }
 
 .menu .navbar ul {
@@ -99,11 +99,11 @@ header{
 }
 
 .header-img {
-    width: 70%;
+    width: 60%;
 }
 .hamburger{
-    height: 200%;
-    width: 180%;
+    height: 100%;
+    width: 100%;
 }
 
 .botones {
