@@ -1,44 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet'  href='estilo.css'>
-    <link rel="icon" href="Captura.PNG">
+    <title>Registrate Cliente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Nearbuylogo-removebg-preview.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-    <title>Inicio sesion cliente</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
-    <header>
-        <h1>Near Buy</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-           
-            <li><a href="QS.html">Quienes somos</a></li>
-            <li> <a href="regi.html">Unete a Near Buy</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="registroa">
-        <h1>Accede como cliente</h1>
-        <form >
-         <div class="usuario">
-           <input type="email" required>
-           <label >Email</label>
- </div>
- <div class="usuario">
-   <input type="password" required>
-   <label >Contraseña</label>
-</div> 
-<div>
-<input class="submit" type="submit" value="Iniciar sesion"  />
-</div>
-<div> 
 
-  <label class="relleno" for="relleno">a</label>
+<body>
+    <div>
+        <img src="Nearbuylogo-removebg-preview.png" style="height: 100px; width: 250px;" class="img-logo">
+      </div>
+    <div class="headerc" style="position: relative;
+  width: 25%;" >
+
+  <header >
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="RoI.html">Unete o inicia sesion</a></li>
+
+      </ul>
+    </nav>
+  </header>
 </div>
+  
+<div class="wrapper"> 
+    <span class="bg-animate"></span>
+    <span class="bg-animate2"></span>
+
+    <div class="from-box Login"> 
+        <h2 class="animation" style="--i:0; --j:21;">Inicia Sesion</h2>
+        <form action="#"> 
+            <div class="input-box animation" style="--i:1;--j:22;"> 
+                <input type="text" required>
+                <label>Nombre</label>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box animation" style="--i:2; --j:23;"> 
+                <input type="password" required>
+                <label>Contraseña</label>
+                <i class='bx bxs-lock-alt'></i>
+             </div>
+             <button type="submit" class="btn animation" style="--i:3; --j:24;">Inicia Sesion</button>
+             <div class="logreg-link animation" style="--i:4; --j:25;"> 
+              <p>¿No tienes una cuenta? <a href="#" class="register-link">Registrate</p>
+             </div>
+        </form>
+    </div>
+    <div class="info-text Login">
+        <h2 class="animation" style="--i:0; --j:20;">NearBuy</h2>
+        <p class="animation" style="--i:1;--j:21;"></p>
+    </div>
+
+    <div class="from-box register"> 
+        <h2 class="animation" style="--i:17; --j:0;">Reg</h2>
+        <form action="#"> 
+            <div class="input-box animation" style="--i:18;--j:1;"> 
+                <input type="text" required>
+                <label>Nombre</label>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box animation" style="--i:19; --j:2;"> 
+                <input type="text" required>
+                <label>Correo</label>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box animation" style="--i:20; --j:3;"> 
+                <input type="password" required>
+                <label>Contraseña</label>
+                <i class='bx bxs-lock-alt'></i>
+             </div>
+             <button type="submit" class="btn animation" style="--i:21; --j:4;">Registrate</button>
+             <div class="logreg-link animation" style="--i:22; --j:5;"> 
+                <p>¿Ya tienes una cuenta? <a href="#" class="login-link">Inicia Sesion</a></p>
+             </div>
+        </form>
+    </div>
+    <div class="info-text register">
+        <h2 class="animation" style="--i:17; --j:0;">NearBuy</h2>
+        <p class="animation" style="--i:18; --j:1;"></p>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
+
+</html>
