@@ -162,6 +162,7 @@ header{
     bottom: -130px;
     width: 150px;
 }
+<<<<<<< Updated upstream
 
 .menu-nav{
     display: flex;
@@ -577,4 +578,14 @@ header{
     }
 
 
+=======
+.wrapper.active .bg-animate2{
+     transform: rotate(-11deg) skewY(-41deg);
+     transition-delay: 1.2s;
+}
+
+div a {
+    text-decoration: none;
+    color:white;
+>>>>>>> Stashed changes
 }
