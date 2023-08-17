@@ -8,7 +8,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #240202;
+    background-color: #022422;
 }
 
 
@@ -407,11 +407,11 @@ header{
     display: flex;
 }
 .social{
-    margin: 0 10px;
+    margin:  10px;
     height: 40px;
     width: 40px;
-    border: 1px solid #DD241b;
-    border-radius: 50%;
+    border: 1px solid #1b4fdd;
+    border-radius: 60%;
 }
 .social:hover {
     background-color:#DD241b;
