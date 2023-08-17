@@ -8,7 +8,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #101116;
+    background-color: #240202;
 }
 
 
@@ -52,13 +52,13 @@ header{
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color: #fdfdfd;
+    color: #ca9494;
     display: block;
     text-transform: uppercase;
 }
 
 .menu .navbar ul li a:hover {
-    color: #E70B25;
+    color: #550a13;
 }
 
 #menu {
@@ -306,16 +306,17 @@ header{
     display: inline-block;
     padding: 13px 35px;
     border-radius: 25px;
-    border: 1px solid #A0A0A0;
+    border: 1px solid #1c1aa3;
     font-size: 16px;
     cursor: pointer;
 
 }
 
 .load-more:hover {
-    background: linear-gradient(90deg, #e70B25 0%, #900314 100%);
+    background: linear-gradient(90deg, #a38d8d 0%, #900314 100%);
     border-color: rgb(220, 20, 60);
     color: #FDFDFD;
+    
 }
 
 .info {
