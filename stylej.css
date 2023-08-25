@@ -8,7 +8,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #022422;
+    background-color: #001C30;
 }
 
 
@@ -52,13 +52,13 @@ header{
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color: #ca9494;
+    color: #8bf1eb;
     display: block;
     text-transform: uppercase;
 }
 
 .menu .navbar ul li a:hover {
-    color: #550a13;
+    color: #DAFFFB;
 }
 
 #menu {
@@ -89,7 +89,7 @@ header{
     font-size: 55px;
     line-height: 70px;
     font-weight: 800;
-    color: #fdfdfd;
+    color: #DAFFFB;
     margin-bottom: 25px;
 }
 
@@ -113,16 +113,16 @@ header{
 
 .btn-1{
     display: inline-block;
-    background: linear-gradient(90deg, #E70B25 0%, #900314 100%);
+    background: linear-gradient(90deg, #64CCC5 0%, #176B87 100%);
     padding: 10px 35px;
     margin-right: 20px;
-    color: #fdfdfd;
+    color: #DAFFFB;
     border-radius: 25px;
 }
 
 .btn-2{
     display: inline-block;
-    border: 1px solid #FDFDFD;
+    border: 1px solid #176B87;
     padding: 10px 35px;
     margin-right: 20px;
     color: #fdfdfd;
@@ -130,10 +130,11 @@ header{
 }
 
 .btn-1:hover {
-    background: linear-gradient(90deg, #ff3149 0%, #770815 100%);
+    background: linear-gradient(90deg, #ff3149 0%, #001C30 100%);
+    
 }
 .btn-2:hover{
-    border: 1px solid #fa0d29;
+    border: 1px solid #DAFFFB;
 }
 
 .icon {
@@ -173,15 +174,15 @@ header{
    text-align: center;
    padding: 10px 35px;
    border-radius: 25px;
-   color: #A0A0A0;
+   color: #b4b1b1;
    font-size: 16px;
    font-weight: 800;
-   background-color: #24252A;
+   background-color: #176B87;
    cursor: pointer;
 }
 
 .tab.active {
-    background: linear-gradient(90deg, #E70B25 0%, #900314 100%);
+    background: linear-gradient(90deg, #64CCC5 0%, #176B87 100%);
     color: #FDFDFD;
 }
 
@@ -306,15 +307,17 @@ header{
     display: inline-block;
     padding: 13px 35px;
     border-radius: 25px;
-    border: 1px solid #1c1aa3;
+    border: 1px solid #64CCC5;
     font-size: 16px;
     cursor: pointer;
+    color: #FDFDFD;
+    background-color: #176B87;
 
 }
 
 .load-more:hover {
-    background: linear-gradient(90deg, #a38d8d 0%, #900314 100%);
-    border-color: rgb(220, 20, 60);
+    background: linear-gradient(90deg, #176B87 0%, #64CCC5 100%);
+    border-color: rgb(240, 240, 240);
     color: #FDFDFD;
     
 }
