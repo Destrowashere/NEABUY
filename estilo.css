@@ -439,3 +439,31 @@ form .usuario {
   filter: contrast(120%);
  
 }
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100hv;
+  background-color: #2fb4cc2d;
+  border-radius: 50px 0;
+}
+
+table {
+  color: #fff;
+  font-size: 14px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 20px 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 15px;
+  border-bottom: solid 1px white;
+}
