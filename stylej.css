@@ -89,6 +89,7 @@ header{
 .header-txt{
     width: 40%;
     padding-right: 25px;
+   
 }
 
 .header-txt h1 {
@@ -101,7 +102,7 @@ header{
 
 .header-txt p {
     font-size: 18px;
-    color:#176b87;
+    color: #DAFFFB;
 }
 
 .header-img {
@@ -136,7 +137,7 @@ header{
 }
 
 .btn-1:hover {
-    background: linear-gradient(90deg, #ff3149 0%, #001C30 100%);
+    background: linear-gradient(90deg, #0e1874 0%, #001C30 100%);
     
 }
 .btn-2:hover{
@@ -145,7 +146,7 @@ header{
 
 .icon {
     width: 20px;
-}
+}s
 
 .product-menu {
     padding: 50px 0 150px 0;
