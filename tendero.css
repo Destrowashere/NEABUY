@@ -110,9 +110,9 @@ nav li a {
     position: absolute;
     top: 50%;
     left: 5px;
-    color: #adadad;
+    color: #6e6c6c;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 11px;
     pointer-events: none;
     transition: .5s;
   }
@@ -126,7 +126,6 @@ nav li a {
     height: 2px;
     background: red;
     transition: .5s;
-    
   }
   
   .usuario input:focus~label,
