@@ -58,7 +58,7 @@ header{
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color: #8bf1eb;
+    color: #FDFDFD;
     display: block;
     text-transform: uppercase;
 }
@@ -101,7 +101,7 @@ header{
 
 .header-txt p {
     font-size: 18px;
-    color:#176b87;
+    color:#e2e2e2;
 }
 
 .header-img {
