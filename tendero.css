@@ -1,5 +1,5 @@
 header {
-    background: #176B87;
+    background: #64CCC5;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,14 +7,15 @@ header {
 }
 
 .img-logo {
-  width: 100px;
+  width: 300px;
   height: 100px;
 }
 
 body {
   font-family: 'Oswald', sans-serif;
   text-align: left;
-  background-color: #001C30;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%2300192d' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); 
+background-color: #001C30;
 }
 
 nav ul {
@@ -27,6 +28,11 @@ nav ul {
 
 nav li {
   float: left;
+}
+nav li a:hover {
+  background-color: #176B87;
+  border-radius: 15px;
+transition: .3s;
 }
 
 nav li a {
@@ -62,7 +68,7 @@ nav li a {
     display: inline-block;
     padding: 10px;
     margin-top: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     border: 1px solid #ffffff;
     border-radius: 4px;
     transition: all 400ms ease;
@@ -72,19 +78,21 @@ nav li a {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    background: #343434;
+    width: 450px;
+    background: #DAFFFB;
     border-radius: 15px;
     text-align: center;
-    color: #ffffff;
+    color: #176B87;
   }
   form .usuario {
     position: relative;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 1px solid #ccc;
     margin: 30px 0;
-    width: 400px;
     background-position: center;
+    left: 5px;  
+    margin-right: 10px;
   }
+  
   
   .usuario input {
     width: 70%;
@@ -94,16 +102,17 @@ nav li a {
     border: none;
     background: none;
     outline: none;
-    color: azure;
+    color: rgb(0, 0, 0);
+
   }
   
   .usuario label {
     position: absolute;
     top: 50%;
     left: 5px;
-    color: #adadad;
+    color: #6e6c6c;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 11px;
     pointer-events: none;
     transition: .5s;
   }
@@ -123,6 +132,7 @@ nav li a {
   .usuario input:focus~label {
     top: -5px;
     color: red;
+    
   }
   .container {
     width: 100%;
@@ -131,4 +141,21 @@ nav li a {
     align-items: center;
   }
   
-  
+.submit {
+    margin-bottom:10px ;
+    border: 1px solid #176B87;
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.submit:hover{
+  background-color: #176B87;
+  padding: 10px 35px;
+  transition: .5s;
+  color: #fff;
+}
+.submit:active{
+  transform: scale(0.9) rotate(3deg);
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,94,247,1)17.8%, rgba(2,245,255,1)100.2%);
+}
