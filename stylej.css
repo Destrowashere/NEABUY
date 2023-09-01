@@ -21,7 +21,7 @@ header{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-radius: 15px;
+      border-radius: 150px;
 }
 
 .container{
@@ -83,7 +83,7 @@ header{
 .header-content {
     display: flex;
     align-items: center;
-    padding: 200px 0 150px 0;
+    padding: 150px 0 150px 0;
 }
 
 .header-txt{
@@ -101,7 +101,7 @@ header{
 
 .header-txt p {
     font-size: 18px;
-    color:#176b87;
+    color:#283235;
 }
 
 .header-img {
