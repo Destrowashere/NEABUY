@@ -416,9 +416,6 @@ form .usuario {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  min-width: 350px;
-  max-width: 2000px;
-
 
 }
 .gal img {
@@ -470,12 +467,12 @@ td {
 
 @media (max-width: 790px) {
   header {
-    width: 99%;
+    width: 100%;
   }
   nav li a {
     float: center;
     color: #fff;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -483,5 +480,65 @@ td {
   .img-logo {
     width: 160px;
     height: 70px;
+  }
+  .contenedor {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;  
+    object-fit: cover;
+    
+   
+  }
+  article{
+    margin-left: 5px;
+    width: 98%;
+  }
+  section{
+    margin-left: 5px;
+    width: 98%;
+  }
+
+
+  article .gale{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .centrado {
+    position: absolute;
+    top: 86%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color:#176b87;
+    text-shadow: 1px 1px 30px rgb(158, 158, 158);
+    width: 75%;
+   
+  }
+
+  .gal{
+    height: 210px;
+    
+  }
+  .gale img {
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease ;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px #64CCC5;
+    width: 30%;
+  }
+  .gale img:hover{
+    cursor: crosshair;
+    width: 120px;
+    opacity: 1;
+    filter: contrast(120%);
+   
+  }
+  .izq{
+   font-size: 14px;
+   width: 100%;
+  }
+  .imagendere{
+    display: none;
   }
 }
