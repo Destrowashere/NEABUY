@@ -213,8 +213,6 @@ p {
 .card img {
   width: 100%;
   height: 210px;
- min-height: 50px;
- min-width: 100px;
  border-radius: 5px;
 }
 
@@ -541,4 +539,55 @@ td {
   .imagendere{
     display: none;
   }
+
+.container{
+  width: 100%;
 }
+  .card  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    height: 300px; 
+}
+
+.card img {
+   
+    width: 100%; 
+    height: 100%;
+    border-radius: 30px;
+}
+.card .contenido{
+  font-size: 10px;
+}
+.contenido a{
+  height: 15px;
+  margin: 5px;
+}
+
+
+.card .contenido p {
+  line-height: 1.1;
+  color: #343434;
+  width: 100%;
+}
+
+.card .contenido h3 {
+  font-weight: 200px;
+  margin-bottom: 10px;
+
+}
+
+.card .contenido a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px;
+  margin-top: 5px;
+  color: #2fb4cc;
+  border: 1px solid #2fb4cc;
+  border-radius: 5px;
+  transition: all 400ms ease;
+}
+}   
