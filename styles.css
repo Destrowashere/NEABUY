@@ -1,0 +1,97 @@
+:root{
+    --blue:#176b87;
+    --black: #64ccc6;
+    --grey-text: #000000;
+    font-size: 10px;
+
+}
+
+body{
+    box-sizing: border-box;
+    margin:0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    display: flex;
+    margin: 0;
+    height: 100%;
+}
+h1{
+    font-size: 6.4rem;
+    font-weight: 900;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+.left-side{
+    width: 42%;
+    padding: 25px ;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.rigth-side{
+    width: 58%;
+    padding: 25px;
+    color: var(--grey-text);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.rigth-side_buttons{
+    display: flex;
+    flex-direction:column;
+    height: 250px;
+    justify-content: space-around;
+}
+
+button{
+    width:45%;
+    height: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.login-button{
+    background: var(--black);
+    color:var(--blue);
+    border: var(--blue) solid 1px;
+}
+.login-button:hover{
+    background: var(--blue);
+    color: var(--black);
+}
+.singup-button{
+    background: var(--black);
+    color: var(--blue);
+    border: var(--blue) solid 1px;
+}
+
+.singup-button:hover{
+    background: var(--blue);
+    color:var(--grey-text); 
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+li{
+    padding: 0 8px;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+a:hover{
+    text-decoration: underline;
+}
