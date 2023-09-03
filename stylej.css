@@ -83,7 +83,7 @@ header{
 .header-content {
     display: flex;
     align-items: center;
-    padding: 150px 0 150px 0;
+    padding: 100px 0 45px 0;
 }
 
 .header-txt{
@@ -124,6 +124,7 @@ header{
     margin-right: 20px;
     color: #DAFFFB;
     border-radius: 25px;
+    transition: .5s;
 }
 
 .btn-2{
@@ -137,7 +138,7 @@ header{
 
 .btn-1:hover {
     background: linear-gradient(90deg, #ff3149 0%, #001C30 100%);
-    
+    transition: .99s;
 }
 .btn-2:hover{
     border: 1px solid #DAFFFB;
@@ -430,7 +431,7 @@ header{
 }
 
 
-@media(max-width: 991px ) {
+@media(max-width: 790px ) {
 
     .menu {
         padding: 20px;
@@ -439,13 +440,20 @@ header{
     .menu label {
         display: initial;
     }
-
+    .menu .navbar ul li a {
+        font-size: 18px;
+        padding: 20px;
+        color: #fdffff;
+        display: block;
+        text-transform: uppercase;
+        transition: .5s;
+    }
     .menu .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #f61706;
+        background-color: #001C30;
         display: none;
     }
 
@@ -454,9 +462,12 @@ header{
     }
     
     .menu .navbar ul li a:hover {
-        color: #ffffff;
+        color: #fffbfb;
     }
-
+    .menu-icono {
+        width: 25px;
+        transition: .5s;
+    }
     #menu:checked ~ .navbar {
         display: initial;
     }
