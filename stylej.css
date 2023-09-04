@@ -328,6 +328,21 @@ header{
     color: #FDFDFD;
     
 }
+.boton-redireccion {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #1E92E9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-redireccion:hover {
+    background-color: #156CB8;
+    transform: scale(1.05);
+}
 
 .info {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/bg-info.jpg);
@@ -424,7 +439,7 @@ header{
     border-radius: 60%;
 }
 .social:hover {
-    background-color:#DD241b;
+    background-color:#62c3ca;
 }
 .social img {
     margin: 8px 0 0 10px;
