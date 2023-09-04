@@ -328,22 +328,26 @@ header{
     color: #FDFDFD;
     
 }
-.boton-redireccion {
+
+.boton-coments {
+    margin-top: 50px;
     display: inline-block;
-    padding: 15px 30px;
-    font-size: 20px;
-    background-color: #1E92E9;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 13px 35px;
+    border-radius: 25px;
+    border: 1px solid #64CCC5;
+    font-size: 16px;
+    cursor: pointer;
+    color: #FDFDFD;
+    background-color: #176B87;
+
 }
 
-.boton-redireccion:hover {
-    background-color: #156CB8;
-    transform: scale(1.05);
+.boton-coments:hover {
+    background: linear-gradient(90deg, #176B87 0%, #64CCC5 100%);
+    border-color: rgb(240, 240, 240);
+    color: #FDFDFD;
+    
 }
-
 .info {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/bg-info.jpg);
     background-position: center center;
