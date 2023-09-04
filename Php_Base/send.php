@@ -6,7 +6,7 @@
 
         if(
             strlen($_POST["name"]) >= 1 &&
-            strlen($_POST["password"]) >= 1 &&
+            strlen($_POST["password"]) >= 1&&
             strlen($_POST["email"]) >= 1 &&
             strlen($_POST["phone"]) >= 1
         ) {
