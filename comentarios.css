@@ -57,7 +57,23 @@ input, textarea {
     margin-bottom: 20px;
     border-radius: 10px;
 }
+a{
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: .3s;
+    border-radius: 5px;
+}
 
+a:hover{
+    background-color: #176B87;
+  border-radius: 15px;
+transition: .3s;
+font-size: 20px;
+}
 :focus {
     outline: 1px solid #1E92E9;
 }
