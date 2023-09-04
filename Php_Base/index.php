@@ -35,7 +35,7 @@
         </div>
 
         <a href="#">Terminos y condiciones</a>
-       <a href="index.html"><input type="submit" name="send" class="btn" value="Enviar"></a> 
+       <input type="submit" name="send" class="btn" value="Enviar">
     </div>
 </form>
 
