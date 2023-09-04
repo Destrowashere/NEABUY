@@ -12,7 +12,7 @@ class Tendero{
      actualizar_pedidos(){}
      obtener_comentarios(){}
      datos_personales(){}
- }
+ } 
 
  class Administrador{ 
     constructor(id_admin, constraseña_admin){ 
