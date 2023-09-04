@@ -21,7 +21,7 @@ header{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-radius: 150px;
+      border-radius: 10% / 50%;
 }
 
 .container{
