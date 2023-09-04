@@ -40,6 +40,7 @@ form{
     display: flex;
     flex-direction: column;
     width: 50%;
+
 }
 
 label {
@@ -76,17 +77,21 @@ font-size: 20px;
 }
 :focus {
     outline: 1px solid #1E92E9;
+    transition: .5s;
 }
 
 .btn {
     background-color: #1E92E9;
-    width: 150px;
-    align-self: flex-end;
+    width: 100px;
+    align-self: center;
     cursor: pointer;
+    transition: .5s;
 }
 
 .btn:hover {
-    background-color: #1E92E9;
+    background-color: #68b9f7;
+    transition: .3s;
+    width: 150px;
 }
 
 @media(max-width:991px){
