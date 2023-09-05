@@ -40,6 +40,7 @@ form{
     display: flex;
     flex-direction: column;
     width: 50%;
+
 }
 
 label {
@@ -57,20 +58,40 @@ input, textarea {
     margin-bottom: 20px;
     border-radius: 10px;
 }
+a{
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: .3s;
+    border-radius: 5px;
+}
 
+a:hover{
+    background-color: #176B87;
+  border-radius: 15px;
+transition: .3s;
+font-size: 20px;
+}
 :focus {
     outline: 1px solid #1E92E9;
+    transition: .5s;
 }
 
 .btn {
     background-color: #1E92E9;
-    width: 150px;
-    align-self: flex-end;
+    width: 100px;
+    align-self: center;
     cursor: pointer;
+    transition: .5s;
 }
 
 .btn:hover {
-    background-color: #1E92E9;
+    background-color: #68b9f7;
+    transition: .3s;
+    width: 150px;
 }
 
 @media(max-width:991px){
