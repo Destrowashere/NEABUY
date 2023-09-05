@@ -419,13 +419,13 @@ header{
 }
 
 .logo-2{
-    width: 150px;
+    width: 300px;
 }
 
 .links h4{
     color: #fdfdfd;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .links ul li a{
