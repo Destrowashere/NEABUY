@@ -401,19 +401,7 @@ header{
 .logo-2{
     width: 300px;
 }
-/*.boton-coments {
-    margin-top: 0px;
-    display: flex;
-    justify-content: center;
-    padding: 13px 35px;
-    border-radius: 25px;
-    border: 1px solid rgb(100, 204, 197);
-    font-size: 15px;
-    cursor: pointer;
-    color: rgb(253, 253, 253);
-    background-color: rgb(23, 107, 135)
-    
-}*/
+
 *.boton-coments{
     display: inline-block;
     border: 1px solid #176B87;
