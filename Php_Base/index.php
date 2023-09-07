@@ -15,22 +15,22 @@
     <div class="input-group">
 
         <div class="input-container">
-            <input type="text" name="name" placeholder="Nombre">
+            <input type="text" name="name" placeholder="Nombre" required>
             <i class="fa-solid fa-user"></i>
         </div>
 
         <div class="input-container">
-            <input type="password" name="password" placeholder="Contraseña">
+            <input type="password" name="password" placeholder="Contraseña" required>
             <i class="fa-solid fa-lock"></i>
         </div>
 
         <div class="input-container">
-            <input type="email" name="email" placeholder="Correo">
+            <input type="email" name="email" placeholder="Correo" required>
             <i class="fa-solid fa-envelope"></i>
         </div>
 
         <div class="input-container">
-            <input type="tel" name="phone" placeholder="Telefono">
+            <input type="tel" name="phone" placeholder="Telefono" required>
             <i class="fa-solid fa-phone"></i>
         </div>
 
