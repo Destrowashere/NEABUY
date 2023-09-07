@@ -329,27 +329,7 @@ header{
     
 }
 
-.boton-coments {
-        display: inline-block;
-        border: 1px solid #176B87;
-        padding: 10px 35px;
-        margin-right: 20px;
-        color: #fdfdfd;
-        border-radius: 25px;
 
-}
-.boton-coments:hover{
-
-        border: 1px solid #DAFFFB;
-    
-}
-
-.boton-coments:hover {
-    background: linear-gradient(90deg, #176B87 0%, #64CCC5 100%);
-    border-color: rgb(240, 240, 240);
-    color: #FDFDFD;
-    
-}
 .info {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/bg-info.jpg);
     background-position: center center;
@@ -413,7 +393,7 @@ header{
 }
 
 .footer {
-    padding: 150px 0 100px 0;
+    padding: 150px 0 150px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -422,6 +402,28 @@ header{
     width: 300px;
 }
 
+*.boton-coments{
+    display: inline-block;
+    border: 1px solid #176B87;
+    padding: 10px 35px;
+    margin-right: 20px;
+    color: #fdfdfd;
+    border-radius: 25px;
+    height: 100px;
+    width: 200px;
+}
+.boton-coments:hover{
+    
+    border: 1px solid #DAFFFB;
+
+}
+
+.boton-coments:hover {
+background: linear-gradient(90deg, #176B87 0%, #64CCC5 100%);
+border-color: rgb(240, 240, 240);
+color: #FDFDFD;
+
+}
 .links h4{
     color: #fdfdfd;
     text-transform: uppercase;
@@ -436,14 +438,14 @@ header{
 }
 
 .footer {
-    padding: 40px 0;
+    padding: 30px 0;
     background-color: #176B87;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23267e93' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%233692a0' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2345a5ac' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%2355b9b9' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%2364CCC5' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     background-size: cover;
-    border-radius: 15px;
+    border-radius: 20px;
   }
-.socials {
+  .socials {
     display: flex;
 }
 .footer .social a {
@@ -455,15 +457,14 @@ header{
     line-height: 38px;
     display: inline-block;
     text-align: center;
-    border-radius: 50%;
-    margin: 0.8px;
+    border-radius: 30%;
+    margin: 0.8px 15px;
     opacity: 0.75;
 }
 .footer .social a:hover {
     opacity:20;
     color: #ffffff;
   }
-
 
 @media(max-width: 790px ) {
 
@@ -621,14 +622,14 @@ header{
     }
 
     .footer{
-        padding: 30px;
+        padding: 35px;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
     .links h4 {
-        margin: 25px 0 10px 0;
+        margin: 10px 0 10px 0;
     }
 
 
