@@ -38,7 +38,7 @@
         </div>
 
         <div class="input-container">
-            <input type="number" name="phone" placeholder="Telefono" required min="1" max="">
+            <input type="number" name="phone" placeholder="Telefono" required min="1" max="9999999999">
             <i class="fa-solid fa-phone"></i>
         </div>
 
