@@ -15,12 +15,12 @@
     <div class="input-group">
 
         <div class="input-container">
-            <input type="text" name="name" placeholder="Nombre" required required minlength="10" maxlength="50">
+            <input type="text" name="name" placeholder="Nombre" required required minlength="4" maxlength="50">
             <i class="fa-solid fa-user"></i>
         </div>
 
         <div class="input-container">
-            <input type="text" maxlength="50"  name="lastname" placeholder="Apellido" required required minlength="10" maxlength="50">
+            <input type="text" maxlength="50"  name="lastname" placeholder="Apellido" required required minlength="4" maxlength="50">
             <i class="fa-solid fa-user"></i>
         </div>
 
@@ -30,7 +30,7 @@
         </div>
 
         <div class="input-container">
-            <input type="email" name="email" placeholder="Correo" required required minlength="10" maxlength="30">
+            <input type="email" name="email" placeholder="Correo" required required minlength="2" maxlength="30">
             <i class="fa-solid fa-envelope"></i>
         </div>
 
