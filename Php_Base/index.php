@@ -10,7 +10,7 @@
 </head>
 <body>
 <form method="POST" autocomplete="off">
-    <h2>Bienvenido</h2>
+    <h2>Bienvenido a NearBuy</h2>
 
     <div class="input-group">
 
@@ -41,7 +41,7 @@
 
         <div class="input-container">
             <input type="text" name="direct" placeholder="Direccion" required required minlength="6" maxlength="50">
-            <i class="fa-solid fa-maps"></i>
+            <i class="fa-solid fa-house-user"></i>
         </div>
 
         <a href="#">Terminos y condiciones</a>
