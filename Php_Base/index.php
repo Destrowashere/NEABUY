@@ -35,12 +35,12 @@
         </div>
 
         <div class="input-container">
-            <input type="number" name="phone" placeholder="Telefono" required minlength="10" maxlength="10">
+            <input type="number" name="phone" placeholder="Telefono" required >
             <i class="fa-solid fa-phone"></i>
         </div>
 
         <div class="input-container">
-            <input type="" name="direct" placeholder="Direccion" required required minlength="6" maxlength="50">
+            <input type="text" name="direct" placeholder="Direccion" required required minlength="6" maxlength="50">
             <i class="fa-solid fa-maps"></i>
         </div>
 

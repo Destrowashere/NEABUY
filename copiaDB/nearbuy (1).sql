@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2023 a las 22:05:11
+-- Tiempo de generación: 12-09-2023 a las 22:59:00
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -33,7 +33,7 @@ CREATE TABLE `clientes` (
   `Apellido` varchar(50) NOT NULL,
   `Contraseña` varchar(50) DEFAULT NULL,
   `Correo` varchar(50) NOT NULL,
-  `Telefono` int(20) NOT NULL,
+  `Telefono` bigint(20) NOT NULL,
   `Direccion` varchar(60) NOT NULL,
   `Fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -43,10 +43,10 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Contraseña`, `Correo`, `Telefono`, `Direccion`, `Fecha`) VALUES
-(1, 'ozuna', '', 'bailabailabaila', 'ozuna@gmail.com', 321341232, '', '2006-09-23'),
-(2, 'juan', '', 'juan123', 'juan@mail.com', 321456765, '', '2023-09-06'),
-(4, 'Alberto', '', '123123', 'alb@gmail.com', 321362431, '', '2023-09-07'),
-(5, 'Manuel Fernando', '', 'manuelito2006', 'manuel17@gmail.com', 2147483647, '', '2023-09-12');
+(22, 'dasdsad', 'dasdasdasd', 'adasdasdasda', 'a@dsadsad', 2147483647, 'dasdasd', '2023-09-12'),
+(23, 'zouna', 'ozuna', 'ozuna1', 'ozuna@ozu', 3223969, 'dsadasd', '2023-09-12'),
+(24, 'Felix', 'Santafe', '123456789', '123@123', 2147483647, 'feasdas', '2023-09-12'),
+(25, 'jdksad', 'dfsfasdf', 'asdsdsad', 'a@sdad', 3223969154, 'dasdsad', '2023-09-12');
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle`
