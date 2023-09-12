@@ -20,7 +20,7 @@
         </div>
 
         <div class="input-container">
-            <input type="tel" name="lastname" placeholder="Apellido" required>
+            <input type="tel" maxlength="50"  name="lastname" placeholder="Apellido" required>
             <i class="fa-solid fa-user"></i>
         </div>
 
