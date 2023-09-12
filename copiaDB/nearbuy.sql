@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-09-2023 a las 04:00:28
+-- Tiempo de generación: 12-09-2023 a las 22:05:11
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,9 +30,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `clientes` (
   `id_Cliente` int(30) NOT NULL,
   `Nombre` varchar(30) DEFAULT NULL,
+  `Apellido` varchar(50) NOT NULL,
   `Contraseña` varchar(50) DEFAULT NULL,
   `Correo` varchar(50) NOT NULL,
   `Telefono` int(20) NOT NULL,
+  `Direccion` varchar(60) NOT NULL,
   `Fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -40,10 +42,11 @@ CREATE TABLE `clientes` (
 -- Volcado de datos para la tabla `clientes`
 --
 
-INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Contraseña`, `Correo`, `Telefono`, `Fecha`) VALUES
-(1, 'ozuna', 'bailabailabaila', 'ozuna@gmail.com', 321341232, '2006-09-23'),
-(2, 'juan', 'juan123', 'juan@mail.com', 321456765, '2023-09-06'),
-(4, 'Alberto', '123123', 'alb@gmail.com', 321362431, '2023-09-07');
+INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Contraseña`, `Correo`, `Telefono`, `Direccion`, `Fecha`) VALUES
+(1, 'ozuna', '', 'bailabailabaila', 'ozuna@gmail.com', 321341232, '', '2006-09-23'),
+(2, 'juan', '', 'juan123', 'juan@mail.com', 321456765, '', '2023-09-06'),
+(4, 'Alberto', '', '123123', 'alb@gmail.com', 321362431, '', '2023-09-07'),
+(5, 'Manuel Fernando', '', 'manuelito2006', 'manuel17@gmail.com', 2147483647, '', '2023-09-12');
 
 -- --------------------------------------------------------
 
@@ -120,7 +123,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle`
