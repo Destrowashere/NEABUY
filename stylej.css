@@ -21,7 +21,7 @@ header{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-radius: 15px;
+      border-radius: 10% / 50%;
 }
 
 .container{
@@ -58,7 +58,7 @@ header{
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color: #FDFDFD;
+    color: #03201e;
     display: block;
     text-transform: uppercase;
 }
@@ -83,7 +83,7 @@ header{
 .header-content {
     display: flex;
     align-items: center;
-    padding: 200px 0 150px 0;
+    padding: 100px 0 45px 0;
 }
 
 .header-txt{
@@ -101,7 +101,7 @@ header{
 
 .header-txt p {
     font-size: 18px;
-    color:#e2e2e2;
+    color:#283235;
 }
 
 .header-img {
@@ -114,7 +114,7 @@ header{
 
 .botones {
     display: flex;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .btn-1{
@@ -124,6 +124,7 @@ header{
     margin-right: 20px;
     color: #DAFFFB;
     border-radius: 25px;
+    transition: .5s;
 }
 
 .btn-2{
@@ -137,7 +138,7 @@ header{
 
 .btn-1:hover {
     background: linear-gradient(90deg, #ff3149 0%, #001C30 100%);
-    
+    transition: .99s;
 }
 .btn-2:hover{
     border: 1px solid #DAFFFB;
@@ -180,7 +181,7 @@ header{
    text-align: center;
    padding: 10px 35px;
    border-radius: 25px;
-   color: #b4b1b1;
+   color: #e4bdbd;
    font-size: 16px;
    font-weight: 800;
    background-color: #176B87;
@@ -189,7 +190,7 @@ header{
 
 .tab.active {
     background: linear-gradient(90deg, #64CCC5 0%, #176B87 100%);
-    color: #FDFDFD;
+    color: #fbb13c;
 }
 
 .tab.active::after{
@@ -328,6 +329,7 @@ header{
     
 }
 
+
 .info {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/bg-info.jpg);
     background-position: center center;
@@ -391,19 +393,41 @@ header{
 }
 
 .footer {
-    padding: 150px 0 100px 0;
+    padding: 150px 0 150px 0;
     display: flex;
     justify-content: space-between;
 }
 
 .logo-2{
-    width: 150px;
+    width: 300px;
 }
 
+*.boton-coments{
+    display: inline-block;
+    border: 1px solid #176B87;
+    padding: 10px 35px;
+    margin-right: 20px;
+    color: #fdfdfd;
+    border-radius: 25px;
+    height: 100px;
+    width: 200px;
+}
+.boton-coments:hover{
+    
+    border: 1px solid #DAFFFB;
+
+}
+
+.boton-coments:hover {
+background: linear-gradient(90deg, #176B87 0%, #64CCC5 100%);
+border-color: rgb(240, 240, 240);
+color: #FDFDFD;
+
+}
 .links h4{
     color: #fdfdfd;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .links ul li a{
@@ -412,25 +436,37 @@ header{
     margin-bottom: 5px;
     display: inline-block;
 }
-.socials {
+
+.footer {
+    padding: 30px 0;
+    background-color: #176B87;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23267e93' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%233692a0' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2345a5ac' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%2355b9b9' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%2364CCC5' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .socials {
     display: flex;
 }
-.social{
-    margin:  10px;
-    height: 40px;
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #001c30;
     width: 40px;
-    border: 1px solid #1b4fdd;
-    border-radius: 60%;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 30%;
+    margin: 0.8px 15px;
+    opacity: 0.75;
 }
-.social:hover {
-    background-color:#DD241b;
-}
-.social img {
-    margin: 8px 0 0 10px;
-}
+.footer .social a:hover {
+    opacity:20;
+    color: #ffffff;
+  }
 
-
-@media(max-width: 991px ) {
+@media(max-width: 790px ) {
 
     .menu {
         padding: 20px;
@@ -439,13 +475,20 @@ header{
     .menu label {
         display: initial;
     }
-
+    .menu .navbar ul li a {
+        font-size: 18px;
+        padding: 20px;
+        color: #fdffff;
+        display: block;
+        text-transform: uppercase;
+        transition: .5s;
+    }
     .menu .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #f61706;
+        background-color: #001C30;
         display: none;
     }
 
@@ -454,9 +497,12 @@ header{
     }
     
     .menu .navbar ul li a:hover {
-        color: #ffffff;
+        color: #fffbfb;
     }
-
+    .menu-icono {
+        width: 25px;
+        transition: .5s;
+    }
     #menu:checked ~ .navbar {
         display: initial;
     }
@@ -576,14 +622,14 @@ header{
     }
 
     .footer{
-        padding: 30px;
+        padding: 35px;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
     .links h4 {
-        margin: 25px 0 10px 0;
+        margin: 10px 0 10px 0;
     }
 
 
