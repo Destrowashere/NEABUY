@@ -13,7 +13,7 @@
 <header class="inicio">
                 <a href="http://localhost/nb/NEABUY/index.html" class="ini">Inicio</a>
             </header>
-    <h2>Bienvenido</h2>
+    <h2>Bienvenido a NearBuy</h2>
 
     <div class="input-group">
 
