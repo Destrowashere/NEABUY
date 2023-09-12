@@ -10,6 +10,9 @@
 </head>
 <body>
 <form method="POST" autocomplete="off">
+<header class="inicio">
+                <a href="http://localhost/nb/NEABUY/index.html" class="ini">Inicio</a>
+            </header>
     <h2>Bienvenido</h2>
 
     <div class="input-group">
@@ -35,7 +38,7 @@
         </div>
 
         <div class="input-container">
-            <input type="number" name="phone" placeholder="Telefono" required min="1" max="9999999999">
+            <input type="number" name="phone" placeholder="Telefono" required min="1" max="">
             <i class="fa-solid fa-phone"></i>
         </div>
 
