@@ -25,7 +25,7 @@
         </div>
 
         <div class="input-container">
-            <input type="password" name="password" placeholder="Contraseña" required>
+            <input type="password" name="password" placeholder="Contraseña" required minlength="6" maxlength="20">
             <i class="fa-solid fa-lock"></i>
         </div>
 
@@ -35,7 +35,7 @@
         </div>
 
         <div class="input-container">
-            <input type="tel" name="phone" placeholder="Telefono" required>
+            <input type="number" name="phone" placeholder="Telefono" required minlength="10" maxlength="10">
             <i class="fa-solid fa-phone"></i>
         </div>
 
