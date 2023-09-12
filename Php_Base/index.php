@@ -20,6 +20,11 @@
         </div>
 
         <div class="input-container">
+            <input type="tel" name="lastname" placeholder="Apellido" required>
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="input-container">
             <input type="password" name="password" placeholder="Contraseña" required>
             <i class="fa-solid fa-lock"></i>
         </div>
@@ -32,6 +37,11 @@
         <div class="input-container">
             <input type="tel" name="phone" placeholder="Telefono" required>
             <i class="fa-solid fa-phone"></i>
+        </div>
+
+        <div class="input-container">
+            <input type="tel" name="direct" placeholder="Direccion" required>
+            <i class="fa-solid fa-maps"></i>
         </div>
 
         <a href="#">Terminos y condiciones</a>
