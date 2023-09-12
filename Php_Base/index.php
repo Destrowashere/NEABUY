@@ -15,32 +15,32 @@
     <div class="input-group">
 
         <div class="input-container">
-            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="text" name="name" placeholder="Nombre" required required minlength="10" maxlength="50">
             <i class="fa-solid fa-user"></i>
         </div>
 
         <div class="input-container">
-            <input type="text" maxlength="50"  name="lastname" placeholder="Apellido" required>
+            <input type="text" maxlength="50"  name="lastname" placeholder="Apellido" required required minlength="10" maxlength="50">
             <i class="fa-solid fa-user"></i>
         </div>
 
         <div class="input-container">
-            <input type="password" name="password" placeholder="Contraseña" required>
+            <input type="password" name="password" placeholder="Contraseña" required minlength="6" maxlength="20">
             <i class="fa-solid fa-lock"></i>
         </div>
 
         <div class="input-container">
-            <input type="email" name="email" placeholder="Correo" required>
+            <input type="email" name="email" placeholder="Correo" required required minlength="10" maxlength="30">
             <i class="fa-solid fa-envelope"></i>
         </div>
 
         <div class="input-container">
-            <input type="number" name="phone" placeholder="Telefono" required>
+            <input type="number" name="phone" placeholder="Telefono" required minlength="10" maxlength="10">
             <i class="fa-solid fa-phone"></i>
         </div>
 
         <div class="input-container">
-            <input type="" name="direct" placeholder="Direccion" required>
+            <input type="" name="direct" placeholder="Direccion" required required minlength="6" maxlength="50">
             <i class="fa-solid fa-maps"></i>
         </div>
 

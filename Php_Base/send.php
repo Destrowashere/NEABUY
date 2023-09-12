@@ -6,17 +6,21 @@
 
         if(
             strlen($_POST["name"]) >= 1 &&
+            strlen($_POST["lastname"]) >= 1 &&
             strlen($_POST["password"]) >= 1&&
             strlen($_POST["email"]) >= 1 &&
-            strlen($_POST["phone"]) >= 1
+            strlen($_POST["phone"]) >= 1 
+         
         ){
             $name = trim($_POST["name"]);
+            $lastname = trim($_POST["lastname"]);
             $password = trim($_POST["password"]);
             $email = trim($_POST["email"]);
             $phone = trim($_POST["phone"]);
+            $direct = trim($_POST["direct"]);
             $fecha = date("y/m/d");
-            $consulta = "INSERT INTO clientes( id_Cliente,Nombre, contraseña, Correo, Telefono, Fecha)
-                        VALUES('','$name', '$password', '$email', '$phone', '$fecha')";
+            $consulta = "INSERT INTO clientes( id_Cliente,Nombre, Apellido, contraseña, Correo, Telefono, Direccion, Fecha)
+                        VALUES('','$name','$lastname', '$password', '$email', '$phone','$direct', '$fecha')";
             $resultado = mysqli_query($conex, $consulta);  
             if($resultado) {
                 ?>
