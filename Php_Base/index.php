@@ -20,7 +20,7 @@
         </div>
 
         <div class="input-container">
-            <input type="tel" maxlength="50"  name="lastname" placeholder="Apellido" required>
+            <input type="text" maxlength="50"  name="lastname" placeholder="Apellido" required>
             <i class="fa-solid fa-user"></i>
         </div>
 
@@ -35,12 +35,12 @@
         </div>
 
         <div class="input-container">
-            <input type="tel" name="phone" placeholder="Telefono" required>
+            <input type="number" name="phone" placeholder="Telefono" required>
             <i class="fa-solid fa-phone"></i>
         </div>
 
         <div class="input-container">
-            <input type="tel" name="direct" placeholder="Direccion" required>
+            <input type="" name="direct" placeholder="Direccion" required>
             <i class="fa-solid fa-maps"></i>
         </div>
 
