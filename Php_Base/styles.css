@@ -14,13 +14,34 @@ body{
     min-height: 100vh;
     
 }
+.ini{
+    padding: 5px;
+    color: #DAFFFB;
+    background-color: #5e8592;
+    width: 100%;
+    border-radius: 15px;
+    transition: .5s;
+    
+   
 
+}
+
+.ini:hover{
+    padding: 8px;
+    color: #DAFFFB;
+    background-color: #176B87;
+    transition: .5s;
+    
+}
 form{
-    background-color: #f5f5f5;
+    background-color: #DAFFFB;
     padding: 50px;
     width: 420px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0,2);
+    box-shadow:  10px #fff;
+    margin-top: 50px ;
+    margin-bottom: 50px;
+    border-radius: 15px;
 }
 
 form h2{
@@ -39,8 +60,8 @@ form h2{
     border-radius: 50%;
     background: linear-gradient(
         90deg,
-        rgba(153,26,123,1) 0%,
-        rgba(117,30,156,1) 50%
+        #64CCC5 0%,
+        #176B87  50%
     );
     color: #fceffc;
     position: absolute;
@@ -56,7 +77,11 @@ form h2{
     margin-bottom: 25px;
     border-radius: 35px;
     background-color: transparent;
-    border: 2px solid #cbcbcb;
+    border:linear-gradient(
+        90deg,
+        #64CCC5 0%,
+        #176B87 50%
+    );
     font-size: 16px;
     outline: none;
     color: #1e1e1e;
@@ -64,7 +89,7 @@ form h2{
 }
 
 ::placeholder{
-    color: #a0a0a0;
+    color: #176B87;
     font-size: 16px;  
 }
 
@@ -79,28 +104,35 @@ form a{
 .btn{
     background: linear-gradient(
         90deg,
-        rgba(153,26,123,1) 0%,
-        rgba(117,30,156,1) 50%
+        #64CCC5 0%,
+        #176B87 50%
     );
-    padding: 15px 80px;
+    padding: 5px 40px;
     border: 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0,2);
     border-radius: 25px;
     color: #fceff7;
     font-size: 15px;
     cursor: pointer;
+    transition: .5s;
+}
+.btn:hover{
+    padding: 15px 80px;
+    transition: .5s ;
+    box-shadow: 0 0 10px #001C30;
 }
 
 .success {
     position: absolute;
-    top: 50px;
+    top: 15px;
+    align-self: left;
     color: #00a735;
     font-size: 18px; 
 }
 
 .error {
     position: absolute;
-    top: 50px;
+    top: 15px;
     color: #e02d00;
     font-size: 18px;
 }

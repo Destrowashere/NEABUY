@@ -11,7 +11,7 @@
 <body>
 <form method="POST" autocomplete="off">
 <header class="inicio">
-                <a href="http://localhost/nb/NEABUY/index.html" class="ini">Inicio</a>
+                <a href="http://localhost/NEABUY/index.html " class="ini">Inicio</a>
             </header>
     <h2>Bienvenido a NearBuy</h2>
 
