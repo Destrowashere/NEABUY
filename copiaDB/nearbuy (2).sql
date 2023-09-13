@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2023 a las 22:59:00
+-- Tiempo de generación: 13-09-2023 a las 03:32:51
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,18 +35,20 @@ CREATE TABLE `clientes` (
   `Correo` varchar(50) NOT NULL,
   `Telefono` bigint(20) NOT NULL,
   `Direccion` varchar(60) NOT NULL,
-  `Fecha` date NOT NULL
+  `Fecha` date NOT NULL,
+  `Cedula` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `clientes`
 --
 
-INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Contraseña`, `Correo`, `Telefono`, `Direccion`, `Fecha`) VALUES
-(22, 'dasdsad', 'dasdasdasd', 'adasdasdasda', 'a@dsadsad', 2147483647, 'dasdasd', '2023-09-12'),
-(23, 'zouna', 'ozuna', 'ozuna1', 'ozuna@ozu', 3223969, 'dsadasd', '2023-09-12'),
-(24, 'Felix', 'Santafe', '123456789', '123@123', 2147483647, 'feasdas', '2023-09-12'),
-(25, 'jdksad', 'dfsfasdf', 'asdsdsad', 'a@sdad', 3223969154, 'dasdsad', '2023-09-12');
+INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Contraseña`, `Correo`, `Telefono`, `Direccion`, `Fecha`, `Cedula`) VALUES
+(22, 'dasdsad', 'dasdasdasd', 'adasdasdasda', 'a@dsadsad', 2147483647, 'dasdasd', '2023-09-12', 0),
+(23, 'zouna', 'ozuna', 'ozuna1', 'ozuna@ozu', 3223969, 'dsadasd', '2023-09-12', 0),
+(24, 'Felix', 'Santafe', '123456789', '123@123', 2147483647, 'feasdas', '2023-09-12', 0),
+(25, 'jdksad', 'dfsfasdf', 'asdsdsad', 'a@sdad', 3223969154, 'dasdsad', '2023-09-12', 0),
+(26, 'Felix', 'Santafe', 'feilx55santafe', 'felix@gmail.com', 3223969154, 'calle8a 92 71', '2023-09-13', 1011091547);
 
 -- --------------------------------------------------------
 
@@ -123,7 +125,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle`

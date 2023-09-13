@@ -26,7 +26,10 @@
             <input type="text" maxlength="50"  name="lastname" placeholder="Apellido" required required minlength="4" maxlength="50">
             <i class="fa-solid fa-user"></i>
         </div>
-
+        <div class="input-container">
+            <input type="int" name="cedula" placeholder="Numero de cedula" required minlength="6" maxlength="20">
+            <i class="fa-solid fa-earth-americas"></i>
+        </div>
         <div class="input-container">
             <input type="password" name="password" placeholder="Contraseña" required minlength="6" maxlength="20">
             <i class="fa-solid fa-lock"></i>

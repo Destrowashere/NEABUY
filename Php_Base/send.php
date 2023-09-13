@@ -15,12 +15,13 @@
             $name = trim($_POST["name"]);
             $lastname = trim($_POST["lastname"]);
             $password = trim($_POST["password"]);
+            $Cedula = trim($_POST["cedula"]);
             $email = trim($_POST["email"]);
             $phone = trim($_POST["phone"]);
             $direct = trim($_POST["direct"]);
             $fecha = date("y/m/d");
-            $consulta = "INSERT INTO clientes( id_Cliente,Nombre, Apellido, contraseña, Correo, Telefono, Direccion, Fecha)
-                        VALUES('','$name','$lastname', '$password', '$email', '$phone','$direct', '$fecha')";
+            $consulta = "INSERT INTO clientes( id_Cliente,Nombre, Apellido, contraseña, Correo, Telefono, Direccion, Fecha,Cedula)
+                        VALUES('','$name','$lastname', '$password', '$email', '$phone','$direct', '$fecha','$Cedula')";
             $resultado = mysqli_query($conex, $consulta);  
             if($resultado) {
                 ?>
