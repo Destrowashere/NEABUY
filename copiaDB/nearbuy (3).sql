@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2023 a las 03:32:51
+-- Tiempo de generación: 13-09-2023 a las 03:38:04
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -33,10 +33,10 @@ CREATE TABLE `clientes` (
   `Apellido` varchar(50) NOT NULL,
   `Contraseña` varchar(50) DEFAULT NULL,
   `Correo` varchar(50) NOT NULL,
-  `Telefono` bigint(20) NOT NULL,
+  `Telefono` bigint(10) NOT NULL,
   `Direccion` varchar(60) NOT NULL,
   `Fecha` date NOT NULL,
-  `Cedula` int(10) NOT NULL
+  `Cedula` bigint(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -48,7 +48,9 @@ INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Contraseña`, `Corr
 (23, 'zouna', 'ozuna', 'ozuna1', 'ozuna@ozu', 3223969, 'dsadasd', '2023-09-12', 0),
 (24, 'Felix', 'Santafe', '123456789', '123@123', 2147483647, 'feasdas', '2023-09-12', 0),
 (25, 'jdksad', 'dfsfasdf', 'asdsdsad', 'a@sdad', 3223969154, 'dasdsad', '2023-09-12', 0),
-(26, 'Felix', 'Santafe', 'feilx55santafe', 'felix@gmail.com', 3223969154, 'calle8a 92 71', '2023-09-13', 1011091547);
+(26, 'Felix', 'Santafe', 'feilx55santafe', 'felix@gmail.com', 3223969154, 'calle8a 92 71', '2023-09-13', 1011091547),
+(27, 'Juan David', 'Lopez Perez', 'djksajdsadkda', 'Juan@gmail.com', 3142843210, 'Calle 99b', '2023-09-13', 2147483647),
+(28, 'sadasd', 'sedadas', 'dsadada', 'dasd@dsa', 321312315, 'dasdada', '2023-09-13', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -125,7 +127,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle`

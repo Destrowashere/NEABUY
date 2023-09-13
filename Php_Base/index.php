@@ -27,7 +27,7 @@
             <i class="fa-solid fa-user"></i>
         </div>
         <div class="input-container">
-            <input type="int" name="cedula" placeholder="Numero de cedula" required minlength="6" maxlength="20">
+            <input type="number" name="cedula" placeholder="Numero de cedula" required min="1" max="9999999999">
             <i class="fa-solid fa-earth-americas"></i>
         </div>
         <div class="input-container">
