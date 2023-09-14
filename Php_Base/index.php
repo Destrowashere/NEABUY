@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    
 <form method="POST" autocomplete="off">
 <header class="inicio">
-                <a href="http://localhost/NEABUY/index.html " class="ini">Inicio</a>
+                <a href="../index.html">Inicio</a>
             </header>
     <h2>Bienvenido a NearBuy</h2>
 
@@ -51,7 +52,10 @@
         </div>
 
         <a href="#">Terminos y condiciones</a>
+        <a href="crud/crud.php">crud</a>
        <input type="submit" name="send" class="btn" value="Enviar">
+
+     
     </div>
 </form>
 
