@@ -98,8 +98,27 @@ transition: .3s;
     margin: 30px 0;
     background-position: center;
     left: 5px;  
-    margin-right: 10px;
+    margin-right: 5px;
   }
+  /* Estilos para el contenedor personalizado */
+.custom-file {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo para el campo de entrada de archivos oculto */
+.custom-file-input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+  
+
   
   
   .usuario input {
