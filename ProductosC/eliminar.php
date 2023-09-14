@@ -1,11 +1,11 @@
 <?php
   
-       include_once('conexcrud.php');
+       include_once('conexcrudd.php');
 
        $id = $_GET['Id'];
 
 
-       $sql = "DELETE FROM producto WHERE id_Producto = '$id'";
+       $sql = "DELETE FROM producto WHERE Id_Producto = '$id'";
 
 
 
