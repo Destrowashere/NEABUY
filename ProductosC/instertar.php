@@ -3,10 +3,10 @@
      include_once('conexcrud.php');
 
 
-     $Nombre= $_POST['Nombre'];
+     $nombre= $_POST['Nombre'];
      $precio= $_POST['Precio'];
      $descripcion= $_POST['Descripcion'];
-     $sql="INSERT INTO producto(Nombre,Precio,Descripcion) VALUES('$Nombre','$precio','$descripcion')";
+     $sql="INSERT INTO producto(Nombre,Precio,Descripcion) VALUES('$nombre','$precio','$descripcion')";
 
 
      $query = mysqli_query($conex,$sql);

@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
-  <h1 class="bg-warning p-2 text-white text-center">Agregar productor</h1>
+  <h1 class="bg-warning p-2 text-white text-center">Agregar producto</h1>
     <br>
             <div class="container">
             <form action="insertar.php" method="POST">

@@ -7,7 +7,7 @@
         $precio = $_POST['Precio'];
         $descripcion = $_POST['Descripcion'];
     
-        $sql = "UPDATE productos SET Nombre='$nombre', Precio='$precio', Descripcion='$descripcion' WHERE id_Producto='$id'";
+        $sql = "UPDATE producto SET Nombre='$nombre', Precio='$precio', Descripcion='$descripcion' WHERE id_Producto='$id'";
  
 
 

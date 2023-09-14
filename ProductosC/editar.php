@@ -5,7 +5,7 @@
        $id = $_GET['Id'];
 
 
-       $sql = "SELECT * FROM producto WHERE id_Producto = '$id'";
+       $sql = "SELECT * FROM producto WHERE Id_Producto = '$id'";
 
 
 
@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Editar cliente</title>
+    <title>Editar producto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
@@ -28,7 +28,7 @@
             <div class="container">
             <form action="editarda.php" method="POST">
                 <input type="hidden" name="id" value="<?php
-echo $fila['id_Producto']
+echo $fila['Id_Producto']
 ?>">
   <div class="mb-3">
          <label class="form-label">Nombre</label>
@@ -45,7 +45,7 @@ echo $fila['Precio']
   <div class="mb-3">
   <label class="form-label">Descripcion</label>
     <input type="text" class="form-control"  placeholder="Descripcion" name="Descripcion" value="<?php
-echo $fila['Correo']
+echo $fila['Descripcion']
 ?>">
   <div class="container text-center">
   <button type="submit" class="btn btn-primary">Editar producto </button>
