@@ -1,3 +1,4 @@
+
 header {
   background-color: #64CCC5;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2355b9b9' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2345a5ac' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%233692a0' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23267e93' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23176B87' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
@@ -719,8 +720,6 @@ input[type='text']:focus, [type='email']:focus, [type='password']:focus, textare
 select {
   background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
   outline: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
 }
 
 select::-ms-expand {
@@ -776,6 +775,8 @@ select::-ms-expand {
   background: #474544;
   color: #F2F3EB;
 }
+
+
 
 @media screen and (max-width: 768px) {
   #container {
