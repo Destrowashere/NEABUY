@@ -16,8 +16,8 @@ body{
 .form-content{
     background: linear-gradient(
         50deg,
-        rgb(208, 209, 216) 50%,
-        rgba(137, 146, 206, 0.7)
+        rgb(82, 131, 101) 50%,
+        rgba(60, 71, 143, 0.7)
         ),
         url(fondos_sostenibles.avif);
        
