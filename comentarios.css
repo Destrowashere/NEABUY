@@ -6,7 +6,7 @@
 
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #555764;
+    background-color: #bbbdca;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,10 +16,10 @@ body{
 .form-content{
     background: linear-gradient(
         50deg,
-        rgba(40,42,55,1) 50%,
-        rgba(40,42,55,0.7)
+        rgb(208, 209, 216) 50%,
+        rgba(137, 146, 206, 0.7)
         ),
-        url(fondo/imagee.jpg);
+        url(fondos_sostenibles.avif);
        
     
         background-position: center;
@@ -31,7 +31,7 @@ body{
 }
 
 .form-content h1{
-    color: #f4f6f9;
+    color: #0d0d0e;
     font-size: 40px;
     margin-top: 25px;
 }
@@ -45,13 +45,13 @@ form{
 
 label {
     font-size: 17px;
-    color: #959aab;
+    color: #1c1e25;
     margin-bottom: 10px;
 }
 
 input, textarea {
     padding: 17px 14px;
-    background-color: #333646;
+    background-color: #dfdfdf;
     border: 0;
     font-size: 15px;
     color: #f4f6f9;
