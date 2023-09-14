@@ -16,12 +16,10 @@ body{
 .form-content{
     background: linear-gradient(
         50deg,
-        rgb(82, 131, 101) 50%,
+        rgb(218, 235, 225) 50%,
         rgba(60, 71, 143, 0.7)
         ),
-        url(fondos_sostenibles.avif);
-       
-    
+        url(fondos_sostenibles.avif);    
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -45,16 +43,16 @@ form{
 
 label {
     font-size: 17px;
-    color: #1c1e25;
+    color: #000000;
     margin-bottom: 10px;
 }
 
 input, textarea {
     padding: 17px 14px;
-    background-color: #dfdfdf;
+    background-color: #aca8a8;
     border: 0;
     font-size: 15px;
-    color: #131920;
+    color: #000000;
     margin-bottom: 20px;
     border-radius: 10px;
 }
