@@ -20,7 +20,8 @@
             $phone = trim($_POST["phone"]);
             $direct = trim($_POST["direct"]);
             $fecha = date("y/m/d");
-            $consulta = "INSERT INTO clientes( id_Cliente,Nombre, Apellido, contraseña, Correo, Telefono, Direccion, Fecha,Cedula)
+            $contrasena_encriptada = password_hash($password, PASSWORD_DEFAULT);
+            $consulta = "INSERT INTO clientes( id_Cliente,Nombre, Apellido, ContraUser, Correo, Telefono, Direccion, Fecha,Cedula)
                         VALUES('','$name','$lastname', '$password', '$email', '$phone','$direct', '$fecha','$Cedula')";
             $resultado = mysqli_query($conex, $consulta);  
             if($resultado) {
