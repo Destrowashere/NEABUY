@@ -19,7 +19,7 @@
         <table class="table">
   <thead class= "table-dark">
 
-      <th scope="col">ID_Producto</th>
+      <th scope="col">Id_Producto</th>
       <th scope="col">Nombre</th>
       <th scope="col">Precio</th>
       <th scope="col">Descripion</th>
@@ -27,7 +27,7 @@
   <tbody>
     
   <?php
-include("conexcrud.php");
+include("conexcrudd.php");
 
 $sql = "SELECT * FROM producto";
 $query = mysqli_query($conex, $sql);
@@ -40,7 +40,7 @@ while ($fila = mysqli_fetch_array($query)) {
         <td><?php echo $fila['Precio']; ?></td>
         <td><?php echo $fila['Descripcion']; ?></td>
           <th scope="row">
-            <a href="editar.php?Id=<?php
+            <a href="editar.php?Id<?php
 echo $fila['Id_Producto']
 ?>" class="btn btn-warning" >Editar datos</a>
             <a href="eliminar.php?Id=<?php

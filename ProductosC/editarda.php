@@ -1,13 +1,13 @@
 <?php
   
-       include_once('conexcrud.php');
+       include_once('conexcrudd.php');
 
-       $id = $_POST['id'];
+        $id = $_POST['id'];
         $nombre = $_POST['Nombre'];
         $precio = $_POST['Precio'];
         $descripcion = $_POST['Descripcion'];
     
-        $sql = "UPDATE producto SET Nombre='$nombre', Precio='$precio', Descripcion='$descripcion' WHERE id_Producto='$id'";
+        $sql = "UPDATE producto SET Nombre='$nombre', Precio='$precio', Descripcion='$descripcion' WHERE Id_Producto='$id'";
  
 
 

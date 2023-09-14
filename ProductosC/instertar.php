@@ -1,6 +1,6 @@
 <?php
      
-     include_once('conexcrud.php');
+     include_once('conexcrudd.php');
 
 
      $nombre= $_POST['Nombre'];
