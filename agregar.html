@@ -14,7 +14,7 @@
 
       </div>
       <nav>
-        <ul class="menu">
+        <ul class="menu"> 
           <li> <a href="index.html">Inicio</a></li>
           <li> <a href="productos.html">Productos</a></li>
         </ul>
@@ -23,21 +23,28 @@
     <div class="registroa">
       <h1>Agregar producto</h1>
       <form>
-        <div class="usuario">
-          <input type="" required>
-          <label>Imagen del producto</label>
+        <div class="custom-file">
+          <label for="foto" class="custom-file-label">Agregar imagen</label>
+          <br><br>
+          <input type="file" id="foto" name="foto" accept="image/*" class="custom-file-input">
+
         </div>
         <div class="usuario">
-          <input type="text" required>
-          <label>Descripcion </label>
+          <label >Nombre</label>
+           <input type="text" >
         </div>
         <div class="usuario">
-          <input type="text" required>
+          <input type="text" >
+          <label >Descripcion</label>
+        </div>
+        <div class="usuario">
+          <input type="text" >
           <label>Precio</label>
         </div>
         <div>
           <input class="submit" type="submit" value="Agregar" />
         </div >
+        <a href="ProductosC/crud.php">crud</a>
       
 
       </body>

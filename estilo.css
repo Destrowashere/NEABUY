@@ -7,8 +7,8 @@ background-size: cover;
   justify-content: space-between;
   align-items: center;
   border-radius: 15px;
-  
-}
+  width: 99%;
+} 
 
 .img-logo {
   width: 300px;
@@ -19,10 +19,7 @@ body {
   font-family: 'Oswald', sans-serif;
   text-align: left;
   background-color: #001C30;
-  min-width: 390px;
-  min-height: 860px;
-  max-width: 2000px;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%2300192d' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%2300192d' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); 
 }
 
 nav ul {
@@ -202,8 +199,9 @@ p {
 
 
 .imagen {
-  font-size: 90px;
+  font-size: 85px;
   border-bottom: transparent;
+  
 }
 
 .inl {
@@ -216,8 +214,6 @@ p {
 .card img {
   width: 100%;
   height: 210px;
- min-height: 50px;
- min-width: 100px;
  border-radius: 5px;
 }
 
@@ -355,17 +351,7 @@ form .usuario {
   width: 100%;
 }
 
-.submit {
-  width: 100%;
-  height: 50px;
-  border: 1px solid;
-  background: #444040;
-  border-radius: 25px;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
-  outline: none;
-}
+
 
 .submit:hover {
   border-color: #7a7777;
@@ -392,6 +378,8 @@ form .usuario {
    display: flex;
    text-align: center;
    cursor: default;
+   margin-left: 20px;
+   margin-right: auto;
  
 }
 .izq{
@@ -419,9 +407,6 @@ form .usuario {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  min-width: 350px;
-  max-width: 2000px;
-
 
 }
 .gal img {
@@ -456,7 +441,6 @@ table {
   color: #fff;
   font-size: 14px;
   table-layout: fixed;
-  border-collapse: collapse;
 }
 
 th {
@@ -468,4 +452,367 @@ th {
 td {
   padding: 15px;
   border-bottom: solid 1px white;
+}
+
+
+@media (max-width: 790px) {
+  header {
+    width: 100%;
+  }
+  .inl {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+  nav li a {
+    float: center;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .img-logo {
+    width: 160px;
+    height: 70px;
+  }
+  .contenedor {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;  
+    object-fit: cover;
+    
+   
+  }
+  abbr{
+    font-size: 40px;
+  }
+  article{
+    margin-left: 5px;
+    width: 98%;
+  }
+  section{
+    margin-left: 5px;
+    width: 98%;
+  }
+
+
+  article .gale{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .centrado {
+    position: absolute;
+    top: 86%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    color: #2a92b4;
+    text-shadow: 1px 1px 30px rgb(158, 158, 158);
+    width: 75%;
+
+   
+  }
+
+  .gal{
+    height: 210px;
+    
+  }
+  .gale img {
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease ;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px #64CCC5;
+    width: 30%;
+  }
+  .gale img:hover{
+    cursor: crosshair;
+    width: 120px;
+    opacity: 1;
+    filter: contrast(120%);
+   
+  }
+  .izq{
+   font-size: 14px;
+   width: 100%;
+  }
+  .imagendere{
+    display: none;
+  }
+
+.container{
+  width: 100%;
+}
+  .card  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    height: 300px; 
+}
+
+.card img {
+   
+    width: 100%; 
+    height: 100%;
+    border-radius: 30px;
+}
+.card .contenido{
+  font-size: 10px;
+}
+.contenido a{
+  height: 15px;
+  margin: 5px;
+}
+
+
+.card .contenido p {
+  line-height: 1.1;
+  color: #343434;
+  width: 100%;
+}
+
+.card .contenido h3 {
+  font-weight: 200px;
+  margin-bottom: 10px;
+
+}
+
+.card .contenido a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px;
+  margin-top: 5px;
+  color: #2fb4cc;
+  border: 1px solid #2fb4cc;
+  border-radius: 5px;
+  transition: all 400ms ease;
+}
+table{
+  font-size: 10px;
+  width: 85%; 
+  justify-content: space-between;
+}
+}   
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html {
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #5A5A5A;
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+#container {
+  border: solid 3px #e4e4e4;
+  max-width: 768px;
+  margin: 60px auto;
+  position: relative;
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  border-bottom: solid 2px #ffffff;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+.icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #ffffff;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.email {
+	float: right;
+	width: 100%;
+  
+}
+
+input[type='text'], [type='email'], [type='password'] {
+	background: none;
+  border: none;
+	border-bottom: solid 2px #ffffff;
+	color: #ffffff;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, [type='password']:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+.message {
+	float: none;
+}
+
+.name {
+	float: left;
+	width: 45%;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+
+::-webkit-input-placeholder {
+	color: #ffffff;
+}
+
+:-moz-placeholder { 
+	color: #ffffff;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #ffffff;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #474544;
+}
+
+#form_button {
+  background: none; 
+  border: solid 2px #fffefd;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#form_button:hover {
+  background: #474544;
+  color: #F2F3EB;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  
+  .underline {
+    width: 68px;
+  }
+  
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+  
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .underline {
+    width: 53px;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
 }
