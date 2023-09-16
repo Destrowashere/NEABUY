@@ -40,14 +40,13 @@ while ($fila = mysqli_fetch_array($query)) {
         <td><?php echo $fila['Precio']; ?></td>
         <td><?php echo $fila['Descripcion']; ?></td>
           <th scope="row">
-            <a href="editar.php?Id<?php
-echo $fila['Id_Producto']
-?>" class="btn btn-warning" >Editar datos</a>
+          <a href="editar.php?Id=<?php echo $fila['Id_Producto'] ?>" class="btn btn-warning" >Editar datos</a>
+
             <a href="eliminar.php?Id=<?php
 echo $fila['Id_Producto']
 ?>" class="btn  btn-danger">Eliminar producto</a>
             
-          </th>
+          
     </tr>
     <?php
 }

@@ -2,7 +2,8 @@
   
        include_once('conexcrudd.php');
 
-       $id = $_GET['id'];
+       $id = $_GET['Id'];
+
 
 
        $sql = "SELECT * FROM producto WHERE Id_Producto = '$id'";

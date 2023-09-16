@@ -10,7 +10,7 @@
   <h1 class="bg-warning p-2 text-white text-center">Agregar producto</h1>
     <br>
             <div class="container">
-            <form action="insertar.php" method="POST">
+            <form action="instertar.php" method="POST">
   <div class="mb-3">
 
     <input type="text" class="form-control"  placeholder="Nombre" name="Nombre">

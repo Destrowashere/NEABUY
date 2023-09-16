@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2023 a las 03:38:04
+-- Tiempo de generación: 16-09-2023 a las 13:25:52
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -44,13 +44,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Contraseña`, `Correo`, `Telefono`, `Direccion`, `Fecha`, `Cedula`) VALUES
-(22, 'dasdsad', 'dasdasdasd', 'adasdasdasda', 'a@dsadsad', 2147483647, 'dasdasd', '2023-09-12', 0),
-(23, 'zouna', 'ozuna', 'ozuna1', 'ozuna@ozu', 3223969, 'dsadasd', '2023-09-12', 0),
-(24, 'Felix', 'Santafe', '123456789', '123@123', 2147483647, 'feasdas', '2023-09-12', 0),
-(25, 'jdksad', 'dfsfasdf', 'asdsdsad', 'a@sdad', 3223969154, 'dasdsad', '2023-09-12', 0),
-(26, 'Felix', 'Santafe', 'feilx55santafe', 'felix@gmail.com', 3223969154, 'calle8a 92 71', '2023-09-13', 1011091547),
-(27, 'Juan David', 'Lopez Perez', 'djksajdsadkda', 'Juan@gmail.com', 3142843210, 'Calle 99b', '2023-09-13', 2147483647),
-(28, 'sadasd', 'sedadas', 'dsadada', 'dasd@dsa', 321312315, 'dasdada', '2023-09-13', 2147483647);
+(1, 'Felix', 'Santafe', 'felix55santafe', 'felix@mail.com', 3223969154, 'asdsadas', '2023-09-13', 1011091547);
 
 -- --------------------------------------------------------
 
@@ -87,9 +81,16 @@ CREATE TABLE `factura` (
 CREATE TABLE `producto` (
   `Nombre` varchar(30) NOT NULL,
   `Precio` varchar(30) NOT NULL,
-  `Stock` int(30) NOT NULL,
+  `Descripcion` varchar(100) NOT NULL,
   `Id_Producto` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`Nombre`, `Precio`, `Descripcion`, `Id_Producto`) VALUES
+('Pan', '$200', 'Pan', 1);
 
 --
 -- Índices para tablas volcadas
@@ -127,7 +128,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle`
@@ -145,7 +146,7 @@ ALTER TABLE `factura`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `Id_Producto` int(30) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Producto` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
