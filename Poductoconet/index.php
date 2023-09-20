@@ -10,7 +10,7 @@
   <body>
     <header>
       <div>
-        <img src="Nearbuylogo-removebg-preview.png" alt class="img-logo">
+        <img src="../Nearbuylogo-removebg-preview.png" alt class="img-logo">
 
       </div>
       <nav>
