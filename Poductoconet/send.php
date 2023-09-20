@@ -7,7 +7,7 @@
         if(
             strlen($_POST["name"]) >= 1 &&
             strlen($_POST["buy"]) >= 1 &&
-            strlen($_POST["desc"]) >= 1&&
+            strlen($_POST["desc"]) >= 1 &&
          
         ){
             $name = trim($_POST["name"]);
