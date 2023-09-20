@@ -19,7 +19,6 @@ if(isset($_POST["send"])){
         $direct = trim($_POST["direct"]);
         $fecha = date("y/m/d");
         
-        // Aplicar hash a la contraseña
         $contrasena_encriptada = password_hash($password, PASSWORD_DEFAULT);
         
         $consulta = "INSERT INTO clientes (id_Cliente, Nombre, Apellido, Contrasena, Correo, Telefono, Direccion, Fecha, Cedula)
