@@ -11,8 +11,8 @@
          
         ){
             $name = trim($_POST["name"]);
-            $lastname = trim($_POST["buy"]);
-            $password = trim($_POST["desc"]);
+            $buy = trim($_POST["buy"]);
+            $desc = trim($_POST["desc"]);
 
            
             $consulta = "INSERT INTO producto( id_Producto, Nombre, Precio, Descripcion)

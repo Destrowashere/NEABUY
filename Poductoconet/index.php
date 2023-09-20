@@ -42,7 +42,7 @@
             
         </div>
         <a href="#">Terminos y condiciones</a>
-        <a href="crud/crud.php">crud</a>
+        <a href="../ProductosC/crud.php">crud</a>
        <input type="submit" name="send" class="btn" value="Enviar">
 
      
