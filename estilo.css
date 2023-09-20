@@ -45,7 +45,7 @@ nav li a {
 }
 
 nav li a:hover {
-  background-color: #176B87;
+  background-color: #0996c5;
   border-radius: 15px;
   transition: .3s;
 }
@@ -416,11 +416,11 @@ form .usuario {
   opacity: .8;
   transition: .5s ease ;
   border-radius: 10px;
-  box-shadow: 0px 3px 10px #64CCC5;
+  box-shadow: 0px 3px 10px #0996c5;
   
 }
 .gal img:hover{
-  cursor: crosshair;
+  cursor: default;
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
