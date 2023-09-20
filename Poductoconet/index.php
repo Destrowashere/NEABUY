@@ -46,5 +46,7 @@
         </div >
         <a href="ProductosC/crud.php">crud</a>
       
-
+        <?php 
+    include("send.php");
+?>
       </body>
