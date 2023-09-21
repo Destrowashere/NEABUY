@@ -838,3 +838,93 @@ select::-ms-expand {
   margin: auto;
   overflow: hidden;
 }
+
+
+.que-es-NearBuy {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 18px;
+  padding: 0 250px 60px 250px;
+}
+
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.tarjeta-tendero{
+  background: #27374D ;
+  color: #DDE6ED;
+  display: flex;
+  width: 46%;
+  height: 250px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  margin-left: 225px;
+  padding: 10px;
+  margin-bottom: 60px;
+
+}
+
+.tarjeta-cliente{
+  background: #526D82;
+  color: #DDE6ED;
+  display: flex;
+  width: 46%;
+  height: 250px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  margin-left: 500px;
+  padding: 10px;
+  margin-bottom: 60px;
+
+}
+
+.tarjeta-repartidor{
+  background: #9DB2BF;
+  color: #0F2027;
+  display: flex;
+  width: 46%;
+  height: 250px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  margin-left: 350px;
+  padding: 10px;
+  margin-bottom: 60px;
+
+}
+
+.cards .tarjeta-tendero img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+  margin-right: 15px;
+}
+
+.cards .tarjeta-cliente img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+  margin-right: 15px;
+}
+
+.cards .tarjeta-repartidor img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+  margin-right: 15px;
+}
