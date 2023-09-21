@@ -65,7 +65,13 @@ header .textos-header {
   justify-content: space-evenly;
 }
 
-.contenedor-sobre-nosotros .contenido-textos {
+.imagen-about {
+  width: 48%;
+  margin-right: 30px;
+  
+}
+
+.sobre-nosotros .contenido-textos {
   width: 48%;
   text-align: center;
 }
@@ -75,10 +81,36 @@ header .textos-header {
 
 }
 
-.imagen-about {
-  width: 48%;
-  
+
+.contenido-textos h3 span {
+  background: #27374D;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  font-size: 20px;
+  margin-right: 5px;
 }
+
+.contenido-textos p {
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.titulo {
+  color: #27374D;
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
 
 article {
   background-color: #fff;
@@ -93,9 +125,9 @@ article {
 
 .footer {
   padding: 40px 0;
-  background-color: #176B87;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23267e93' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%233692a0' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2345a5ac' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%2355b9b9' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%2364CCC5' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, hsla(197, 38%, 28%, 0.664), hsla(194, 35%, 19%, 0.699), #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   border-radius: 15px;
 }
@@ -103,13 +135,13 @@ article {
 .footer .social {
   text-align: center;
   padding-bottom: 25px;
-  color: #001c30;
+  color: #DDE6ED;
 }
 
 .footer .social a {
   font-size: 24px;
   color: inherit;
-  border: 1px solid #001c30;
+  border: 1px solid #DDE6ED;
   width: 40px;
   height: 40px;
   line-height: 38px;
@@ -129,7 +161,7 @@ article {
   margin-top: 15 px;
   text-align: center;
   font-size: 15px;
-  color: #001c30;
+  color: #DDE6ED;
   cursor: default;
 }
 
@@ -138,9 +170,9 @@ article {
   line-height: 1.6px;
   text-align: center;
   font-size: 18px;
-  color: #001c30;
+  color: #DDE6ED;
   padding: 0.15px;
-cursor: default;
+  cursor: default;
 }
 
 h1 {
@@ -167,10 +199,6 @@ h3 {
  color:  #526D82;
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.5;
-}
 
 .container {
   width: 100%;
@@ -205,15 +233,6 @@ p {
 .Imagen {
   justify-content: flex-end;
 }
-
-.contenedor {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
 
 
 .centrado {
@@ -420,34 +439,6 @@ form .usuario {
   box-shadow: 0px 1px 10px rgb(0, 0, 0);
     cursor: default;
     min-width: 0;
-}
-
-
-
-.gal{
-  display: flex ;
-  width: 600px;
-  height: 430px;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-.gal img {
-  width: 0px;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: .8;
-  transition: .5s ease ;
-  
-  box-shadow: 0px 3px 10px #242424a1;
-  
-}
-.gal img:hover{
-  cursor: default;
-  width: 300px;
-  opacity: 1;
-  filter: contrast(120%);
- 
 }
 
 
