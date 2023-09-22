@@ -26,14 +26,14 @@ if(isset($_POST["send"])){
         $resultado1 = mysqli_query($conex, $consulta1);
         
         if($resultado1):
-            $id_cliente = mysqli_insert_id($conex); // Obtener el ID del cliente recién insertado
+            $id_cliente = mysqli_insert_id($conex);
             
             $consulta2 = "INSERT INTO claves (id_Cliente, Correo, Contrasena)
                         VALUES ('$id_cliente', '$email', '$contrasena_encriptada')";
             $resultado2 = mysqli_query($conex, $consulta2);
         
             if($resultado2):
-                $rol_seleccionado = $_POST["role"]; // Obtener el rol seleccionado del formulario
+                $rol_seleccionado = $_POST["role"]; 
                 $consulta3 = "INSERT INTO roles (id_Cliente, Rol)
                             VALUES ('$id_cliente', '$rol_seleccionado')";
                 $resultado3 = mysqli_query($conex, $consulta3);
