@@ -50,7 +50,13 @@
             <input type="text" name="direct" placeholder="Direccion" required required minlength="6" maxlength="50">
             <i class="fa-solid fa-house-user"></i>
         </div>
-
+        <div class="input-container">
+            <select name="role" required>
+                <option value="Cliente">Cliente</option>
+                <option value="Tendero">Tendero</option>
+                <option value="Repartidor">Repartidor</option>
+            </select>
+        </div>
         <a href="#">Terminos y condiciones</a>
         <a href="crud/crud.php">crud</a>
        <input type="submit" name="send" class="btn" value="Enviar">

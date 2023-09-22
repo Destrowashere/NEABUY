@@ -9,7 +9,7 @@ if(isset($_POST["send"])){
         strlen($_POST["password"]) >= 1 &&
         strlen($_POST["email"]) >= 1 &&
         strlen($_POST["phone"]) >= 1
-    ){
+    ):
         $name = trim($_POST["name"]);
         $lastname = trim($_POST["lastname"]);
         $password = trim($_POST["password"]);
@@ -25,31 +25,38 @@ if(isset($_POST["send"])){
                     VALUES ('', '$name', '$lastname',  '$phone', '$direct', '$fecha', '$Cedula')";
         $resultado1 = mysqli_query($conex, $consulta1);
         
-        if($resultado1) {
+        if($resultado1):
             $id_cliente = mysqli_insert_id($conex); // Obtener el ID del cliente recién insertado
             
-            $consulta2 = "INSERT INTO claves (id_Cliente,  Correo, Contrasena)
-                    VALUES ('$id_cliente', '$email', '$contrasena_encriptada')";
+            $consulta2 = "INSERT INTO claves (id_Cliente, Correo, Contrasena)
+                        VALUES ('$id_cliente', '$email', '$contrasena_encriptada')";
             $resultado2 = mysqli_query($conex, $consulta2);
-            
-            if($resultado2) {
-                ?>
-                <h3 class="success">Tu registro se ha completado</h3>
-                <?php
-            } else{
+        
+            if($resultado2):
+                $rol_seleccionado = $_POST["role"]; // Obtener el rol seleccionado del formulario
+                $consulta3 = "INSERT INTO roles (id_Cliente, Rol)
+                            VALUES ('$id_cliente', '$rol_seleccionado')";
+                $resultado3 = mysqli_query($conex, $consulta3);
+                
+                if($resultado3):
+                    ?>
+                    <h3 class="success">Tu registro se ha completado</h3>
+                    <?php
+                else:
+                    ?>
+                    <h3 class="error">Ocurrió un error al insertar el rol</h3>
+                    <?php
+                endif;
+            else:
                 ?>
                 <h3 class="error">Ocurrió un error al insertar la clave</h3>
                 <?php
-            }
-        } else{
+            endif;
+        else:
             ?>
             <h3 class="error">Ocurrió un error al insertar el cliente</h3>
             <?php
-        }
-    } else{
-        ?>
-        <h3 class="error">Llena todos los campos</h3>
-        <?php
-    }
+        endif;
+    endif;
 }
 ?>
