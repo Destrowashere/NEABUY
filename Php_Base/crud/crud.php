@@ -42,7 +42,6 @@ while ($fila = mysqli_fetch_array($query)) {
         <th scope="row"><?php echo $fila['id_Cliente']; ?></th>
         <td><?php echo $fila['Nombre']; ?></td>
         <td><?php echo $fila['Apellido']; ?></td>
-        <td><?php echo $fila['Correo']; ?></td>
         <td><?php echo $fila['Telefono']; ?></td>
         <td><?php echo $fila['Direccion']; ?></td>
         <td><?php echo $fila['Cedula']; ?></td>

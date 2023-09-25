@@ -41,12 +41,8 @@ echo $fila['Nombre']
     <input type="text" class="form-control"  placeholder="Apellido" name="Apellido" value="<?php
 echo $fila['Apellido']
 ?>">
-  </div>
-  <div class="mb-3">
-  <label class="form-label">Correo</label>
-    <input type="mail" class="form-control"  placeholder="Correo" name="Correo" value="<?php
-echo $fila['Correo']
-?>">
+  
+ 
   </div>
   <div class="mb-3">
   <label class="form-label">Telefono</label>
