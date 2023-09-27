@@ -315,6 +315,30 @@ color: #FDFDFD;
     opacity:20;
     color: #ffffff;
   }
+  
+.QSS{ 
+    display: flex;
+    text-align: center;
+    cursor: default;
+  
+ }
+ .izq{
+     width: 50%;
+ }
+ 
+ .imagendere{
+   background-size: cover;
+   background-position: center;
+   width: 550px;
+   height: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5px;
+   border-radius: 20px;
+   box-shadow: 0px 1px 10px rgb(0, 0, 0);
+     cursor: default;
+     min-width: 0;
+ }
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 850px) {
     .contenedor {
