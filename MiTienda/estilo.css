@@ -22,12 +22,24 @@ header h1{
     color: #fff;
     padding: 30px 0;
 }
+.deta{
+    width: 50%;
+}
 .enlace-inicio {
     position: absolute;
     top: 40px;
     text-decoration: none;
     right: 10px; 
     color: black;
+  
+}
+.enlace-inicio2 {
+    position: absolute;
+    top: 40px;
+    text-decoration: none;
+    right: 60px; 
+    color: black;
+  
 }
 header a{
     height: 300px;
@@ -90,6 +102,24 @@ header a{
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+.deta {
+    display: block;
+    margin: 8px auto;
+    background-color: rgb(161, 158, 158);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 12px;
+    text-align: center; 
+}
+
+.deta:hover{
+    background-color: black;
+    transition: .5s;
 }
 /* seccion carrito */
 .carrito{
