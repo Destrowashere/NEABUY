@@ -322,10 +322,42 @@ color: #FDFDFD;
     cursor: default;
   
  }
+ .QSS .deta{
+    display: block;
+    margin: 6px auto;
+    background-color: rgb(161, 158, 158);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 16px;
+    text-align: center; 
+ }
+ .QSS .deta:hover{
+    background-color: black;
+    transition: .5s;
+}
+article {
+    background-color: #fff;
+    padding: 20px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+  }
+  
  .izq{
+   
      width: 50%;
  }
- 
+ .izq p{
+    font-size: 20px;
+ }
+ .izq h3{
+    font-size: 40px;
+ }
  .imagendere{
    background-size: cover;
    background-position: center;
