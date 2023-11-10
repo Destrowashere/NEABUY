@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-09-2023 a las 04:33:07
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 10-11-2023 a las 18:41:44
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `nearbuy`
+-- Base de datos: `neabuybonito`
 --
 
 -- --------------------------------------------------------
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `claves` (
   `id_Cliente` int(30) NOT NULL,
   `Correo` varchar(50) NOT NULL,
-  `contrasena` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `contrasena` varchar(270) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `claves`
@@ -40,7 +40,8 @@ CREATE TABLE `claves` (
 INSERT INTO `claves` (`id_Cliente`, `Correo`, `contrasena`) VALUES
 (7, 'felixsantiagosantafe@gmail.com', '$2y$10$5o07HWEuO0Hs/vUO1FXsKORiPfY/e0BAcBjPZjhXOKK'),
 (8, 'felix@gmail.com', '$2y$10$f/W0z/ugE7.7Rh3AjGDuZOJaCyMgqRz5Ccnoesg7kpL'),
-(9, 'andre@gmail.com', '$2y$10$w1VazuTr.VgS0K9os2BWzeBDprHu.G3.fa2zI7BxkSK');
+(9, 'andre@gmail.com', '$2y$10$w1VazuTr.VgS0K9os2BWzeBDprHu.G3.fa2zI7BxkSK'),
+(10, 'manubejaardi17@gmail.com', '$2y$10$UCt7OHy.yrLCC3eGqkYf..s7NmO/0Ecd08NeqyUPX6/AGTFlJYfHK');
 
 -- --------------------------------------------------------
 
@@ -56,7 +57,7 @@ CREATE TABLE `clientes` (
   `Direccion` varchar(60) NOT NULL,
   `Fecha` date NOT NULL,
   `Cedula` bigint(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -68,7 +69,8 @@ INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Telefono`, `Direcci
 (6, 'Raul', 'Poveda', 3223969154, 'Calle 8a 92-71', '2023-09-20', 1011091547),
 (7, 'Felix', 'Santafe', 3223969154, 'calle 8a', '2023-09-22', 1011091547),
 (8, 'Felix', 'Santafe', 3223969154, 'calle 8a', '2023-09-22', 1011091547),
-(9, 'Andres', 'Leon', 3142759521, 'Melgar', '2023-09-22', 1202132134);
+(9, 'Andres', 'Leon', 3142759521, 'Melgar', '2023-09-22', 1202132134),
+(10, 'MAnuek', 'sdgfsdfgdfg', 3203151165, 'ghgfrhf', '2023-11-10', 5345615);
 
 -- --------------------------------------------------------
 
@@ -81,7 +83,7 @@ CREATE TABLE `producto` (
   `Precio` varchar(30) NOT NULL,
   `Descripcion` varchar(100) NOT NULL,
   `Id_Producto` int(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `producto`
@@ -109,7 +111,7 @@ CREATE TABLE `repartidor` (
   `Apellido` varchar(50) NOT NULL,
   `Telefono` int(10) NOT NULL,
   `medioTrasp` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -120,14 +122,15 @@ CREATE TABLE `repartidor` (
 CREATE TABLE `roles` (
   `id_Cliente` int(11) NOT NULL,
   `Rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `roles`
 --
 
 INSERT INTO `roles` (`id_Cliente`, `Rol`) VALUES
-(9, 'Repartidor');
+(9, 'Repartidor'),
+(10, 'Cliente');
 
 -- --------------------------------------------------------
 
@@ -140,7 +143,7 @@ CREATE TABLE `tendero` (
   `apellido` varchar(30) NOT NULL,
   `direccion` varchar(60) NOT NULL,
   `NTienda` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tablas volcadas
@@ -190,7 +193,7 @@ ALTER TABLE `tendero`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
@@ -208,7 +211,7 @@ ALTER TABLE `repartidor`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `tendero`
