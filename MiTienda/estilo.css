@@ -4,11 +4,12 @@
     padding:0;
     font-family: 'Open Sans';
 }
+
 header{
     background: url(img/holanda.png);
     background-size: cover;
     background-position:center;
-    height: 300px;
+    height: 200px;
 }
 .img-logo {
     width: 300px;
@@ -20,6 +21,29 @@ header h1{
     /* background-color: #000; */
     color: #fff;
     padding: 30px 0;
+}
+.deta{
+    width: 50%;
+}
+.enlace-inicio {
+    position: absolute;
+    top: 40px;
+    text-decoration: none;
+    right: 10px; 
+    color: black;
+  
+}
+.enlace-inicio2 {
+    position: absolute;
+    top: 40px;
+    text-decoration: none;
+    right: 60px; 
+    color: black;
+  
+}
+header a{
+    height: 300px;
+    align-items: end;
 }
 .contenedor{
     max-width: 1200px;
@@ -78,6 +102,24 @@ header h1{
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+.deta {
+    display: block;
+    margin: 8px auto;
+    background-color: rgb(161, 158, 158);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 12px;
+    text-align: center; 
+}
+
+.deta:hover{
+    background-color: black;
+    transition: .5s;
 }
 /* seccion carrito */
 .carrito{
@@ -198,6 +240,137 @@ header h1{
     scale: 1.05;
 }
 
+.footer {
+    padding: 150px  0px ;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-2{
+    width: 300px;
+}
+
+*.boton-coments{
+    display: inline-block;
+    border: 1px solid #176B87;
+    padding: 10px 35px;
+    margin-right: 20px;
+    color: #fdfdfd;
+    border-radius: 25px;
+    height: 100px;
+    width: 200px;
+    text-decoration: none;
+}
+.boton-coments:hover{
+    
+    border: 1px solid #DAFFFB;
+
+}
+
+.boton-coments:hover {
+background: linear-gradient(90deg, #176B87 0%, #64CCC5 100%);
+border-color: rgb(240, 240, 240);
+color: #FDFDFD;
+
+}
+.links h4{
+    color: #fdfdfd;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.links ul li a{
+    color: #FDFDFD;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.footer {
+    padding: 30px 30px;
+    background-color: #176B87;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23267e93' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%233692a0' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2345a5ac' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%2355b9b9' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%2364CCC5' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .socials {
+    display: flex;
+}
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #001c30;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 30%;
+    margin: 0.8px 15px;
+    opacity: 0.75;
+}
+.footer .social a:hover {
+    opacity:20;
+    color: #ffffff;
+  }
+  
+.QSS{ 
+    display: flex;
+    text-align: center;
+    cursor: default;
+  
+ }
+ .QSS .deta{
+    display: block;
+    margin: 6px auto;
+    background-color: rgb(161, 158, 158);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 16px;
+    text-align: center; 
+ }
+ .QSS .deta:hover{
+    background-color: black;
+    transition: .5s;
+}
+article {
+    background-color: #fff;
+    padding: 20px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+  }
+  
+ .izq{
+   
+     width: 50%;
+ }
+ .izq p{
+    font-size: 20px;
+ }
+ .izq h3{
+    font-size: 40px;
+ }
+ .imagendere{
+   background-size: cover;
+   background-position: center;
+   width: 550px;
+   height: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5px;
+   border-radius: 20px;
+   box-shadow: 0px 1px 10px rgb(0, 0, 0);
+     cursor: default;
+     min-width: 0;
+ }
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 850px) {
     .contenedor {
