@@ -25,7 +25,7 @@ if (!empty($_POST["submit"])) {
                 if (password_verify($contrasena, $hashedPassword)) {
                     $_SESSION['usuario_nombre'] = $row['correo'];
                     $_SESSION['usuario_apellido'] = $row['contrasena'];
-                    header("location: index.html");
+                    header("location: ../index.html");
                     exit();
                 } else {
                     $error_message = "Contraseña incorrecta";
