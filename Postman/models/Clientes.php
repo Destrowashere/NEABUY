@@ -22,7 +22,7 @@
         }
 
         
-        public function insert_clientes($id_Cliente, $Nombre, $Apellido, $Telefono, $Direccion, $Fecha, $Cedula) {
+        public function insert_clientes($Nombre, $Apellido, $Telefono, $Direccion, $Fecha, $Cedula) {
             $conectar = parent::conexion();
             parent::set_names();
 
