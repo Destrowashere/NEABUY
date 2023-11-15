@@ -25,16 +25,14 @@
         public function insert_clientes($Nombre, $Apellido, $Telefono, $Direccion, $Fecha, $Cedula) {
             $conectar = parent::conexion();
             parent::set_names();
-        
-            $sql = "INSERT INTO clientes(id_Cliente, Nombre, Apellido, Telefono, Direccion, Fecha, Cedula) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO clientes(id_Cliente, Nombre, Apellido, Telefono, Direccion, Fecha, Cedula) VALUES (NULL, ?, ?, ?, ?, ?, ?)";
             $sql = $conectar->prepare($sql);
-            $sql->bindParam(1, $id_Cliente);
-            $sql->bindParam(2, $Nombre);
-            $sql->bindParam(3, $Apellido);
-            $sql->bindParam(4, $Telefono);
-            $sql->bindParam(5, $Direccion);
-            $sql->bindParam(6, $Fecha);
-            $sql->bindParam(7, $Cedula);
+            $sql->bindParam(1, $Nombre);
+            $sql->bindParam(2, $Apellido);
+            $sql->bindParam(3, $Telefono);
+            $sql->bindParam(4, $Direccion);
+            $sql->bindParam(5, $Fecha);
+            $sql->bindParam(6, $Cedula);
             $sql->execute();
             return $resultado=$sql->fetchAll();
         }
