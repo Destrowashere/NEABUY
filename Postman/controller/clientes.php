@@ -20,13 +20,9 @@
             break;
 
             case "Insert":
-<<<<<<< Updated upstream
-                $datos=$clientes->insert_clientes($body["Nombre"],$body["Apellido"], $body["Telefono"],$body["Direccion"], $body["Fecha"],$body["Cedula"]);
-=======
-                $datos=$clientes->insert_clientes($body["id_Cliente"], $body["Nombre"],$body["Apellido"], $body["Telefono"],$body["Direccion"], $body["Fecha"],
-                $body["Cedula"]);
->>>>>>> Stashed changes
-                echo json_encode("Insert Correcto");
+                
+            $datos=$clientes->insert_clientes($body["Nombre"],$body["Apellido"], $body["Telefono"],$body["Direccion"], $body["Fecha"],$body["Cedula"]);
+            echo json_encode("Insert Correcto");
             break;
 
            case "Update":
