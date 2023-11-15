@@ -1,5 +1,5 @@
 <?php
-    class Usuarios extends Conectar{
+    class Clientes extends Conectar{
         public function get_clientes(){
             $conectar= parent::conexion();
             parent::set_names();
@@ -40,28 +40,30 @@
         }
         
         
-
-            public function update_clientes($Id, $N_Documento, $Nombre, $Apellido, $Teléfono, $Correo) {
-                $conectar = parent::conexion();
-                parent::set_names();
-                $sql = "UPDATE usuarios set N_Documento = ?, 
-                Nombre = ?, 
-                Apellido = ?, 
-                Teléfono = ?, 
-                Correo = ? 
-                WHERE 
-                Id = ?";
-                $stmt = $conectar->prepare($sql);
-                $stmt->bindParam(1, $N_Documento);
-                $stmt->bindParam(2, $Nombre);
-                $stmt->bindParam(3, $Apellido);
-                $stmt->bindParam(4, $Teléfono);
-                $stmt->bindParam(5, $Correo);
-                $stmt->bindParam(6, $Id);
-                $stmt->execute();
-        
-                return $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            }
+        public function update_clientes($id_Cliente, $Nombre, $Apellido, $Telefono, $Direccion, $Fecha, $Cedula){
+            $conectar = parent::conexion();
+            parent::set_names();
+            $sql = "UPDATE clientes set   
+            Nombre = ?, 
+            Apellido = ?, 
+            Telefono = ?,
+            Direccion = ?,
+            Fecha = ?,
+            Cedula = ?,
+            WHERE 
+            id_Cliente = ?";
+            $sql = $conectar->prepare($sql);
+            $sql->bindParam(1, $Nombre);
+            $sql->bindParam(2, $Apellido);
+            $sql->bindParam(3, $Telefono);
+            $sql->bindParam(4, $Direccion);
+            $sql->bindParam(5, $Fecha);
+            $sql->bindParam(6, $Cedula);
+            $sql->bindParam(7, $id_Cliente);
+            $sql->execute();
+    
+            return $resultado = $sql->fetchAll();
+        }
 
 
             public function delete_clientes($Id)
