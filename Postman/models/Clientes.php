@@ -22,9 +22,10 @@
         }
 
         
-        public function insert_clientes($Nombre, $Apellido, $Telefono, $Direccion, $Fecha, $Cedula) {
+        public function insert_clientes($id_Cliente, $Nombre, $Apellido, $Telefono, $Direccion, $Fecha, $Cedula) {
             $conectar = parent::conexion();
             parent::set_names();
+<<<<<<< Updated upstream
             $sql = "INSERT INTO clientes(id_Cliente, Nombre, Apellido, Telefono, Direccion, Fecha, Cedula) VALUES (NULL, ?, ?, ?, ?, ?, ?)";
             $sql = $conectar->prepare($sql);
             $sql->bindParam(1, $Nombre);
@@ -33,8 +34,19 @@
             $sql->bindParam(4, $Direccion);
             $sql->bindParam(5, $Fecha);
             $sql->bindParam(6, $Cedula);
+=======
+            $sql = "INSERT INTO clientes(id_Cliente, Nombre, Apellido, Telefono, Direccion, Fecha, Cedula) VALUES (NULL, ?, ?, ?, ?, ?, ?);";
+            $sql = $conectar->prepare($sql);
+            $sql->bindValue(1, $id_Cliente);
+            $sql->bindValue(2, $Nombre);
+            $sql->bindValue(3, $Apellido);
+            $sql->bindValue(4, $Telefono);
+            $sql->bindValue(5, $Direccion);
+            $sql->bindValue(6, $Fecha);
+            $sql->bindValue(7, $Cedula);
+>>>>>>> Stashed changes
             $sql->execute();
-            return $resultado=$sql->fetchAll();
+            return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
         
         
