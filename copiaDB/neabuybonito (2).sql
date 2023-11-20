@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2023 a las 18:41:44
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Servidor: 127.0.0.1:3307
+-- Tiempo de generación: 16-11-2023 a las 19:42:23
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `neabuybonito`
+-- Base de datos: `nearbuybonitoo`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +31,7 @@ CREATE TABLE `claves` (
   `id_Cliente` int(30) NOT NULL,
   `Correo` varchar(50) NOT NULL,
   `contrasena` varchar(270) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `claves`
@@ -57,7 +57,7 @@ CREATE TABLE `clientes` (
   `Direccion` varchar(60) NOT NULL,
   `Fecha` date NOT NULL,
   `Cedula` bigint(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -70,7 +70,7 @@ INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Telefono`, `Direcci
 (7, 'Felix', 'Santafe', 3223969154, 'calle 8a', '2023-09-22', 1011091547),
 (8, 'Felix', 'Santafe', 3223969154, 'calle 8a', '2023-09-22', 1011091547),
 (9, 'Andres', 'Leon', 3142759521, 'Melgar', '2023-09-22', 1202132134),
-(10, 'MAnuek', 'sdgfsdfgdfg', 3203151165, 'ghgfrhf', '2023-11-10', 5345615);
+(10, 'Pepe', 'Pedraza', 320315313, 'Carrera 7', '2023-12-12', 1022021);
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE `producto` (
   `Precio` varchar(30) NOT NULL,
   `Descripcion` varchar(100) NOT NULL,
   `Id_Producto` int(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `producto`
@@ -107,11 +107,23 @@ INSERT INTO `producto` (`Nombre`, `Precio`, `Descripcion`, `Id_Producto`) VALUES
 --
 
 CREATE TABLE `repartidor` (
-  `id_repartidor` int(11) NOT NULL,
+  `id_Cliente` int(11) NOT NULL,
   `Apellido` varchar(50) NOT NULL,
   `Telefono` int(10) NOT NULL,
   `medioTrasp` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `repartidor`
+--
+
+INSERT INTO `repartidor` (`id_Cliente`, `Apellido`, `Telefono`, `medioTrasp`) VALUES
+(1, 'Diaz', 34651321, 'Cicla'),
+(5, 'Hernandez', 32151121, 'Cicla'),
+(6, 'Arias', 31513165, 'Moto'),
+(7, 'Gonzalo', 1321154, 'Carro'),
+(8, 'Hernandez', 32151121, 'taxi'),
+(10, 'Hernandez', 320315313, '');
 
 -- --------------------------------------------------------
 
@@ -122,7 +134,7 @@ CREATE TABLE `repartidor` (
 CREATE TABLE `roles` (
   `id_Cliente` int(11) NOT NULL,
   `Rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `roles`
@@ -139,11 +151,12 @@ INSERT INTO `roles` (`id_Cliente`, `Rol`) VALUES
 --
 
 CREATE TABLE `tendero` (
-  `id_tendero` int(11) NOT NULL,
+  `id_Cliente` int(11) NOT NULL,
   `apellido` varchar(30) NOT NULL,
   `direccion` varchar(60) NOT NULL,
-  `NTienda` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `NTienda` varchar(60) NOT NULL,
+  `Id_Producto` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
@@ -171,7 +184,7 @@ ALTER TABLE `producto`
 -- Indices de la tabla `repartidor`
 --
 ALTER TABLE `repartidor`
-  ADD PRIMARY KEY (`id_repartidor`);
+  ADD PRIMARY KEY (`id_Cliente`);
 
 --
 -- Indices de la tabla `roles`
@@ -183,7 +196,8 @@ ALTER TABLE `roles`
 -- Indices de la tabla `tendero`
 --
 ALTER TABLE `tendero`
-  ADD PRIMARY KEY (`id_tendero`);
+  ADD PRIMARY KEY (`id_Cliente`),
+  ADD UNIQUE KEY `Id_Producto` (`Id_Producto`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -205,7 +219,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `repartidor`
 --
 ALTER TABLE `repartidor`
-  MODIFY `id_repartidor` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -217,7 +231,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `tendero`
 --
 ALTER TABLE `tendero`
-  MODIFY `id_tendero` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -228,6 +242,25 @@ ALTER TABLE `tendero`
 --
 ALTER TABLE `claves`
   ADD CONSTRAINT `claves_ibfk_1` FOREIGN KEY (`id_Cliente`) REFERENCES `clientes` (`id_Cliente`);
+
+--
+-- Filtros para la tabla `repartidor`
+--
+ALTER TABLE `repartidor`
+  ADD CONSTRAINT `repartidor_ibfk_1` FOREIGN KEY (`id_Cliente`) REFERENCES `clientes` (`id_Cliente`);
+
+--
+-- Filtros para la tabla `roles`
+--
+ALTER TABLE `roles`
+  ADD CONSTRAINT `roles_ibfk_1` FOREIGN KEY (`id_Cliente`) REFERENCES `clientes` (`id_Cliente`);
+
+--
+-- Filtros para la tabla `tendero`
+--
+ALTER TABLE `tendero`
+  ADD CONSTRAINT `tendero_ibfk_1` FOREIGN KEY (`id_Cliente`) REFERENCES `clientes` (`id_Cliente`),
+  ADD CONSTRAINT `tendero_ibfk_2` FOREIGN KEY (`Id_Producto`) REFERENCES `producto` (`Id_Producto`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
