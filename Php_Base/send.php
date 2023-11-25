@@ -19,6 +19,22 @@ if(isset($_POST["send"])){
         $direct = trim($_POST["direct"]);
         $fecha = date("y/m/d");
         
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $captcha = $_POST['g-recaptcha-response'];
+        $secretkey = "6LcXxxspAAAAAFiywT5zTbc3tpGpGqi7hcoZLPgI";
+
+        $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+
+        $atributos = json_decode($respuesta, TRUE);
+
+        if(empty($_POST['g-recaptcha-response'])){
+            $errors[] = 'Verificar Captcha';
+        }
+
+        if(!$atributos['success']){
+            $errors[]= 'Verificar Captcha';
+        }
+
         $contrasena_encriptada = password_hash($password, PASSWORD_DEFAULT);
         
         $consulta1 = "INSERT INTO clientes (id_Cliente, Nombre, Apellido, Telefono, Direccion, Fecha, Cedula)
