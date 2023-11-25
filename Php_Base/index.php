@@ -7,13 +7,19 @@
     <link rel="icon" href="Nearbuylogo-removebg-preview.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeY1xspAAAAANGSMIJCNpQEediDDpztjC9V79of"></script>
+<script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
 </head>
 <body>
     
-<form method="POST" autocomplete="off">
+<form method="POST" autocomplete="off" id="demo-form">
 <header class="inicio">
                 <a href="../index.html">Inicio</a>
             </header>
@@ -60,17 +66,15 @@
                 <option value="Repartidor">Repartidor</option>
             </select>
 
-            <div class="mb-3 mt-3"  >
-                    
-                    </div>
-                    <div class="g-recaptcha"  data-sitekey="6LcXxxspAAAAAFiywT5zTbc3tpGpGqi7hcoZLPgI" >
-                           
-                    </div>
-        </div>
+           
       
         <a href="#">Terminos y condiciones</a>
         <a href="crud/crud.php">crud</a>
-       <input type="submit" name="send" class="btn" value="Enviar">
+      
+<div class="text-center"> 
+    <input type="submit" name="send" class="btn btn-primary text-white" value="Enviar">
+</div>
+
 
      
     </div>
