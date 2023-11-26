@@ -11,6 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
 </head>
 <body>
     
@@ -61,7 +64,24 @@
                 <option value="Repartidor">Repartidor</option>
             </select>
 
-           
+           <div class="mb-3"> 
+
+           <div class="g-recaptcha" data-sitekey="6Lf3sBwpAAAAAJSrKAkpUnMaAA2pDCu5LP7c9E79"> 
+            <?php  
+            $ip= $_SERVER['REMOTE_ADDR'];
+       $captcha = $_POST['g-recaptcha-response'];
+       $secretkey = "6Lf3sBwpAAAAAJoHLdVB4pW0yjo6oa7rBueCUdaJ";
+
+       $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+
+       $atributos = json_decode($respuesta,true);
+       if(!$atributos['success']){
+        $error[] = 'verificar captcha';
+       }?>
+
+</div>
+
+           </div>
       
         <a href="#">Terminos y condiciones</a>
         <a href="crud/crud.php">crud</a>
