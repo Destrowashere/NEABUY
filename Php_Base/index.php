@@ -66,18 +66,29 @@
 
            <div class="mb-3"> 
 
-           <div class="g-recaptcha" data-sitekey="6Lf3sBwpAAAAAJSrKAkpUnMaAA2pDCu5LP7c9E79"> 
-            <?php  
-            $ip= $_SERVER['REMOTE_ADDR'];
-       $captcha = $_POST['g-recaptcha-response'];
-       $secretkey = "6Lf3sBwpAAAAAJoHLdVB4pW0yjo6oa7rBueCUdaJ";
+           <div class="g-recaptcha" data-sitekey="6LdksRwpAAAAANLPnkPXaBy3HpApxK7hV4fGSdrR"> 
+           <?php
+    $error = []; 
 
-       $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                
+        if (isset($_POST['g-recaptcha-response'])) {
+            $captcha = $_POST['g-recaptcha-response'];
+            $ip = $_SERVER['REMOTE_ADDR'];
+            $secretkey = "6LdksRwpAAAAAKjz4Zt1VSbnXm7iuSBYUSnCAtnZ";
 
-       $atributos = json_decode($respuesta,true);
-       if(!$atributos['success']){
-        $error[] = 'verificar captcha';
-       }?>
+            $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+
+            $atributos = json_decode($respuesta, true);
+            if (!$atributos['success']) {
+                $error[] = 'Verificar captcha';
+            }
+        } else {
+           
+            $error[] = 'Por favor, completa el captcha';
+        }
+    }
+?>
 
 </div>
 
