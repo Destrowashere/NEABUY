@@ -3,7 +3,7 @@
     $host="localhost";
     $user="root";
     $pass="";
-    $db="neabuybonito";
+    $db="neabuybonitoo";
 
     $conex=mysqli_connect($host,$user,$pass,$db);
 ?>

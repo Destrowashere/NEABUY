@@ -19,6 +19,8 @@ if(isset($_POST["send"])){
         $direct = trim($_POST["direct"]);
         $fecha = date("y/m/d");
         
+       
+        
         $contrasena_encriptada = password_hash($password, PASSWORD_DEFAULT);
         
         $consulta1 = "INSERT INTO clientes (id_Cliente, Nombre, Apellido, Telefono, Direccion, Fecha, Cedula)
