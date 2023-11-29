@@ -118,12 +118,13 @@ textarea::placeholder {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css">
    
    
-    <div>
-      <input id="origin" type="text" placeholder="Origen">
-      <input id="destination" type="text" placeholder="Destino">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <input id="origin" type="text" placeholder="Origen" style="width: 80%; max-width: 400px; padding: 8px;">
+      <input id="destination" type="text" placeholder="Destino" style="width: 80%; max-width: 400px; padding: 8px;">
       <button onclick="calculateAndDisplayRoute()">Mostrar Ruta</button>
     </div>
-    <div id="map" style="height: 400px;"></div>
+    <div id="map" style="height: 400px; width: 600px; margin: 0 auto;"></div>
+    
     
     <script>
       let map;
