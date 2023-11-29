@@ -11,10 +11,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
-</script>
 
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <style>
+      #mi_mapa{
+          height: 400px;
+          width: 600px;
+          margin-left: 26%;
+          margin-bottom:5%;
+      }
+     
+#origin,
+#destination {
+  background-color: #fff; 
+  border: 2px solid #2fb4cc; 
+  border-radius: 5px; 
+  padding: 8px; 
+  margin-bottom: 10px; 
+  color: #000; 
+}
+
+
+button {
+  background-color: #2fb4cc; 
+  color: #fff;
+  border: none; 
+  border-radius: 5px; 
+  padding: 10px 15px; 
+  cursor: pointer; 
+}
+
+
+input[type='text']::placeholder,
+input[type='email']::placeholder,
+input[type='password']::placeholder,
+textarea::placeholder {
+  color: black; 
+}
+
+   </style>
 </head>
 <body style="background-color: #DDE6ED;">
   
@@ -81,7 +117,62 @@
     <script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css">
    
+   
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <input id="origin" type="text" placeholder="Origen" style="width: 80%; max-width: 400px; padding: 8px;">
+      <input id="destination" type="text" placeholder="Destino" style="width: 80%; max-width: 400px; padding: 8px;">
+      <button onclick="calculateAndDisplayRoute()">Mostrar Ruta</button>
+    </div>
+    <div id="map" style="height: 400px; width: 600px; margin: 0 auto;"></div>
+    
+    
+    <script>
+      let map;
+      let directionsService;
+      let directionsDisplay;
+      let autocomplete;
+  
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: 4.710989, lng: -74.072090 }, 
+          zoom: 12
+        });
+  
+        directionsService = new google.maps.DirectionsService();
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsDisplay.setMap(map);
+  
+        const originInput = document.getElementById('origin');
+        const destinationInput = document.getElementById('destination');
+        const originAutocomplete = new google.maps.places.Autocomplete(originInput);
+        const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+        originAutocomplete.bindTo('bounds', map);
+        destinationAutocomplete.bindTo('bounds', map);
+      }
+  
+      function calculateAndDisplayRoute() {
+        const origin = document.getElementById('origin').value;
+        const destination = document.getElementById('destination').value;
+  
+        directionsService.route({
+          origin: origin,
+          destination: destination,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('No se encontraron direcciones: ' + status);
+          }
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2r3A0UEa0MvZNfQjvGvn-kGR0WhbZ6dE&callback=initMap&libraries=places" defer></script>
+  
 
+
+
+  
     
     <section class="footer">
       <div class="social">

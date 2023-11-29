@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCTOS NEARBUY</title>
     <link rel="stylesheet" href="stylej.css">
-    <link rel="icon" href="Nearbuylogo-removebg-preview.png">
+    <link rel="icon" href="neanea-removebg-preview.png">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,21 +16,19 @@
     <header>
 
         <div class="menu container">
-            <a href="#"> <img src="Nearbuylogo-removebg-preview.png" class="logo"></a>
+            <a href="#"> <img src="neanea-removebg-preview.png" class="logo"></a>
             <input type="checkbox" id="menu">
             <label for="menu"><img src="images/menu.png" class="menu-icono"></label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Repartidor.html">Repartidor</a></li>
-                    <li><a href="tenderosi.html">tenderos</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <div id="ctn-icon-search">
+                     <i class="fas fa-search" id="icon-search"></i></div>
                 </ul>
             </nav>
         </div>
         <div class="header-content container">
             <div class="header-txt">
-                <h1>Nearbuy</h1>
+                <br>
                 <p>
                     Bienvenidos a nuestra pagina, donde encontrarás todo lo que necesitas y más. Nuestros amables tenderos están aquí para ayudarte a 
                     encontrar los productos que buscas y brindarte un servicio excepcional
@@ -41,12 +39,31 @@
                 </div>
             </div>
             <div class="header-img">
-                <img src="images/JornalerosDgitales02-removebg-preview.png" class="hamburguer" alt="hamburguer">
+                <img src="images/zorroo-removebg-preview.png" class="hamburguer" alt="hamburguer">
             </div>
 
         </div>
 
     </header>
+<br>
+
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Que deseas buscar?">
+    </div>
+    <ul id="box-search">
+    <li><a href="productos.html"><i class="fas fa-search"></i>HTML</a></li>
+    <li><a href="#"><i class="fas fa-search"></i>papas</a></li>
+    <li><a href="#"><i class="fas fa-search"></i>alfajor</a></li>
+    <li><a href="#"><i class="fas fa-search"></i>Jugo</a></li>
+    <li><a href="#"><i class="fas fa-search"></i>Panaderia</a></li>
+    <li><a href="#"><i class="fas fa-search"></i>limon</a></li>
+    <li><a href="#"><i class="fas fa-search"></i>perro</a></li>
+    <li><a href="#"><i class="fas fa-search"></i>ice</a></li>
+    </ul>
+
+
+        <div id="cover-ctn-search"></div>
+
 
     <main class="product-menu">
         <div class="container">
@@ -68,7 +85,7 @@
 
                     <div class="box-1">
                         <div class="image">
-                            <img src="PAPELERIA/esfero.png" alt="">
+                            <img src="Productos\PAPELERIA\esfero.png" alt="">
                         </div>
                         <div class="content">
                             <h3>Esfero de  tinta</h3>
@@ -78,7 +95,7 @@
                             </p>
                             <div class="icons">
                                 <span class="price">$4000</span>
-                                <span class="buy"><img src="images/car.svg" alt=""></span>
+                                <a href="../miscelanea.html">Ir</a>
                                
                             </div>
                         </div>
@@ -96,7 +113,7 @@
                             </p>
                             <div class="icons">
                                 <span class="price">$1000</span>
-                                <span class="buy"><img src="images/car.svg" alt=""></span>
+                                <a href="../miscelanea.html">Ir</a>
                             </div>
                         </div>
                     </div>
@@ -113,7 +130,7 @@
                             </p>
                             <div class="icons">
                                 <span class="price">$15000</span>
-                                <span class="buy"><img src="images/car.svg" alt=""></span>
+                                <a href="../miscelanea.html">Ir</a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +147,7 @@
                             </p>
                             <div class="icons">
                                 <span class="price">$1000</span>
-                                <span class="buy"><img src="images/car.svg" alt=""></span>
+                                <a href="../miscelanea.html">Ir</a>
                             </div>
                         </div>
                     </div>
@@ -147,7 +164,7 @@
                             </p>
                             <div class="icons">
                                 <span class="price">$30000</span>
-                                <span class="buy"><img src="images/car.svg" alt=""></span>
+                                <a href="../miscelanea.html">Ir</a>
                             </div>
                         </div>
                     </div>
@@ -598,7 +615,7 @@
             </ul>
 
         </div>
-        <a href="comentarios.html" class="boton-coments">Click para tus comentarios<img class="icon" src="images/arrow.svg" alt="icon"></a>
+        <a href="comentarios/comentarios.html" class="boton-coments">Click para tus comentarios<img class="icon" src="images/arrow.svg" alt="icon"></a>
 
         <div class="links">
             <h4>Redes sociales</h4>
