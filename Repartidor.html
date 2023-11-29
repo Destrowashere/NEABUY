@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 
+
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <style>
       #mi_mapa{
           height: 400px;
           width: 600px;
+          margin-left: 26%;
+          margin-bottom:5%;
       }
    </style>
 </head>
@@ -85,25 +89,53 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css">
    
    
-    <div id="mi_mapa"></div>
+    <div id="mi_mapa" ></div>
 
 
 
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-             <script>
-                let map= L.map('mi_mapa').setView([4.6449,-74.1028], 6)
+    <script>
+        let map = L.map('mi_mapa').setView([4.6449, -74.1028], 6);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+        const waypoints = [];
 
+        function addMarker(e) {
+            const marker = L.marker(e.latlng)
+                .addTo(map)
+                .bindPopup("Coordenadas: " + e.latlng.toString())
+                .openPopup();
 
-L.marker([4.65546,-74.15663]).addTo(map)
-    .bindPopup('Calle 8a 92-71<br>')
-    .openPopup();
-             </script>
+            marker.on('click', function () {
+                map.removeLayer(marker);
+                const index = waypoints.indexOf(e.latlng);
+                if (index > -1) {
+                    waypoints.splice(index, 1);
+                }
+                updateRoute();
+            });
+
+            waypoints.push(e.latlng);
+            updateRoute();
+        }
+
+        function updateRoute() {
+            if (waypoints.length > 1) {
+                L.Routing.control({
+                    waypoints: waypoints,
+                    routeWhileDragging: true,
+                }).addTo(map);
+            }
+        }
+
+        map.on('click', addMarker);
+    </script>
+  
+  
     
     <section class="footer">
       <div class="social">
