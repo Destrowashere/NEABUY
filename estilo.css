@@ -820,11 +820,14 @@ h1 {
   
 }
 
+
+
+
 input[type='text'], [type='email'], [type='password'] {
 	background: none;
   border: none;
 	border-bottom: solid 2px #ffffff;
-	color: #ffffff;
+	color: #000000;
 	font-size: 1.000em;
   font-weight: 400;
   letter-spacing: 1px;
@@ -1072,11 +1075,4 @@ select::-ms-expand {
   margin-left: 250px;
 }
 
-.mapa-google {
-  margin-top: 70px;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
+
