@@ -1,5 +1,5 @@
 <?php
 
-    $conex = mysqli_connect("localhost", "root", "", "nearbuybonitoo");
+    $conex = mysqli_connect("localhost", "root", "", "neabuybonitoo");
 
 ?>
