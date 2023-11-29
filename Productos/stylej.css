@@ -110,12 +110,13 @@ header{
 
 #ctn-bars-search{
     position: fixed;
-    top: 10px;
+    top: -80px;
     width: 100%;
     background-color: transparent;
     padding: 20px;
     z-index: 9;
     transition: all 600ms;
+    
 }
 
 #ctn-bars-search input{
