@@ -89,52 +89,59 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css">
    
    
-    <div id="mi_mapa" ></div>
-
-
-
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
+    <div>
+      <input id="origin" type="text" placeholder="Origen">
+      <input id="destination" type="text" placeholder="Destino">
+      <button onclick="calculateAndDisplayRoute()">Mostrar Ruta</button>
+    </div>
+    <div id="map" style="height: 400px;"></div>
+    
     <script>
-        let map = L.map('mi_mapa').setView([4.6449, -74.1028], 6);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        const waypoints = [];
-
-        function addMarker(e) {
-            const marker = L.marker(e.latlng)
-                .addTo(map)
-                .bindPopup("Coordenadas: " + e.latlng.toString())
-                .openPopup();
-
-            marker.on('click', function () {
-                map.removeLayer(marker);
-                const index = waypoints.indexOf(e.latlng);
-                if (index > -1) {
-                    waypoints.splice(index, 1);
-                }
-                updateRoute();
-            });
-
-            waypoints.push(e.latlng);
-            updateRoute();
-        }
-
-        function updateRoute() {
-            if (waypoints.length > 1) {
-                L.Routing.control({
-                    waypoints: waypoints,
-                    routeWhileDragging: true,
-                }).addTo(map);
-            }
-        }
-
-        map.on('click', addMarker);
-    </script>
+      let map;
+      let directionsService;
+      let directionsDisplay;
+      let autocomplete;
   
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: 4.710989, lng: -74.072090 }, 
+          zoom: 12
+        });
+  
+        directionsService = new google.maps.DirectionsService();
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsDisplay.setMap(map);
+  
+        const originInput = document.getElementById('origin');
+        const destinationInput = document.getElementById('destination');
+        const originAutocomplete = new google.maps.places.Autocomplete(originInput);
+        const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+        originAutocomplete.bindTo('bounds', map);
+        destinationAutocomplete.bindTo('bounds', map);
+      }
+  
+      function calculateAndDisplayRoute() {
+        const origin = document.getElementById('origin').value;
+        const destination = document.getElementById('destination').value;
+  
+        directionsService.route({
+          origin: origin,
+          destination: destination,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('No se encontraron direcciones: ' + status);
+          }
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2r3A0UEa0MvZNfQjvGvn-kGR0WhbZ6dE&callback=initMap&libraries=places" defer></script>
+  
+
+
+
   
     
     <section class="footer">
