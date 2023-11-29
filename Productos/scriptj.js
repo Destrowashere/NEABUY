@@ -25,7 +25,7 @@ function mostrar_buscador(){
 //funcion para ocultar buscador
 function ocultar_buscador(){
     bars_search.style.top="-90px"
-    cover_ctn_search,style.display="none"; 
+    cover_ctn_search.style.display="none"; 
     inputSearch.value= "";
 }
 
