@@ -22,11 +22,13 @@ header{
       justify-content: space-between;
       align-items: center;
       border-radius: 10% / 50%;
+      
 }
 
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 .menu {
@@ -79,6 +81,19 @@ header{
     cursor: pointer;
     display: none;
 }
+
+/*buscador de contenido*/
+
+#ctn-icon-search{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+
 
 .header-content {
     display: flex;
