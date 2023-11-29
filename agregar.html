@@ -22,7 +22,7 @@
     </header>
     <div class="registroa">
       <h1>Agregar producto</h1>
-      <form>
+      <form id="producto">
         <div class="custom-file">
           <label for="foto" class="custom-file-label">Agregar imagen</label>
           <br><br>
@@ -45,6 +45,24 @@
           <input class="submit" type="submit" value="Agregar" />
         </div >
         <a href="ProductosC/crud.php">crud</a>
-      
+      </form>
 
-      </body>
+        <script>  
+              const resultado = document.getElementById('producto')
+  
+          const formulario = document.getElementById('producto');
+          
+    
+          formulario.addEventListener('submit', function (e) {
+              e.preventDefault(); 
+  
+              
+              const nombre = document.getElementById('nombre').value;
+  
+              // Muestra el valor en un elemento div con id 'resultado'
+              const resultado = document.getElementById('resultado');
+              resultado.innerHTML = `Nombre: ${nombre}`;
+          });
+        </script>
+
+  </body>
