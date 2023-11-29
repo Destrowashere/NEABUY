@@ -14,7 +14,7 @@ body{
 
 
 header{
-    background-color: #4fc2d6;
+    background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2355b9b9' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2345a5ac' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%233692a0' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23267e93' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23176B87' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     background-size: cover;
@@ -29,6 +29,7 @@ header{
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    z-index: 8;
     
     
 }
@@ -41,9 +42,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
     margin-left: 60px;
-    
+    z-index: 11;
 }
 
 .logo{
@@ -110,11 +110,12 @@ header{
 
 #ctn-bars-search{
     position: fixed;
-    top: 80px;
+    top: 10px;
     width: 100%;
     background-color: transparent;
     padding: 20px;
     z-index: 9;
+    transition: all 600ms;
 }
 
 #ctn-bars-search input{
@@ -123,7 +124,7 @@ header{
     margin: auto;
     padding: 10px;
     font-size: 18px;
-   outline: 0;
+    outline: 0;
    
 }
 #box-search{
@@ -135,6 +136,7 @@ header{
     background-color: #FDFDFD;
     z-index: 8;
     overflow: hidden;
+    display: none;
 }
 
 
@@ -161,12 +163,15 @@ header{
     left: 0;
     background: #9c9898; 
     z-index: 7;
+    display: none;
 }
+
 
 .header-content {
     display: flex;
     align-items: center;
     padding: 100px 0 45px 0;
+    
 }
 
 .header-txt{
