@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Pagina de Configuracion</title>
+ <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+ <h1>Bienvenido</h1>
+ <h2>Configuracion de Datos</h2>
+ <form action="update_data.php" method="post">
+    <label for="username">Nombre de Usuario:</label>
+    <input type="text" id="username" name="username" value="<?php echo $_SESSION['username']; ?>">
+    <br>
+    <label for="email">Correo Electronico:</label>
+    <input type="text" id="email" name="email" value="<?php echo $_SESSION['email']; ?>">
+    <br>
+    <input type="submit" value="Actualizar Datos">
+ </form>
+ <h2>Cerrar Sesion</h2>
+ <a href="logout.php">Cerrar Sesion</a>
+</body>
+</html>
