@@ -221,7 +221,7 @@ header{
     border: 1px solid #176B87;
     padding: 10px 35px;
     margin-right: 20px;
-    color: #fdfdfd;
+    color: #000000;
     border-radius: 25px;
 }
 
@@ -230,7 +230,7 @@ header{
     transition: .99s;
 }
 .btn-2:hover{
-    border: 1px solid #DAFFFB;
+    border: 1px solid #000000;
 }
 
 .icon {
