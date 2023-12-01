@@ -18,3 +18,9 @@ inputs.forEach(input => {
 	input.addEventListener("focus", focusFunc);
 	input.addEventListener("blur", blurFunc);
 });
+
+
+const correo = document.getElementById("correo")
+const password = document.getElementById("password")
+const form = document.getElementById("form")
+const parrafo = document.getElementById("warnings")

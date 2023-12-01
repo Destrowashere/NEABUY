@@ -172,6 +172,13 @@ a{
 a:hover{
 	color: #38d39f;
 }
+.warnings{
+	width: 200px;
+	text-align: center;
+	margin: auto;
+	color: #32be8f;
+	padding-top: 20px;
+}
 
 .btn{
 	display: block;
