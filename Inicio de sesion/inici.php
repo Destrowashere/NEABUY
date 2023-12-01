@@ -2,7 +2,7 @@
 
 session_start();
 
-$conexion = new mysqli("localhost", "root", "", "nearbuybonitoo");
+$conexion = new mysqli("localhost", "root", "", "neabuybonitoo");
 
 $error_message = "";
 
