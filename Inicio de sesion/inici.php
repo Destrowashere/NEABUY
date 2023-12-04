@@ -33,7 +33,7 @@ if (!empty($_POST["submit"])) {
           } else {
             $_SESSION['usuario_nombre'] = $row['correo'];
             $_SESSION['usuario_apellido'] = $row['contrasena'];
-            header("location:../index.html");
+            header("location:../indexuse.html");
             exit();
           }
         } else {
