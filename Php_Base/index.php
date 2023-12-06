@@ -66,7 +66,7 @@
 
            <div class="mb-3"> 
 
-           <div class="g-recaptcha"   data-sitekey="6LdksRwpAAAAANLPnkPXaBy3HpApxK7hV4fGSdrR"> 
+           <div class="g-recaptcha" data-sitekey="6LdksRwpAAAAANLPnkPXaBy3HpApxK7hV4fGSdrR"> 
            <?php
     $error = []; 
 
@@ -95,7 +95,6 @@
            </div>
       
         <a href="#">Terminos y condiciones</a>
-        <a href="crud/crud.php">crud</a>
       
 <div class="text-center"> 
     <input type="submit" name="send" class="btn btn-primary text-white" value="Enviar">
