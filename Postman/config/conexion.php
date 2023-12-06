@@ -1,7 +1,7 @@
 <?php
 class Conectar{
     protected $dbh;
-
+     // mysql:host=127.0.0.1:3307;dbname=neabuybonitoo","root", 
     protected function Conexion(){
         try {
             $conectar = $this->dbh = new PDO("mysql:host=;dbname=nearbuybonitoo","root","");
@@ -19,4 +19,3 @@ class Conectar{
    
 }
 ?>
-/*mysql:host=127.0.0.1:3307;dbname=neabuybonitoo","root",*/
