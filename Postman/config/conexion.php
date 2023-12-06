@@ -4,7 +4,7 @@ class Conectar{
 
     protected function Conexion(){
         try {
-            $conectar = $this->dbh = new PDO("mysql:host=127.0.0.1:3307;dbname=neabuybonitoo","root","");
+            $conectar = $this->dbh = new PDO("mysql:host=;dbname=nearbuybonitoo","root","");
             return $conectar;
         } catch (Exception $e) {
             print "!Error BD¡: " . $e->getMessage() . "<br/>";
@@ -19,3 +19,4 @@ class Conectar{
    
 }
 ?>
+/*mysql:host=127.0.0.1:3307;dbname=neabuybonitoo","root",*/
