@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 16-11-2023 a las 19:42:23
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 06-12-2023 a las 21:17:06
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -24,6 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `administradores`
+--
+
+CREATE TABLE `administradores` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `role` enum('Super Administrador','Administrador','Moderador') NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `administradores`
+--
+
+INSERT INTO `administradores` (`id`, `username`, `password`, `email`, `role`, `created_at`, `updated_at`) VALUES
+(1, 'DWH', '$2y$10$ZG9IREgClSXnf4lTx.JBP.HSDq.7vMxM/dQNJhaY5CYD3xvFSDT0i', 'felixsantiagosantafe2017@gmail.com', 'Administrador', '2023-12-06 20:03:22', '2023-12-06 20:03:22');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `claves`
 --
 
@@ -38,10 +61,15 @@ CREATE TABLE `claves` (
 --
 
 INSERT INTO `claves` (`id_Cliente`, `Correo`, `contrasena`) VALUES
-(7, 'felixsantiagosantafe@gmail.com', '$2y$10$5o07HWEuO0Hs/vUO1FXsKORiPfY/e0BAcBjPZjhXOKK'),
-(8, 'felix@gmail.com', '$2y$10$f/W0z/ugE7.7Rh3AjGDuZOJaCyMgqRz5Ccnoesg7kpL'),
-(9, 'andre@gmail.com', '$2y$10$w1VazuTr.VgS0K9os2BWzeBDprHu.G3.fa2zI7BxkSK'),
-(10, 'manubejaardi17@gmail.com', '$2y$10$UCt7OHy.yrLCC3eGqkYf..s7NmO/0Ecd08NeqyUPX6/AGTFlJYfHK');
+(60, 'danguz@gmail.com', '$2y$10$UqPBErK9BqvTFazeCxuKO.CXyyCR7PH7QF0IxEp4ybSjBe4smpCiK'),
+(63, 'juan@gmail.com', '$2y$10$9X3DWC/QCh29rhSKEv/1v.M1B/HNTtObevdqHZElxtOzlrqJ7TIAa'),
+(64, 'dan@gmail.com', '$2y$10$H0djrcA99on4H3XZ/uhFHODJn3L48Ir1/PQRgbEblxO/VFAXhNTf6'),
+(65, 'felix@gmail.com', '$2y$10$bIkKLjxzk7IA/a0nR2wHZOFD.lFRUkKwNpFqeb9O9cKtEjgIno79O'),
+(66, 'mona@gmail.com', '$2y$10$z8jL9P2E.mqjl8kenlmJveEKNo8qAx4S8bxXYhec15Adk/a/54.b.'),
+(67, 'diomede@gmail.com', '$2y$10$cakf8.o4.gMPSaGrpF4DFus1ZwBFskhU2qTJazkO71gUQDCI9mVR6'),
+(68, 'diomede@gmail.com', '$2y$10$K7FSUsLezMPS8HzDEBswVuHLJ23E9n.smnyRWvZYFZ1jCZzIniZxe'),
+(69, 'karfo@gmail.com', '$2y$10$rU02rRDNDyeLo8XAgeOBlO55jvvoCsI84GjjphbShl4C/HpJa2Uo.'),
+(72, 'camilo@gmail.com', '$2y$10$uEokBqPny.J82QrMahumW.MB/ZoP.ZTVZxSwOnLDcpFGnjS87kxSG');
 
 -- --------------------------------------------------------
 
@@ -64,13 +92,18 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Telefono`, `Direccion`, `Fecha`, `Cedula`) VALUES
-(1, 'Felix', 'Santafe', 3223969154, 'rerere', '2023-09-13', 1011091547),
-(5, 'Juan', 'Hernandez', 32135221, 'Calle 8a 92-71 M5 L3', '2023-09-20', 10238213),
-(6, 'Raul', 'Poveda', 3223969154, 'Calle 8a 92-71', '2023-09-20', 1011091547),
-(7, 'Felix', 'Santafe', 3223969154, 'calle 8a', '2023-09-22', 1011091547),
-(8, 'Felix', 'Santafe', 3223969154, 'calle 8a', '2023-09-22', 1011091547),
-(9, 'Andres', 'Leon', 3142759521, 'Melgar', '2023-09-22', 1202132134),
-(10, 'Pepe', 'Pedraza', 320315313, 'Carrera 7', '2023-12-12', 1022021);
+(59, 'Andres', 'Cardenas', 3257291332, 'asdads', '2023-11-26', 472941702),
+(60, 'Daniel', 'Guzman', 3258129423, 'Tintal', '2023-11-27', 2011039265),
+(63, 'juan', 'ortiz', 3157293132, 'Avenida guayacanes', '2023-11-28', 2931893282),
+(64, 'Daniel', 'ortiz', 3258271323, 'Guayacanes', '2023-11-29', 1013827492),
+(65, 'felix', 'santafe', 3223969154, 'calle 8a', '2023-11-30', 1011091547),
+(66, 'Valentina', 'Velazquez', 314589329, 'Valladolid', '2023-11-30', 2938192372),
+(67, 'diomedez', 'dias', 3232351354, 'CC Andino', '2023-11-30', 7493729311),
+(68, 'diomedez', 'dias', 3232351354, 'CC Andino', '2023-11-30', 7493729311),
+(69, 'karen', 'forero', 3112285480, 'nueva castilla', '2023-11-30', 3829372822),
+(71, 'Carlos', 'ortiz', 3257333222, 'Villa alsacia', '2023-12-06', 47294444),
+(72, 'camilo', 'mendoza', 321424273, 'Calle 8a', '2023-12-06', 203817472),
+(73, 'Cecilia', 'ibarra', 3257294444, 'Villa alsacia', '2023-12-06', 472941222);
 
 -- --------------------------------------------------------
 
@@ -92,13 +125,10 @@ CREATE TABLE `producto` (
 INSERT INTO `producto` (`Nombre`, `Precio`, `Descripcion`, `Id_Producto`) VALUES
 ('Pan', '400', 'Panes', 1),
 ('Pan', '300', 'pna pna', 2),
-('Pan', '', '', 3),
-('Pan', '', '', 4),
 ('Pan', '800', 'panpan', 5),
 ('panes', '500', 'panpanpan', 6),
 ('panes', '500', 'panpanpan', 7),
-('panes', '500', 'panpanpan', 8),
-('Gomitas', '500', 'Dulce', 9);
+('panes', '500', 'panpanpan', 8);
 
 -- --------------------------------------------------------
 
@@ -112,18 +142,6 @@ CREATE TABLE `repartidor` (
   `Telefono` int(10) NOT NULL,
   `medioTrasp` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `repartidor`
---
-
-INSERT INTO `repartidor` (`id_Cliente`, `Apellido`, `Telefono`, `medioTrasp`) VALUES
-(1, 'Diaz', 34651321, 'Cicla'),
-(5, 'Hernandez', 32151121, 'Cicla'),
-(6, 'Arias', 31513165, 'Moto'),
-(7, 'Gonzalo', 1321154, 'Carro'),
-(8, 'Hernandez', 32151121, 'taxi'),
-(10, 'Hernandez', 320315313, '');
 
 -- --------------------------------------------------------
 
@@ -141,8 +159,15 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id_Cliente`, `Rol`) VALUES
-(9, 'Repartidor'),
-(10, 'Cliente');
+(59, 'Tendero'),
+(60, 'Repartidor'),
+(63, 'Repartidor'),
+(64, 'Repartidor'),
+(66, 'Cliente'),
+(67, 'Tendero'),
+(68, 'Tendero'),
+(69, 'Cliente'),
+(72, 'Tendero');
 
 -- --------------------------------------------------------
 
@@ -161,6 +186,14 @@ CREATE TABLE `tendero` (
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indices de la tabla `claves`
@@ -204,16 +237,22 @@ ALTER TABLE `tendero`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `Id_Producto` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Id_Producto` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1002;
 
 --
 -- AUTO_INCREMENT de la tabla `repartidor`
@@ -225,7 +264,7 @@ ALTER TABLE `repartidor`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT de la tabla `tendero`
