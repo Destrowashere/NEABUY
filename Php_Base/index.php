@@ -66,7 +66,7 @@
 
            <div class="mb-3"> 
 
-           <div class="g-recaptcha" data-sitekey="6LdksRwpAAAAANLPnkPXaBy3HpApxK7hV4fGSdrR"> 
+           <div class="g-recaptcha"   data-sitekey="6LdksRwpAAAAANLPnkPXaBy3HpApxK7hV4fGSdrR"> 
            <?php
     $error = []; 
 

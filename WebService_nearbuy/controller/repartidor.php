@@ -10,18 +10,18 @@
 
     switch($_GET["op"]){
         case "GetAll":
-            $datos=$clientes->get_repartidor();
+            $datos=$repartidor->get_repartidor();
             echo json_encode($datos);
         break;
-        
+
         case "GetId":
-            $datos=$clientes->get_repartidor_x_Idd($body["id_Cliente"]);
+            $datos=$repartidor->get_repartidor_x_Idd($body["id_Cliente"]);
             echo json_encode($datos);
             break;
 
-            case "Insert":
-                
-            $datos=$clientes->insert_repartidor($body["Nombre"],$body["Apellido"], $body["Telefono"],$body["Direccion"], $body["Fecha"],$body["Cedula"]);
+            case "Insert": 
+                 
+            $datos=$repartidor->insert_repartidor($body["id_Cliente"],$body["Apellido"], $body["Telefono"],$body["medioTransp"]);
             echo json_encode("Insert Correcto");
             break;
 
