@@ -39,9 +39,16 @@
             <i class="fa-solid fa-earth-americas"></i>
         </div>
         <div class="input-container">
-            <input type="password" name="password" placeholder="Contraseña" required minlength="6" maxlength="20">
-            <i class="fa-solid fa-lock"></i>
-        </div>
+    <input id="pass1" type="password" name="password" placeholder="Contraseña" required minlength="6" maxlength="20">
+    <i class="fa-solid fa-lock"></i>
+    <button type="button" onclick="togglePassword('pass1')">Mostrar Contraseña</button>
+</div>
+
+<div class="input-container">
+    <input id="pass2" type="password" name="confirm_password" placeholder="Confirmar Contraseña" required minlength="6" maxlength="20">
+    <i class="fa-solid fa-lock"></i>
+    <button type="button" onclick="togglePassword('pass2')">Mostrar Contraseña</button>
+</div>
 
         <div class="input-container">
             <input type="email" name="email" placeholder="Correo" required required minlength="2" maxlength="30">
@@ -95,7 +102,6 @@
            </div>
       
         <a href="#">Terminos y condiciones</a>
-        <a href="crud/crud.php">crud</a>
       
 <div class="text-center"> 
     <input type="submit" name="send" class="btn btn-primary text-white" value="Enviar">
@@ -109,6 +115,32 @@
 <?php 
     include("send.php");
 ?>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#demo-form').submit(function(event) {
+            // Obtener el valor de las contraseñas
+            var password1 = $('#pass1').val();
+            var password2 = $('#pass2').val();
+
+            // Verificar si las contraseñas coinciden
+            if (password1 !== password2) {
+                alert('Las contraseñas no coinciden. Por favor, verifica.');
+                event.preventDefault(); // Evitar que el formulario se envíe si las contraseñas no coinciden
+            }
+        });
+    });
+</script>
+<script>
+    function togglePassword(inputId) {
+        var passwordInput = document.getElementById(inputId);
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+    }
+</script>
 
 </body>
 </html>
