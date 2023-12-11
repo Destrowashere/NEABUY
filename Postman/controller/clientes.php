@@ -31,10 +31,16 @@
                     echo json_encode("Correcto");
                     break;
 
-             case "Delete":
+             /*case "Delete":
                     $datos=$clientes->delete_clientes($body["id_Cliente"]);
                     echo json_encode("Delete Correcto");
-                    break;
+                    break;*/
+
+                    case "Delete":
+                        $datos = $clientes->delete_clientes($body["id_Cliente"]);
+                        echo json_encode("Eliminado Correcto");
+                        break;
+                    
      
     }
 ?>

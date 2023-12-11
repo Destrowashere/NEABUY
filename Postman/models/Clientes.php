@@ -58,21 +58,34 @@
         
 
 
-            public function delete_clientes($Id)
+           /* public function delete_clientes($id_Cliente)
             {
                 $conectar = parent::conexion();
                 parent::set_names();
             
                 $sql = "UPDATE Nombre SET
-                            Cedula= '5345615'
+                            Cedula= '?'
                             WHERE
                             id_Cliente = ?";
             
                 $sql=$conectar->prepare($sql);
-                $sql->bindValue(1, $Id);
+                $sql->bindValue(1, $id_Cliente);
                 $sql->execute();
                 return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
+            }/*/
+
+            public function delete_clientes($id_Cliente) {
+                $conectar = parent::conexion();
+                parent::set_names();
+            
+                $sql = "DELETE FROM clientes WHERE id_Cliente = ?";
+                $sql = $conectar->prepare($sql);
+                $sql->bindParam(1, $id_Cliente);
+                $sql->execute();
+            
+                return $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             }
+            
             
         }
         
