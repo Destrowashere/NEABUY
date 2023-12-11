@@ -58,7 +58,7 @@
         
 
 
-            public function delete_clientes($Id)
+            public function delete_clientes($Id_Cliente)
             {
                 $conectar = parent::conexion();
                 parent::set_names();
@@ -69,7 +69,7 @@
                             id_Cliente = ?";
             
                 $sql=$conectar->prepare($sql);
-                $sql->bindValue(1, $Id);
+                $sql->bindValue(1, $Id_Cliente);
                 $sql->execute();
                 return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
             }
