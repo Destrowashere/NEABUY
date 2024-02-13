@@ -994,11 +994,16 @@ select::-ms-expand {
     font-size: 0.875em;
   }
 }
-
+@media screen and (max-width: 768px) {
+  body {
+    margin: 5px auto;
+    width: 98%;
+  }
+}
 .contenedor {
   padding: 60px 0;
   width: 90%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   overflow: hidden;
 }
@@ -1108,4 +1113,12 @@ select::-ms-expand {
   margin-left: 250px;
 }
 
+#map{
+  height: 400px; width: 600px; margin: 0 auto;
+}
 
+@media screen and  (max-width: 768px)  {
+  #map {
+          max-width: 100%; 
+        }
+}
