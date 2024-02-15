@@ -65,11 +65,36 @@
             <i class="fa-solid fa-house-user"></i>
         </div>
         <div class="input-container">
-            <select name="role" required>
+            <select id="selectRol" name="role" required>
                 <option value="Cliente">Cliente</option>
                 <option value="Tendero">Tendero</option>
                 <option value="Repartidor">Repartidor</option>
             </select>
+
+            <button onclick="redirigir()">Seleccionar Rol</button>
+
+            <script>
+
+                function redirigir() {
+                var selectElement = document.getElementById("selectRol");
+                var selectedValue = selectElement.value;
+                
+                switch (selectedValue) {
+                    case "tendero":
+                    window.location.href = "tendero.html";
+                    break;
+                    case "cliente":
+                    window.location.href = "pagina-cliente.html";
+                    break;
+                    case "repartidor":
+                    window.location.href = "pagina-repartidor.html";
+                    break;
+                    default:
+                    alert("Rol no válido");
+                }
+                }
+
+            </script>
 
            <div class="mb-3"> 
 
