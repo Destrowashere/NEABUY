@@ -69,7 +69,7 @@
                 <option value="Cliente">Cliente</option>
                 <option value="Tendero">Tendero</option>
                 <option value="Repartidor">Repartidor</option>
-            </select>
+            </select>|
 
             <button onclick="redirigir()">Seleccionar Rol</button>
 
