@@ -1,5 +1,17 @@
 {
   "dependencies": {
+    "dotenv": "^16.4.4",
     "firebase": "^10.6.0"
+  },
+  "name": "neabuy",
+  "version": "1.0.0",
+  "main": "clases.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 }
