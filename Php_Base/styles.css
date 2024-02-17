@@ -139,12 +139,13 @@ form a{
 
 @media(max-width:991px){
     
-    body{
+    *{
         padding: 30px;
+        min-width: 250px;
     }
 
     form{
         width: 340px;
     }
-
+    
 }
