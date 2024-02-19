@@ -6,8 +6,7 @@
     <title>Document</title>
 
     
-<script src="https://www.paypal.com/sdk/js?client-id=
-AaNHzMJyEE45aEplocUcYkcdZfqfJ492LBbzH_nKtCNZxBDSHAX3mV6kZ_glAJUZLVgd5MGuNVWarmVd"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AaNHzMJyEE45aEplocUcYkcdZfqfJ492LBbzH_nKtCNZxBDSHAX3mV6kZ_glAJUZLVgd5MGuNVWarmVd"></script>
     
 </head>
 <body>
