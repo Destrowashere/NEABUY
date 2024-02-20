@@ -32,6 +32,7 @@ body{
 	align-items: center;
 }
 
+
 .login-content{
 	display: flex;
 	justify-content: flex-start;
@@ -200,6 +201,7 @@ a:hover{
 .btn:hover{
 	background-position: right;
 }
+
 
 
 @media screen and (max-width: 1050px){
