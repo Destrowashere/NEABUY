@@ -24,12 +24,26 @@
             return actions.order.create({
                 purchase_units: [{
                     amount:{
-                        value: 5.000
+                        value: 100
                     }
                 }]
             });
+        },
+
+        onApprove: function(data, actions){
+            actions.order.capture().then(function (detalles){
+                console.log(detalles);
+            });
+        },
+
+
+        onCancel: function(data){
+            alert("Pago cancelado");
+            console.log(data);
         }
     }).render('#paypal-button-container');
+
+    //sb-2xtup29585679@personal.example.com contra: S#xHu/l1
 </script>
 </body>
 </html>
