@@ -73,28 +73,38 @@
 	
 				</script>  -->
 				<script>
-
 					function redirigir() {
-					var selectElement = document.getElementById("selectRol");
-					var selectedValue = selectElement.value;
+					  // Get the select element and its selected value
+					  var selectElement = document.getElementById("selectRol");
+					  var selectedValue = selectElement.value;
 					
-					switch (selectedValue) {
+					  // Validate the selected value (optional but recommended)
+					  if (!selectedValue || selectedValue === "") {
+						alert("Por favor, seleccione un rol válido.");
+						return; // Prevent redirection if selection is invalid
+					  }
+					
+					  // Construct the correct href based on selected value
+					  var href = "";
+					  switch (selectedValue) {
 						case "Tendero":
-						window.location.href = "../agregar.html";
-						break;
+						  href = "../agregar.html";
+						  break;
 						case "Cliente":
-						window.location.href  = "../productos.html";
-						break;
+						  href = "../productos.html";
+						  break;
 						case "Repartidor":
-						window.location.href = "../Repartidor.html";
-						break;
+						  href = "../Repartidor.html";
+						  break;
 						default:
-						alert("Rol no válido");
+						  alert("Rol no válido");
+					  }
+					
+					  // Redirect using window.location.href (prevents potential issues)
+					  window.location.href = href;
 					}
-					}
-	
-				</script>
-            </form>
+					</script>
+					
         </div>
     </div>
 </body>
