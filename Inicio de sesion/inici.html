@@ -1,89 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Iniciar Sesion</title>
-  <link rel="stylesheet" type="text/css" href="inici.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-  <script src="inici.js"></script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Iniciar Sesion</title>
+	<link rel="stylesheet" type="text/css" href="inici.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="inici.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-  <img class="wave" src="ladito.avif">
-  <div class="container">
-    <div class="img">
-      <img src="shopp-removebg-preview.png">
+	
+	<img class="wave" src="ladito.avif" >
+	<div class="container">
+		<div class="img">
+			<img src="shopp-removebg-preview.png">
+		</div>
+		<div class="login-content">
+			<form action="inici.php" method="post">
+				<img src="profile-removebg-preview.png">
+				<h2 class="title">Bienvenido a Nearbuy</h2>
+           		<div class="input-div one ">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Correo electronico</h5>
+           		   		<input type="email" id="correo" required="input" name="Correo">
+           		   </div>
+           		</div>
+           		<div class="input-div two ">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Contraseña</h5>
+           		    	<input type="password" id="password" required="input" name="contrasena">
+						<p class="warnings" id="warnings"></p>
+            	   </div>
+            	</div>
+				<div class="select">
+					<select id="selectRol" name="role" required>
+						<option value="Cliente">Cliente</option>
+						<option value="Tendero">Tendero</option>
+						<option value="Repartidor">Repartidor</option>
+					</select>
+				</div>
+				
+            	<a href="#">Olvide mi contraseña</a>
+            	<input  onclick="redirigir()" type="submit" class="btn" value="Ingresar" name="submit">
+					
+				<script>
+					function redirigir() {
+						var selectElement = document.getElementById("selectRol");
+						var selectedValue = selectElement.value;
+						var href;
+				
+						switch (selectedValue) {
+							case "Tendero":
+								href = "../agregar.html";
+								break;
+							case "Cliente":
+								href = "../productos.html";
+								break;
+							case "Repartidor":
+								href = "../Repartidor.html";
+								break;
+							default:
+								alert("Rol no válido");
+								return; // Agrega un return para salir de la función si el rol no es válido.
+						}
+				
+						// Realiza la redirección
+						window.location.href = href;
+					}
+				</script>
+				
+        </div>
     </div>
-    <div class="login-content">
-      <form action="inici.php" method="post">
-        <img src="profile-removebg-preview.png">
-        <h2 class="title">Bienvenido a Nearbuy</h2>
-        <div class="input-div one">
-          <div class="i">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="div">
-            <h5>Correo electronico</h5>
-            <input type="email" id="correo" required="input" name="Correo">
-          </div>
-        </div>
-        <div class="input-div two">
-          <div class="i">
-            <i class="fas fa-lock"></i>
-          </div>
-          <div class="div">
-            <h5>Contraseña</h5>
-            <input type="password" id="password" required="input" name="contrasena">
-            <p class="warnings" id="warnings"></p>
-          </div>
-        </div>
-        <div class="select">
-          <select id="selectRol" name="role" required>
-            <option value="Cliente">Cliente</option>
-            <option value="Tendero">Tendero</option>
-            <option value="Repartidor">Repartidor</option>
-          </select>
-        </div>
-
-        <a href="#">Olvide mi contraseña</a>
-        <input type="submit" class="btn" value="Ingresar" name="submit">
-      </form>
-    </div>
-  </div>
-
-  <script>
-    function redirigir() {
-      // Get the select element and its selected value
-      var selectElement = document.getElementById("selectRol");
-      var selectedValue = selectElement.value;
-
-      // Validate the selected value (optional but recommended)
-      if (!selectedValue || selectedValue === "") {
-        alert("Por favor, seleccione un rol válido.");
-        return; // Prevent redirection if selection is invalid
-      }
-
-      // Construct the correct href based on selected value
-      var href = "";
-      switch (selectedValue) {
-        case "Tendero":
-		window.location.href  = "../tenderosi.html";
-          break;
-        case "Cliente":
-		window.location.href  = "../Productos/productos.html";
-          break;
-        case "Repartidor":
-		window.location.href  = "../Repartidor.html";
-          break;
-        default:
-          alert("Rol no válido");
-      }
-
-      // Redirect using window.location.href (prevents potential issues)
-      window.location.href = href;
-    }
-  </script>
 </body>
 </html>
