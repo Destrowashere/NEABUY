@@ -4,7 +4,7 @@
         public function get_repartidor(){
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="SELECT * FROM repartidor ";
+            $sql="SELECT * FROM repartidor";
             $sql=$conectar->prepare($sql);
             $sql->execute();
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
