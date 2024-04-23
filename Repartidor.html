@@ -10,9 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
-
-
-    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <style>
       #mi_mapa{
@@ -74,6 +71,7 @@ textarea::placeholder {
             <th>Tiempo de entrega</th>
             <th>Listo para entregar</th>
             <th>Estado</th>
+            <th></th> <!-- Agregar una columna vacía para el botón -->
           </tr>
         </thead>
         <tbody>
@@ -86,6 +84,7 @@ textarea::placeholder {
             <td>30 min.</td>
             <td>En espera</td>
             <td>Pendiente</td>
+            <td><button class="button" onclick="mostrarRuta('Calle 6a # 84')">Mostrar Ruta</button></td> <!-- Agregar botón en la fila -->
           </tr>
           <tr>
             <td>02</td>
@@ -96,6 +95,7 @@ textarea::placeholder {
             <td>60 min.</td>
             <td>En espera</td>
             <td>Pendiente</td>
+            <td><button class="button" onclick="mostrarRuta('Cra 47 # 63d')">Mostrar Ruta</button></td> <!-- Agregar botón en la fila -->
           </tr>
           <tr>
             <td>03</td>
@@ -106,6 +106,7 @@ textarea::placeholder {
             <td>55 min.</td>
             <td>Listo</td>
             <td>Pendiente</td>
+            <td><button class="button" onclick="mostrarRuta('Av. 64 # 12b')">Mostrar Ruta</button></td> <!-- Agregar botón en la fila -->
           </tr>
         </tbody>
       </table>
@@ -166,6 +167,12 @@ textarea::placeholder {
           }
         });
       }
+
+      function mostrarRuta(direccion) {
+    document.getElementById('destination').value = direccion;
+    calculateAndDisplayRoute();
+}
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2r3A0UEa0MvZNfQjvGvn-kGR0WhbZ6dE&callback=initMap&libraries=places" defer></script>
   
