@@ -1,9 +1,4 @@
 <?php
 
-    $host="localhost";
-    $user="root";
-    $pass="";
-    $db="nearbuybonitoo";
-
-    $conex=mysqli_connect($host,$user,$pass,$db);
+$conex = mysqli_connect("sql305.infinityfree.com", "if0_36548430", "VDYd0Ykr6H4i", "if0_36548430_nearbuybonitoo");;
 ?>

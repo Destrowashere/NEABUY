@@ -1,19 +1,6 @@
 <?php
-//validamos datos del servidor
-$user = "root";
-$pass = "";
-$host = "localhost";
-
-//conetamos al base datos
-$connection = mysqli_connect($host, $user, $pass);
-
-//hacemos llamado al imput de formuario
-$nombre = $_POST["nombre"] ;
-$usuario = $_POST["usuario"] ;
-$contraseña = $_POST["contraseña"] ;
-
-//verificamos la conexion a base datos
-if(!$connection) 
+$conex = mysqli_connect("sql305.infinityfree.com", "if0_36548430", "VDYd0Ykr6H4i", "if0_36548430_nearbuybonitoo");
+if(!$conex) 
         {
             echo "No se ha podido conectar con el servidor" . mysql_error();
         }
@@ -24,7 +11,7 @@ if(!$connection)
         //indicamos el nombre de la base datos
         $datab = "dbformulario";
         //indicamos selecionar ala base datos
-        $db = mysqli_select_db($connection,$datab);
+        $db = mysqli_select_db($conex,$datab);
 
         if (!$db)
         {
@@ -39,12 +26,12 @@ if(!$connection)
                              VALUES ('$nombre','$usuario','$contraseña')";
                            
                             
-        $resultado = mysqli_query($connection,$instruccion_SQL);
+        $resultado = mysqli_query($conex,$instruccion_SQL);
 
         //$consulta = "SELECT * FROM tabla where id ='2'"; si queremos que nos muestre solo un registro en especifivo de ID
         $consulta = "SELECT * FROM tabla_form";
         
-$result = mysqli_query($connection,$consulta);
+$result = mysqli_query($conex,$consulta);
 if(!$result) 
 {
     echo "No se ha podido realizar la consulta";
@@ -68,7 +55,7 @@ while ($colum = mysqli_fetch_array($result))
 }
 echo "</table>";
 
-mysqli_close( $connection );
+mysqli_close( $conex );
 
    //echo "Fuera " ;
    echo'<a href="index.html"> Volver Atrás</a>';
