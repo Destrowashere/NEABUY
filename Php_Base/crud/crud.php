@@ -22,9 +22,8 @@
       <th scope="col">ID</th>
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Direccion</th>
       <th scope="col">Telefono</th>
+      <th scope="col">Direccion</th>
       <th scope="col">Cedula</th>
     </tr>
   </thead>
