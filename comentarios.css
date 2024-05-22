@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #bbbdca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-content{
+    background: linear-gradient(
+        50deg,
+        rgb(218, 235, 225) 50%,
+        rgba(60, 71, 143, 0.7)
+        ),
+        url(fondos_sostenibles.avif);    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+        width: 1000px;
+        border-radius: 25px;
+}
+
+.form-content h1{
+    color: #0d0d0e;
+    font-size: 40px;
+    margin-top: 25px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+label {
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 17px 14px;
+    background-color: #aca8a8;
+    border: 0;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+a{
+    color: rgb(53, 17, 17);
+    font-size: 10px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: .3s;
+    border-radius: 5px;
+}
+
+a:hover{
+    background-color: #176B87;
+  border-radius: 15px;
+transition: .3s;
+font-size: 20px;
+}
+:focus {
+    outline: 1px solid #1E92E9;
+    transition: .5s;
+}
+
+.btn {
+    background-color: #749ebe;
+    width: 100px;
+    align-self: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: #acdbff;
+    transition: .3s;
+    width: 150px;
+}
+
+
+
+#form {
+    width: 300px;
+    margin: 0 auto;
+    height: 100px;
+  }
+  
+  #form p {
+    text-align: left;
+  }
+  
+  #form label {
+    font-size: 70px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+@media(max-width:991px){
+    body {
+        padding: 30px;
+    }
+    .form-content{
+        width: 100%;
+    }
+    form {
+        width: 100px;
+    }
+}
