@@ -51,7 +51,7 @@
 </div>
 
         <div class="input-container">
-            <input type="email" name="email" placeholder="Correo" required required minlength="2" maxlength="30">
+            <input type="email" name="email" placeholder="Correo" required required minlength="2" maxlength="100">
             <i class="fa-solid fa-envelope"></i>
         </div>
 

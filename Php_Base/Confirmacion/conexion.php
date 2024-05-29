@@ -1,18 +1,12 @@
 <?php
-$servername = "localhost"; 
-$username = "Nombre";
-$password = "Contraseña";
-$dbname = "neabuybonitoo";
+$conex = mysqli_connect("sql305.infinityfree.com", "if0_36548430", "VDYd0Ykr6H4i", "if0_36548430_nearbuybonitoo");
 
 
-$conexion = new mysqli($servername, $username, $password, $dbname);
-
-
-if ($conexion->connect_error) {
-    die("La conexión a la base de datos falló: " . $conexion->connect_error);
+if ($conex->connect_error) {
+    die("La conexión a la base de datos falló: " . $conex->connect_error);
 }
 
 
-$conexion->set_charset("utf8");
+$conex->set_charset("utf8");
 
 ?>
