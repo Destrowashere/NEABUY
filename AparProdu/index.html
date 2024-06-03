@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a NearBuy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header .location,
+        .header .search,
+        .header .user-actions {
+            display: flex;
+            align-items: center;
+        }
+        .header .location select,
+        .header .search input {
+            margin-left: 10px;
+            padding: 5px;
+        }
+        .header .search input {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .header .user-actions a,
+        .header .user-actions i {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        .promo-banner {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .promo-text {
+            max-width: 50%;
+        }
+        .promo-banner h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .promo-banner p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .promo-banner button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .promo-image {
+            max-width: 50%;
+        }
+        .promo-image img {
+            width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            text-align: left;
+            padding: 20px;
+        }
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+                .section div {
+            width: 250px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+            border-radius: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s; 
+            text-align: center;
+            position: relative;
+        }
+
+        .section div:hover {
+            transform: scale(1.05); 
+        }
+
+        .section div i {
+            font-size: 50px;
+            margin-bottom: 10px; 
+            margin-top: 20px; 
+        }
+
+        .section div p {
+            margin-top: 10px; 
+        }
+
+        .restaurants {
+            background-color: #ff4b5c;
+        }
+
+        .markets {
+            background-color: #60d394;
+        }
+        .options {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .options div {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .options div:hover {
+            transform: scale(1.1);
+        }
+        .options div i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .most-searched, .top-ten {
+            margin: 20px 0;
+        }
+        .tags {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .tags div {
+            background-color: #eee;
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .tags div:hover {
+            transform: scale(1.1);
+        }
+        .top-ten div {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .top-ten i {
+            font-size: 60px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .top-ten i:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://logo.clearbit.com/rappi.com" alt="Rappi Logo">
+    <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <select>
+            <option value="cali">Cali</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Comida, restaurantes, tiendas, productos,...">
+    </div>
+    <div class="user-actions">
+        <a href="#">Ingreso</a>
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+</div>
+
+<div class="promo-banner">
+    <div class="promo-text">
+        <h1>¡Hasta 15 días de entregas gratis!</h1>
+        <p>Para tus primeros pedidos en Restaurantes pagando con tarjeta. <br><a href="#">*Aplican TyC</a></p>
+        <button>¡Pide ahora!</button>
+    </div>
+    <div class="promo-image">
+        <img src="Tienda.png" alt="Delivery Image">
+    </div>
+</div>
+
+<div class="container">
+    <h1>¿Que estas buscando?</h1>
+    
+    <div class="section">
+        <div class="restaurants">
+            <i class="fa-solid fa-bread-slice"></i>
+            <div>Panaderias</div>
+        </div>
+        <div class="markets">
+            <i class="fa-solid fa-wrench"></i>
+            <div>Ferreterias</div>
+        </div>
+        <div class="restaurants">
+            <i class="fa-solid fa-print"></i>
+            <div>Papelerias</div>
+        </div>
+        <div class="markets">
+            <i class="fa-solid fa-tablets"></i>
+            <div>Droguerias</div>
+        </div>
+        <div class="restaurants">
+            <i class="fa-solid fa-beer-mug-empty"></i>
+            <div>Licorerias</div>
+        </div>
+        <div class="markets">
+            <i class="fa-solid fa-store"></i>
+            <div>Tiendas</div>
+        </div>
+        <div class="restaurants">
+            <i class="fa-solid fa-drumstick-bite"></i>
+            <div>Carnicerias</div>
+        </div>
+        <div class="markets">
+            <i class="fa-solid fa-shirt"></i>
+            <div>Ropa</div>
+        </div>
+    </div>
+
+    <div class="options">
+        <div>
+            <i class="fas fa-prescription-bottle-alt"></i>
+            <div>Farmacia</div>
+        </div>
+        <div>
+            <i class="fas fa-store"></i>
+            <div>Tiendas</div>
+        </div>
+        <div>
+            <i class="fas fa-bolt"></i>
+            <div>Turbo</div>
+        </div>
+        <div>
+            <i class="fas fa-wine-bottle"></i>
+            <div>Licores</div>
+        </div>
+        <div>
+            <i class="fas fa-plane"></i>
+            <div>Rappi Travel</div>
+        </div>
+        <div>
+            <i class="fas fa-car"></i>
+            <div>SOAT</div>
+        </div>
+    </div>
+
+    <div class="most-searched">
+        <h2>Lo más buscado</h2>
+        <div class="tags">
+            <div>huevo</div>
+            <div>agua</div>
+            <div>leche</div>
+            <div>queso</div>
+            <div>dellaneira</div>
+            <div>pan</div>
+            <div>helado</div>
+            <div>mantequilla</div>
+            <div>vape</div>
+            <
+
+            <div>pollo</div>
+        </div>
+    </div>
+
+    <div class="top-ten">
+        <h2>¡Los 10 más elegidos!</h2>
+        <div>
+            <i class="fas fa-hamburger"></i>
+            <i class="fas fa-drumstick-bite"></i>
+            <i class="fas fa-burger-soda"></i>
+            <i class="fas fa-pizza-slice"></i>
+            <i class="fas fa-sandwich"></i>
+            <i class="fas fa-pizza"></i>
+            <i class="fas fa-hamburger"></i>
+            <i class="fas fa-burrito"></i>
+            <i class="fas fa-utensils"></i>
+            <i class="fas fa-coffee"></i>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 session_start();
 
-$conex = mysqli_connect("sql305.infinityfree.com", "if0_36548430", "VDYd0Ykr6H4i", "if0_36548430_nearbuybonitoo");
+$conex = mysqli_connect("localhost", "root", "", "nearbuybonitoo");
 
 $error_message = "";
 if (!empty($_POST["submit"])) {
@@ -33,7 +33,7 @@ if (!empty($_POST["submit"])) {
           } else {
             $_SESSION['usuario_nombre'] = $row['correo'];
             $_SESSION['usuario_apellido'] = $row['contrasena'];
-            header("location:../indexuse.html");
+            header("location:../AparProdu/index.html");
             exit();
           }
         } else {
