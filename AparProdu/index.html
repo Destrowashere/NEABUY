@@ -46,42 +46,52 @@
             text-decoration: none;
             color: #333;
         }
-        .banner {
-            position: relative;
-            width: 50%;
-            height: 250px; /* Ajusta la altura según tus necesidades */
-            overflow: hidden;
-          }
-          
-          .imagen-animada {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 3s ease-in-out;
-          }
-          
-          .imagen-animada.mostrar {
-            opacity: 1;
-          }
+        #hamburguesa {
+            width: 200px; /* Ajusta el ancho según tu preferencia */
+            height: auto; /* La altura se ajusta automáticamente */
+            margin: 20px auto; /* Ajusta los márgenes superior e inferior */
+            display: block;
+            transition: transform 0.5s ease-in-out;
+            animation: zoom 2s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1); /* Ajusta la escala de acercamiento */
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilos para el contenedor de texto */
+        .contenedor-texto {
+            display: inline-block;
+            vertical-align: middle;
+        }
           
         .promo-banner {
             background-color: #fff;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 40px 20px;
+            padding: 40px 90px;
         }
         .promo-text {
-            max-width: 50%;
+            max-width: 100000%;
         }
         .promo-banner h1 {
             font-size: 36px;
             margin-bottom: 10px;
         }
         .promo-banner p {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            
         }
         .promo-banner button {
             background-color: #000;
@@ -103,7 +113,7 @@
             max-width: 1200px;
             margin: auto;
             text-align: left;
-            padding: 20px;
+            padding: 50px;
         }
         .section {
             display: flex;
@@ -234,11 +244,9 @@
 </div>
 
 <div class="promo-banner">
-    <div class="banner">
-        <img src="imagenes/ham1.jpg" class="imagen-animada" />
-        <img src="imagenes/piz1.png" class="imagen-animada" />
-        <img src="imagenes/tac1.jpg" class="imagen-animada" />
-      </div>
+    <div class="contenedor">
+        <img src="imagenes/ham1.jpg" alt="Hamburguesa" id="hamburguesa">
+    </div>
       
     <div class="promo-text">
         <h1>Bienvenido a Nearbuy</h1>
