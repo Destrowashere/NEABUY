@@ -26,6 +26,32 @@ body {
   display: block;
  }
  
+.descarga{
+  display: inline-block;
+  border: 1px solid #176B87;
+  padding: 10px 35px;
+  margin-right: 20px;
+  color: #fdfdfd;
+  border-radius: 25px;
+  height: 100px;
+  width: 200px;
+  text-decoration: none;
+  transition: .5s;
+}
+.descarga:hover{
+  transition: .5s;
+  border: 1px solid #686868;
+
+}
+
+.descarga:hover {
+  transition: .5s;
+  background: linear-gradient(90deg, #00bfff 0%, #ffffff 100%);
+  border-color: rgb(3, 3, 3);
+  color: #ffffff;
+  
+  }
+ 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
  }

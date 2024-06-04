@@ -261,18 +261,43 @@ header a{
     height: 100px;
     width: 200px;
     text-decoration: none;
+    transition: .5s;
 }
 .boton-coments:hover{
-    
+    transition: .5s;
     border: 1px solid #DAFFFB;
 
 }
+.descarga{
+    display: inline-block;
+    border: 1px solid #176B87;
+    padding: 10px 35px;
+    margin-right: 20px;
+    color: #fdfdfd;
+    border-radius: 25px;
+    height: 100px;
+    width: 200px;
+    text-decoration: none;
+    transition: .5s;
+}
+.descarga:hover{
+    transition: .5s;
+    border: 1px solid #686868;
+
+}
+
+.descarga:hover {
+    background: linear-gradient(90deg, #096d8f 0%, #07beb2 100%);
+    border-color: rgb(255, 179, 179);
+    color: #ffffff;
+    transition: .5s;
+    }
 
 .boton-coments:hover {
 background: linear-gradient(90deg, #176B87 0%, #64CCC5 100%);
 border-color: rgb(240, 240, 240);
 color: #FDFDFD;
-
+transition: .5s;
 }
 .links h4{
     color: #fdfdfd;
