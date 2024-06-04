@@ -46,6 +46,25 @@
             text-decoration: none;
             color: #333;
         }
+        .banner {
+            position: relative;
+            width: 50%;
+            height: 250px; /* Ajusta la altura según tus necesidades */
+            overflow: hidden;
+          }
+          
+          .imagen-animada {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 3s ease-in-out;
+          }
+          
+          .imagen-animada.mostrar {
+            opacity: 1;
+          }
+          
         .promo-banner {
             background-color: #fff;
             display: flex;
@@ -201,7 +220,7 @@
     <div class="location">
         <i class="fas fa-map-marker-alt"></i>
         <select>
-            <option value="cali">Cali</option>
+            <option value="Bogota">Bogota</option>
             <!-- Add more options as needed -->
         </select>
     </div>
@@ -209,15 +228,21 @@
         <input type="text" placeholder="Comida, restaurantes, tiendas, productos,...">
     </div>
     <div class="user-actions">
-        <a href="#">Ingreso</a>
+        <a href="#"></a>
         <i class="fas fa-shopping-cart"></i>
     </div>
 </div>
 
 <div class="promo-banner">
+    <div class="banner">
+        <img src="imagenes/ham1.jpg" class="imagen-animada" />
+        <img src="imagenes/piz1.png" class="imagen-animada" />
+        <img src="imagenes/tac1.jpg" class="imagen-animada" />
+      </div>
+      
     <div class="promo-text">
-        <h1>¡Hasta 15 días de entregas gratis!</h1>
-        <p>Para tus primeros pedidos en Restaurantes pagando con tarjeta. <br><a href="#">*Aplican TyC</a></p>
+        <h1>Bienvenido a Nearbuy</h1>
+        <p>Empieza a comprar ya!. <br><a href="#">*Aplican TyC</a></p>
         <button>¡Pide ahora!</button>
     </div>
     <div class="promo-image">
@@ -347,6 +372,6 @@
         </div>
     </div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
