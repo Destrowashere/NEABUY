@@ -5,7 +5,7 @@ header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
 // Configuración de la conexión a la base de datos
-$conn = mysqli_connect("localhost", "root", "", "nbapp");
+$conn = mysqli_connect("localhost", "root", "", "nearbuybonitoo");
 
 // Verificar conexión
 if ($conn->connect_error) {
