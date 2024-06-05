@@ -47,10 +47,9 @@
             color: #333;
         }
         #hamburguesa {
-            width: 200px; /* Ajusta el ancho según tu preferencia */
-            height: auto; /* La altura se ajusta automáticamente */
-            margin: 20px auto; /* Ajusta los márgenes superior e inferior */
-            display: block;
+            width: 200px; 
+            height: auto; 
+            margin: 20px; 
             transition: transform 0.5s ease-in-out;
             animation: zoom 2s infinite;
             animation-timing-function: ease-in-out;
@@ -61,7 +60,7 @@
                 transform: scale(1);
             }
             50% {
-                transform: scale(1.1); /* Ajusta la escala de acercamiento */
+                transform: scale(1.1); 
             }
             100% {
                 transform: scale(1);
@@ -72,31 +71,42 @@
             display: inline-block;
             vertical-align: middle;
         }
-          
+
         .promo-banner {
             background-color: #fff;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 40px 90px;
         }
+
         .promo-text {
             max-width: 50%;
             align-items: center;
             display: inline-block;
             vertical-align: middle;
+            text-align: left;
+            padding-left: 20px; 
         }
+
         .promo-banner h1 {
-            align-items: center;
-            font-size: 36px;
-            margin-bottom: 150px;
-            display: flex;
+            font-size: 50px; 
+            margin-bottom: 20px; 
+            font-weight: 700; 
         }
+
         .promo-banner p {
-            font-size: 20px;
+            font-size: 18px; 
             margin-bottom: 30px;
-            
         }
+
+        .promo-banner a {
+            font-size: 14px; 
+            text-decoration: none;
+            color: #blue; 
+        }
+
+
         .promo-banner button {
             background-color: #000;
             color: #fff;
@@ -106,19 +116,25 @@
             cursor: pointer;
             border-radius: 5px;
         }
+
         .promo-image {
             max-width: 50%;
+            display: inline-block;
+            vertical-align: middle;
         }
+
         .promo-image img {
             width: 100%;
             height: auto;
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
-            text-align: left;
-            padding: 50px;
+            text-align: center; 
+            padding: 40px;
         }
+
         .section {
             display: flex;
             flex-wrap: wrap;
@@ -225,6 +241,15 @@
         .top-ten i:hover {
             transform: scale(1.1);
         }
+
+        .card-image {
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        .options-header {
+            margin-bottom: 70px; /* Ajusta la separación entre el texto y el card */
+        }
     </style>
 </head>
 <body>
@@ -235,7 +260,6 @@
         <i class="fas fa-map-marker-alt"></i>
         <select>
             <option value="Bogota">Bogota</option>
-            <!-- Add more options as needed -->
         </select>
     </div>
     <div class="search">
@@ -323,66 +347,67 @@
         </a>
     </div>
 
-    <div class="options">
-        <div>
-            <i class="fas fa-prescription-bottle-alt"></i>
-            <div>Farmacia</div>
+    <div class="options-header"> <h1> ¡Los más elegidos!</h1></div>
+<div class="options">
+    
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Farmacia.webp" class="card-image">
+            <div>Farmacias Roma</div>
         </div>
-        <div>
-            <i class="fas fa-store"></i>
-            <div>Tiendas</div>
+    </a>
+       
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Ferreteria.png" class="card-image">
+            <div>Ferreteria Sanchez</div>
         </div>
-        <div>
-            <i class="fas fa-bolt"></i>
-            <div>Turbo</div>
+    </a>
+    
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Lumen.png" class="card-image">
+            <div>Papeleria Lumen</div>
         </div>
-        <div>
-            <i class="fas fa-wine-bottle"></i>
-            <div>Licores</div>
-        </div>
-        <div>
-            <i class="fas fa-plane"></i>
-            <div>Rappi Travel</div>
-        </div>
-        <div>
-            <i class="fas fa-car"></i>
-            <div>SOAT</div>
-        </div>
-    </div>
+    </a>
 
-    <div class="most-searched">
-        <h2>Lo más buscado</h2>
-        <div class="tags">
-            <div>huevo</div>
-            <div>agua</div>
-            <div>leche</div>
-            <div>queso</div>
-            <div>dellaneira</div>
-            <div>pan</div>
-            <div>helado</div>
-            <div>mantequilla</div>
-            <div>vape</div>
-            <
-
-            <div>pollo</div>
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Pan.jpg" class="card-image">
+            <div>Pan Prisma</div>
         </div>
-    </div>
+    </a>
 
-    <div class="top-ten">
-        <h2>¡Los 10 más elegidos!</h2>
-        <div>
-            <i class="fas fa-hamburger"></i>
-            <i class="fas fa-drumstick-bite"></i>
-            <i class="fas fa-burger-soda"></i>
-            <i class="fas fa-pizza-slice"></i>
-            <i class="fas fa-sandwich"></i>
-            <i class="fas fa-pizza"></i>
-            <i class="fas fa-hamburger"></i>
-            <i class="fas fa-burrito"></i>
-            <i class="fas fa-utensils"></i>
-            <i class="fas fa-coffee"></i>
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/La Cava.webp" class="card-image">
+            <div>La Cava del Puro</div>
         </div>
-    </div>
+    </a>
+
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/FerreMin.png" class="card-image">
+            <div>FerrMin</div>
+        </div>
+    </a>
+
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/sinco.png" class="card-image">
+            <div>Supermercado Sinco</div>
+        </div>
+    </a>
+
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Real.png" class="card-image">
+            <div>Panadería Real</div>
+        </div>
+    </a>
+    
+</div>
+
 </div>
 <script src="script.js"></script>
 </body>
