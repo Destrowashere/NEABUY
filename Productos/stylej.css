@@ -99,13 +99,13 @@ header{
 }
 
 #ctn-icon-search i{
-    font-size: 18px;
-    color: #073a4e;
+    font-size: 25px;
+    color: #000000;
     cursor: pointer;
     transition: all 300ms;
 }
 #ctn-icon-search i:hover{
-    color:#176B87;
+    color:#000000;
 }
 
 #ctn-bars-search{
