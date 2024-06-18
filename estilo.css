@@ -30,23 +30,25 @@ body {
   display: inline-block;
   border: 1px solid #176B87;
   padding: 10px 35px;
-  margin-right: 20px;
-  color: #fdfdfd;
+  margin-bottom: 10px;
+  color: #383737;
   border-radius: 25px;
   height: 100px;
   width: 200px;
   text-decoration: none;
-  transition: .5s;
-}
-.descarga:hover{
-  transition: .5s;
-  border: 1px solid #686868;
+  transition: .2s  ease-out;
+  justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+    background-color: white;
 
+    
 }
 
 .descarga:hover {
-  transition: .5s;
-  background: linear-gradient(90deg, #00bfff 0%, #ffffff 100%);
+  transition: .4s ease-out;
+  background: linear-gradient(90deg, hsla(197, 38%, 28%, 0.664), hsla(194, 35%, 19%, 0.699));
   border-color: rgb(3, 3, 3);
   color: #ffffff;
   
@@ -190,6 +192,10 @@ article {
   background: linear-gradient(to right, hsla(197, 38%, 28%, 0.664), hsla(194, 35%, 19%, 0.699), #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   border-radius: 15px;
+  display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 }
 
 .footer .social {
