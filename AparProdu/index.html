@@ -46,24 +46,67 @@
             text-decoration: none;
             color: #333;
         }
+        #hamburguesa {
+            width: 200px; 
+            height: auto; 
+            margin: 20px; 
+            transition: transform 0.5s ease-in-out;
+            animation: zoom 2s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1); 
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .contenedor-texto {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         .promo-banner {
             background-color: #fff;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 40px 20px;
+            padding: 40px 90px;
         }
+
         .promo-text {
             max-width: 50%;
+            align-items: center;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            padding-left: 20px; 
         }
+
         .promo-banner h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-size: 50px; 
+            margin-bottom: 20px; 
+            font-weight: 700; 
         }
+
         .promo-banner p {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 18px; 
+            margin-bottom: 30px;
         }
+
+        .promo-banner a {
+            font-size: 14px; 
+            text-decoration: none;
+            color: #000; 
+        }
+
+
         .promo-banner button {
             background-color: #000;
             color: #fff;
@@ -73,19 +116,25 @@
             cursor: pointer;
             border-radius: 5px;
         }
+
         .promo-image {
             max-width: 50%;
+            display: inline-block;
+            vertical-align: middle;
         }
+
         .promo-image img {
             width: 100%;
             height: auto;
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
-            text-align: left;
-            padding: 20px;
+            text-align: center; 
+            padding: 40px;
         }
+
         .section {
             display: flex;
             flex-wrap: wrap;
@@ -192,6 +241,15 @@
         .top-ten i:hover {
             transform: scale(1.1);
         }
+
+        .card-image {
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        .options-header {
+            margin-bottom: 70px; /* Ajusta la separación entre el texto y el card */
+        }
     </style>
 </head>
 <body>
@@ -201,27 +259,30 @@
     <div class="location">
         <i class="fas fa-map-marker-alt"></i>
         <select>
-            <option value="cali">Cali</option>
-            <!-- Add more options as needed -->
+            <option value="Bogota">Bogota</option>
         </select>
     </div>
     <div class="search">
         <input type="text" placeholder="Comida, restaurantes, tiendas, productos,...">
     </div>
     <div class="user-actions">
-        <a href="#">Ingreso</a>
+        <a href="#"></a>
         <i class="fas fa-shopping-cart"></i>
     </div>
 </div>
 
 <div class="promo-banner">
+    <div class="contenedor">
+        <img src="imagenes/ham1.jpg" alt="Hamburguesa" id="hamburguesa">
+    </div>
+      
     <div class="promo-text">
-        <h1>¡Hasta 15 días de entregas gratis!</h1>
-        <p>Para tus primeros pedidos en Restaurantes pagando con tarjeta. <br><a href="#">*Aplican TyC</a></p>
+        <h1>Bienvenido a Nearbuy</h1> 
+        <p>Empieza a comprar ya!. <br><a href="#">*Aplican TyC</a></p>
         <button>¡Pide ahora!</button>
     </div>
     <div class="promo-image">
-        <img src="Tienda.png" alt="Delivery Image">
+        <img src="../Productos/zorroo-removebg-preview.png" alt="Delivery Image">
     </div>
 </div>
 
@@ -286,67 +347,68 @@
         </a>
     </div>
 
-    <div class="options">
-        <div>
-            <i class="fas fa-prescription-bottle-alt"></i>
-            <div>Farmacia</div>
+    <div class="options-header"> <h1> ¡Los más elegidos!</h1></div>
+<div class="options">
+    
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Farmacia.webp" class="card-image">
+            <div>Farmacias Roma</div>
         </div>
-        <div>
-            <i class="fas fa-store"></i>
-            <div>Tiendas</div>
+    </a>
+       
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Ferreteria.png" class="card-image">
+            <div>Ferreteria Sanchez</div>
         </div>
-        <div>
-            <i class="fas fa-bolt"></i>
-            <div>Turbo</div>
+    </a>
+    
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Lumen.png" class="card-image">
+            <div>Papeleria Lumen</div>
         </div>
-        <div>
-            <i class="fas fa-wine-bottle"></i>
-            <div>Licores</div>
-        </div>
-        <div>
-            <i class="fas fa-plane"></i>
-            <div>Rappi Travel</div>
-        </div>
-        <div>
-            <i class="fas fa-car"></i>
-            <div>SOAT</div>
-        </div>
-    </div>
+    </a>
 
-    <div class="most-searched">
-        <h2>Lo más buscado</h2>
-        <div class="tags">
-            <div>huevo</div>
-            <div>agua</div>
-            <div>leche</div>
-            <div>queso</div>
-            <div>dellaneira</div>
-            <div>pan</div>
-            <div>helado</div>
-            <div>mantequilla</div>
-            <div>vape</div>
-            <
-
-            <div>pollo</div>
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Pan.jpg" class="card-image">
+            <div>Pan Prisma</div>
         </div>
-    </div>
+    </a>
 
-    <div class="top-ten">
-        <h2>¡Los 10 más elegidos!</h2>
-        <div>
-            <i class="fas fa-hamburger"></i>
-            <i class="fas fa-drumstick-bite"></i>
-            <i class="fas fa-burger-soda"></i>
-            <i class="fas fa-pizza-slice"></i>
-            <i class="fas fa-sandwich"></i>
-            <i class="fas fa-pizza"></i>
-            <i class="fas fa-hamburger"></i>
-            <i class="fas fa-burrito"></i>
-            <i class="fas fa-utensils"></i>
-            <i class="fas fa-coffee"></i>
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/La Cava.webp" class="card-image">
+            <div>La Cava del Puro</div>
         </div>
-    </div>
+    </a>
+
+    <a href="../MiTienda/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/FerreMin.png" class="card-image">
+            <div>FerrMin</div>
+        </div>
+    </a>
+
+    <a href="../Negocios/SupermercadoSinco/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/sinco.png" class="card-image">
+            <div>Supermercado Sinco</div>
+        </div>
+    </a>
+
+    <a href="../Negocios/Panaderia Real/index.html" class="section-link">
+        <div class="card">
+            <img src="imagenes/Real.png" class="card-image">
+            <div>Panadería Real</div>
+        </div>
+    </a>
+    
 </div>
 
+</div>
+<script src="script.js"></script>
 </body>
 </html>

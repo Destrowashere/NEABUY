@@ -6,7 +6,7 @@
 }
 
 header{
-    background: url(img/holanda.png);
+    background: url();
     background-size: cover;
     background-position:center;
     height: 200px;
@@ -25,137 +25,6 @@ header h1{
 .deta{
     width: 50%;
 }
-
-.main {
-    justify-content: center; 
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-  
-  .up {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5em;
-  }
-  
-  .down {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5em;
-  }
-  
-  .card1 {
-    width: 90px;
-    height: 90px;
-    outline: none;
-    border: none;
-    background: white;
-    border-radius: 90px 5px 5px 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: .2s ease-in-out;
-  }
-  
-  .instagram {
-    margin-top: 1.5em;
-    margin-left: 1.2em;
-    fill: #cc39a4;
-  }
-  
-  .card2 {
-    width: 90px;
-    height: 90px;
-    outline: none;
-    border: none;
-    background: white;
-    border-radius: 5px 90px 5px 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: .2s ease-in-out;
-  }
-  
-  .facebook {
-    margin-top: 1.5em;
-    margin-left: -.9em;
-    fill: #03A9F4;
-  }
-  
-  .card3 {
-    width: 90px;
-    height: 90px;
-    outline: none;
-    border: none;
-    background: white;
-    border-radius: 5px 5px 5px 90px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: .2s ease-in-out;
-  }
-  
-  .whatsapp {
-    margin-top: -.6em;
-    margin-left: 1.2em;
-    fill: #00ff00;
-  }
-  
-  .card4 {
-    width: 90px;
-    height: 90px;
-    outline: none;
-    border: none;
-    background: white;
-    border-radius: 5px 5px 90px 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: .2s ease-in-out;
-  }
-  
-  .twitter {
-    margin-top: 1.3em;
-    margin-left: -.9em;
-    fill: #03A9F4;
-  }
-  
-  .card1:hover {
-    cursor: pointer;
-    scale: 1.1;
-    background-color: #cc39a4;
-  }
-  
-  .card1:hover .instagram {
-    fill: white;
-  }
-  
-  .card2:hover {
-    cursor: pointer;
-    scale: 1.1;
-    background-color: #1877f2;
-  }
-  
-  .card2:hover .facebook {
-    fill: white;
-  }
-  
-  .card3:hover {
-    cursor: pointer;
-    scale: 1.1;
-    background-color: #b88585;
-  }
-  
-  .card3:hover .whatsapp {
-    fill: white;
-  }
-  
-  .card4:hover {
-    cursor: pointer;
-    scale: 1.1;
-    background-color: #03A9F4;
-  }
-  
-  .card4:hover .twitter {
-    fill: white;
-  }
-
 .enlace-inicio {
     position: absolute;
     top: 40px;
@@ -386,13 +255,13 @@ header a{
     display: inline-block;
     border: 1px solid #176B87;
     padding: 10px 35px;
+    margin-right: 20px;
     color: #fdfdfd;
     border-radius: 25px;
     height: 100px;
     width: 200px;
     text-decoration: none;
     transition: .5s;
-    margin-bottom: 10px;
 }
 .boton-coments:hover{
     transition: .5s;
@@ -403,28 +272,26 @@ header a{
     display: inline-block;
     border: 1px solid #176B87;
     padding: 10px 35px;
-    margin-bottom: 10px;
-    color: #383737;
+    margin-right: 20px;
+    color: #fdfdfd;
     border-radius: 25px;
     height: 100px;
     width: 200px;
     text-decoration: none;
-    transition: .2s  ease-out;
-    justify-content: center;
-      align-items: center;
-      display: flex;
-      border: none;
-      background-color: white;
-  
-      
-  }
-  
-  .descarga:hover {
-    transition: .4s ease-out;
-    background: linear-gradient(90deg, hsla(197, 38%, 28%, 0.664), hsla(194, 35%, 19%, 0.699));
-    border-color: rgb(3, 3, 3);
-    color: #ffffff;
+    transition: .5s;
 }
+.descarga:hover{
+    transition: .5s;
+    border: 1px solid #686868;
+
+}
+
+.descarga:hover {
+    background: linear-gradient(90deg, #096d8f 0%, #07beb2 100%);
+    border-color: rgb(255, 179, 179);
+    color: #ffffff;
+    transition: .5s;
+    }
 
 .boton-coments:hover {
 background: linear-gradient(90deg, #176B87 0%, #64CCC5 100%);
@@ -452,10 +319,6 @@ transition: .5s;
     background-attachment: fixed;
     background-size: cover;
     border-radius: 20px;
-    display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
   }
   .socials {
     display: flex;
@@ -483,8 +346,6 @@ transition: .5s;
     text-align: center;
     cursor: default;
   
- 
-    
  }
  .QSS .deta{
     display: block;

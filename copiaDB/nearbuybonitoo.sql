@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2023 a las 21:17:06
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 04-06-2024 a las 05:08:49
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -92,7 +92,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Telefono`, `Direccion`, `Fecha`, `Cedula`) VALUES
-(59, 'Andres', 'Cardenas', 3257291332, 'asdads', '2023-11-26', 472941702),
+(59, 'Andres', 'Cardenas', 3257291332, 'LA PERRERA - LA ORIGINAL, CALLE 1', '2023-11-26', 472941702),
 (60, 'Daniel', 'Guzman', 3258129423, 'Tintal', '2023-11-27', 2011039265),
 (63, 'juan', 'ortiz', 3157293132, 'Avenida guayacanes', '2023-11-28', 2931893282),
 (64, 'Daniel', 'ortiz', 3258271323, 'Guayacanes', '2023-11-29', 1013827492),
@@ -104,6 +104,52 @@ INSERT INTO `clientes` (`id_Cliente`, `Nombre`, `Apellido`, `Telefono`, `Direcci
 (71, 'Carlos', 'ortiz', 3257333222, 'Villa alsacia', '2023-12-06', 47294444),
 (72, 'camilo', 'mendoza', 321424273, 'Calle 8a', '2023-12-06', 203817472),
 (73, 'Cecilia', 'ibarra', 3257294444, 'Villa alsacia', '2023-12-06', 472941222);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mitappnb`
+--
+
+CREATE TABLE `mitappnb` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(250) NOT NULL,
+  `tipo_product` varchar(250) NOT NULL,
+  `info_product` varchar(250) NOT NULL,
+  `precio_product` int(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `mitappnb`
+--
+
+INSERT INTO `mitappnb` (`id`, `nombre`, `tipo_product`, `info_product`, `precio_product`) VALUES
+(16, 'pan', 'pan ', 'pan ', 500000),
+(17, 'pan', 'pan', 'pan', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `id` int(11) NOT NULL,
+  `id_Cliente` int(11) DEFAULT NULL,
+  `RecogerEn` varchar(255) DEFAULT NULL,
+  `Precio` decimal(10,2) DEFAULT NULL,
+  `DireccionDestino` varchar(255) DEFAULT NULL,
+  `TiempoEntrega` varchar(255) DEFAULT NULL,
+  `ListoParaEntregar` varchar(10) DEFAULT NULL,
+  `Estado` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`id`, `id_Cliente`, `RecogerEn`, `Precio`, `DireccionDestino`, `TiempoEntrega`, `ListoParaEntregar`, `Estado`) VALUES
+(1, 65, 'LA PERRERA - LA ORIGINAL, CALLE 1', 15000.00, 'Calle 8a 92-71', '30 min', 'pendiente', 'pendiente');
 
 -- --------------------------------------------------------
 
@@ -129,6 +175,21 @@ INSERT INTO `producto` (`Nombre`, `Precio`, `Descripcion`, `Id_Producto`) VALUES
 ('panes', '500', 'panpanpan', 6),
 ('panes', '500', 'panpanpan', 7),
 ('panes', '500', 'panpanpan', 8);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `productos_app`
+--
+
+CREATE TABLE `productos_app` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(255) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `tipo` varchar(255) NOT NULL,
+  `precio` decimal(10,2) NOT NULL,
+  `descripcion` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -184,6 +245,13 @@ CREATE TABLE `tendero` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Volcado de datos para la tabla `tendero`
+--
+
+INSERT INTO `tendero` (`id_Cliente`, `apellido`, `direccion`, `NTienda`, `Id_Producto`) VALUES
+(59, 'Cardenas', 'LA PERRERA - LA ORIGINAL, CALLE 1', '32134', 6);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -208,10 +276,29 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id_Cliente`);
 
 --
+-- Indices de la tabla `mitappnb`
+--
+ALTER TABLE `mitappnb`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_Cliente` (`id_Cliente`);
+
+--
 -- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`Id_Producto`);
+
+--
+-- Indices de la tabla `productos_app`
+--
+ALTER TABLE `productos_app`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `repartidor`
@@ -249,10 +336,22 @@ ALTER TABLE `clientes`
   MODIFY `id_Cliente` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
+-- AUTO_INCREMENT de la tabla `mitappnb`
+--
+ALTER TABLE `mitappnb`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
   MODIFY `Id_Producto` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1002;
+
+--
+-- AUTO_INCREMENT de la tabla `productos_app`
+--
+ALTER TABLE `productos_app`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `repartidor`
@@ -270,7 +369,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `tendero`
 --
 ALTER TABLE `tendero`
-  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- Restricciones para tablas volcadas
@@ -281,6 +380,12 @@ ALTER TABLE `tendero`
 --
 ALTER TABLE `claves`
   ADD CONSTRAINT `claves_ibfk_1` FOREIGN KEY (`id_Cliente`) REFERENCES `clientes` (`id_Cliente`);
+
+--
+-- Filtros para la tabla `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_Cliente`) REFERENCES `clientes` (`id_Cliente`);
 
 --
 -- Filtros para la tabla `repartidor`
