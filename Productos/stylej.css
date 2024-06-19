@@ -110,7 +110,7 @@ header{
 
 #ctn-bars-search{
     position: fixed;
-    top: -10px;
+    top: 10px;
     width: 100%;
     background-color: transparent;
     padding: 20px;
