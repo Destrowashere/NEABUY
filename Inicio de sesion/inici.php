@@ -2,6 +2,7 @@
 
 session_start();
 
+
 $conex = mysqli_connect("localhost", "root", "", "nearbuybonitoo");
 
 $error_message = "";
@@ -54,11 +55,10 @@ if (!empty($_POST["submit"])) {
     }
   }
 
-  
-  
-  
-  
 
+
+
+  
 ?>
 
         
