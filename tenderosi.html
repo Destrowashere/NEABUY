@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <div style="width: 50%;">
+        <div style="width: 30%;">
             <img src="Nearbuylogo-removebg-preview.png"  class="img-logo">
         </div>
         
@@ -25,11 +25,26 @@
         </nav>
         <center>
         <h2>TENDEROS</h2>
-        <a download="NEARBUY"  class="descarga"   href="NearBuy_1.apk">Descarga nuestra app</a>
-    </center>
+        
     </header>
     <center>
-       
+        <h1>Lista de Productos</h1>
+        <button id="add-product-btn">Agregar Producto</button>
+        <div class="product-form" id="product-form" style="display: none;">
+            <h2>Nuevo Producto</h2>
+            <label for="product-name">Nombre del Producto:</label>
+            <input type="text" id="product-name" required><br><br>
+            <label for="product-description">Descripción:</label>
+            <input type="text" id="product-description" required><br><br>
+            <label for="product-quantity">Cantidad:</label>
+            <input type="number" id="product-quantity" required><br><br>
+            <label for="product-price">Precio (€):</label>
+            <input type="number" id="product-price" step="0.01" required><br><br>
+            <label for="product-image">Subir Imagen:</label>
+            <input type="file" id="product-image" accept="image/*" required><br><br>
+            <button id="submit-product">Agregar</button>
+        </div>
+        <div id="product-list" class="product-list"></div>
 </center>
     <section class="footer">
      
@@ -57,6 +72,8 @@
           <button class="card4" onclick="redirectToTwitter()">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="twitter"><path d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1.93726,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path></svg>
           </button>
+
+          
       </div>
   </div>
       <p class="contacto"> Email: nearbuyy5@gmail.com | Locación: Bogotá D.C  </p>
@@ -72,7 +89,93 @@
       function redirectToTwitter() {
           window.open("https://twitter.com/NearBuy218626", "_blank");
       }
-  </script>
+  
+                document.getElementById('add-product-btn').addEventListener('click', function() {
+                    document.getElementById('product-form').style.display = 'block';
+                });
+        
+                document.getElementById('submit-product').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const name = document.getElementById('product-name').value;
+                    const description = document.getElementById('product-description').value;
+                    const quantity = document.getElementById('product-quantity').value;
+                    const price = document.getElementById('product-price').value;
+                    const imageFile = document.getElementById('product-image').files[0];
+        
+                    if (name && description && quantity && price && imageFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const imageUrl = e.target.result;
+                            const product = {
+                                name,
+                                description,
+                                quantity,
+                                price,
+                                imageUrl
+                            };
+                            addProductToPage(product);
+                            saveProduct(product);
+                            resetForm();
+                            document.getElementById('product-form').style.display = 'none';
+                        };
+                        reader.readAsDataURL(imageFile);
+                    } else {
+                        alert('Por favor, rellene todos los campos.');
+                    }
+                });
+        
+                function addProductToPage(product, index) {
+                    const productList = document.getElementById('product-list');
+                    const productDiv = document.createElement('div');
+                    productDiv.classList.add('product');
+                    productDiv.setAttribute('data-index', index);
+                    productDiv.innerHTML = `
+                        <img src="${product.imageUrl}" alt="${product.name}">
+                        <div class="product-details">
+                            <h3>${product.name}</h3>
+                            <p>${product.description}</p>
+                            <p>Cantidad: ${product.quantity}</p>
+                            <p>Precio: €${product.price}</p>
+                        </div>
+                        <button class="delete-btn">Borrar</button>
+                    `;
+                    productDiv.querySelector('.delete-btn').addEventListener('click', function() {
+                        deleteProduct(index);
+                    });
+                    productList.appendChild(productDiv);
+                }
+        
+                function saveProduct(product) {
+                    const products = JSON.parse(localStorage.getItem('products')) || [];
+                    products.push(product);
+                    localStorage.setItem('products', JSON.stringify(products));
+                }
+        
+                function loadProducts() {
+                    const products = JSON.parse(localStorage.getItem('products')) || [];
+                    products.forEach((product, index) => addProductToPage(product, index));
+                }
+        
+                function deleteProduct(index) {
+                    let products = JSON.parse(localStorage.getItem('products')) || [];
+                    products.splice(index, 1);
+                    localStorage.setItem('products', JSON.stringify(products));
+                    document.getElementById('product-list').innerHTML = '';
+                    loadProducts();
+                }
+        
+                function resetForm() {
+                    document.getElementById('product-name').value = '';
+                    document.getElementById('product-description').value = '';
+                    document.getElementById('product-quantity').value = '';
+                    document.getElementById('product-price').value = '';
+                    document.getElementById('product-image').value = '';
+                }
+        
+                window.onload = function() {
+                    loadProducts();
+                }
+    </script>
 
 </body>
 </html>
