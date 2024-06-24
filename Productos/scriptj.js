@@ -1,22 +1,17 @@
+// Buscador de contenido
 
- //buscador de contenido
+// Ejecutando funciones
+document.getElementById("icon-search").addEventListener("click", mostrar_buscador);
+document.getElementById("cover-ctn-search").addEventListener("click", ocultar_buscador);
 
- //ejecutando funciones
- document.getElementById("icon-search").addEventListener("click", mostrar_buscador);
- document.getElementById("cover-ctn-search"). addEventListener("click", ocultar_buscador)
+// Variables
+let bars_search = document.getElementById("ctn-bars-search");
+let cover_ctn_search = document.getElementById("cover-ctn-search");
+let inputSearch = document.getElementById("inputSearch");
+let box_search = document.getElementById("box-search");
 
-
-
- //variables
- bars_search =      document.getElementById("ctn-bars-search");
- cover_ctn_search = document.getElementById("cover-ctn-search");
- inputSearch =      document.getElementById("inputSearch");
- box_search =       document.getElementById("box-search");
-
-
- //Funcion para mostrar el buscador
+// Función para mostrar el buscador
 function mostrar_buscador(){
-
     bars_search.style.top = "80px";
     cover_ctn_search.style.display = "block";
     inputSearch.focus();
@@ -26,59 +21,52 @@ function mostrar_buscador(){
     }
 }
 
-//funcion para ocultar buscador
+// Función para ocultar buscador
 function ocultar_buscador(){
-    bars_search.style.top="-90px"
-    cover_ctn_search.style.display="none"; 
-    inputSearch.value= "";
-    box_search.style.display= "none";
+    bars_search.style.top = "-90px";
+    cover_ctn_search.style.display = "none"; 
+    inputSearch.value = "";
+    box_search.style.display = "none";
 }
 
-//Creando filtrado de busqueda
-
-document.getElementById("inputSearch").addEventListener("keyup", buscador_interno)
+// Creando filtrado de búsqueda
+document.getElementById("inputSearch").addEventListener("keyup", buscador_interno);
 
 function buscador_interno(){
+    let filter = inputSearch.value.toUpperCase();
+    let li = box_search.getElementsByTagName("li");
 
-    filter = inputSearch.value.toUpperCase();
-    li = box_search.getElementsByTagName("li");
-
-    //Recorriendo elementos a filtrar mediante los "li"
-    for (i = 0; i < li.length; i++){
-        a = li[i].getElementsByTagName("a")[0];
-        textValue = a.textContent || a.innerText;
+    // Recorriendo elementos a filtrar mediante los "li"
+    for(let i = 0; i < li.length; i++){
+        let a = li[i].getElementsByTagName("a")[0];
+        let textValue = a.textContent || a.innerText;
 
         if(textValue.toUpperCase().indexOf(filter) > -1){
+            li[i].style.display = "";
+            box_search.style.display = "block";
 
-                li[i].style.display = "";
-                box_search.style.display = "block";
-
-                if(inputSearch.value === ""){
-                    box_search.style.display = "none"
-                }
-        }else{
-            li[i].style.display = "none"
+            if(inputSearch.value === ""){
+                box_search.style.display = "none";
+            }
+        } else {
+            li[i].style.display = "none";
         }
     }
-
 }
 
- function E(selector, parent) {
+function E(selector, parent) {
     if(selector instanceof HTMLElement){
-         return selector;
+        return selector;
     }
-       
-    
     return (parent || document).querySelectorAll(selector);
- }
+}
 
- function hasClass(element, className) {
+function hasClass(element, className) {
     return element.classList.contains(className);
- }
+}
 
- function radioClass(element, className) {
-    E("." + className).forEach((elem)=> 
-    elem.classList.remove(className));
+function radioClass(element, className) {
+    E("." + className).forEach((elem) => elem.classList.remove(className));
     element.classList.toggle(className);
 }
 
@@ -92,68 +80,55 @@ function tabs(nav) {
             radioClass(target, "active");
         
         let linkedTab = E("." + target.id)[0];
-
         radioClass(linkedTab, "visible");
-
-        
     });
 
     let active = E(".tab.active")[0];
-    if (active) {
+    if(active){
         radioClass(E("."+active.id)[0], "visible");
     }
 }
 
-tabs(".menu-nav")
-
+tabs(".menu-nav");
 
 let loadMoreBtn1 = document.querySelector('#load-more-1');
 let currentItem1 = 4;
 
 loadMoreBtn1.onclick = () => {
     let boxes = [...document.querySelectorAll('.box-container-1 .box-1')];
-    for(var i = currentItem1; i < currentItem1 + 4; i++) {
+    for(let i = currentItem1; i < currentItem1 + 4; i++) {
         boxes[i].style.display = 'inline-block';
     }
     currentItem1 += 4;
     if(currentItem1 >= boxes.length) {
-        loadMoreBtn1.style.display= 'none'
+        loadMoreBtn1.style.display= 'none';
     }
-}
-
+};
 
 let loadMoreBtn2 = document.querySelector('#load-more-2');
 let currentItem2 = 4;
 
 loadMoreBtn2.onclick = () => {
-    let boxes= [...document.querySelectorAll('.box-container-2 .box-2')];
-    for(var i = currentItem2; i < currentItem2 + 4; i++) {
+    let boxes = [...document.querySelectorAll('.box-container-2 .box-2')];
+    for(let i = currentItem2; i < currentItem2 + 4; i++) {
         boxes[i].style.display = 'inline-block';
     }
     currentItem2 += 4;
     if(currentItem2 >= boxes.length) {
-        loadMoreBtn2.style.display= 'none'
+        loadMoreBtn2.style.display= 'none';
     }
-}
+};
 
 let loadMoreBtn3 = document.querySelector('#load-more-3');
 let currentItem3 = 4;
 
 loadMoreBtn3.onclick = () => {
-    let boxes= [...document.querySelectorAll('.box-container-3 .box-3')];
-    for(var i = currentItem3; i < currentItem3 + 4; i++) {
+    let boxes = [...document.querySelectorAll('.box-container-3 .box-3')];
+    for(let i = currentItem3; i < currentItem3 + 4; i++) {
         boxes[i].style.display = 'inline-block';
     }
     currentItem3 += 4;
     if(currentItem3 >= boxes.length) {
-        loadMoreBtn3.style.display= 'none'
+        loadMoreBtn3.style.display= 'none';
     }
-}
-
- 
-
-
-
-
-
-
+};
