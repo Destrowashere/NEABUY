@@ -61,7 +61,7 @@ header{
     outline: none;
     border: none;
     background: white;
-    border-radius: 90px 5px 5px 5px;
+    border-radius: 90px 5px 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     transition: .2s ease-in-out;
   }
@@ -112,7 +112,7 @@ header{
     outline: none;
     border: none;
     background: white;
-    border-radius: 5px 5px 90px 5px;
+    border-radius: 5px 5px 90px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     transition: .2s ease-in-out;
   }
@@ -299,7 +299,7 @@ header{
 .header-content {
     display: flex;
     align-items: center;
-    padding: 100px 0 45px 0;
+    padding: 100px 0 45px;
     
 }
 
@@ -366,7 +366,7 @@ header{
 }
 
 .product-menu {
-    padding: 50px 0 150px 0;
+    padding: 50px 0 150px;
 }
 
 .title {
@@ -482,7 +482,6 @@ header{
 }
 
 .content p {
-    font-size: 15px;
     color: #343434;
     line-height: 2;
     font-size: 15px;
@@ -517,7 +516,7 @@ header{
 }
 
 .buy{
-    padding: 1px 15px 0px 15px;
+    padding: 1px 15px 0px;
     border-radius: 15px;
     background: linear-gradient(90deg, #95B52C 0%, #586E25 100%);
 }
@@ -611,7 +610,7 @@ header{
 
 
 .footer {
-    padding: 150px 0 150px 0;
+    padding: 150px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -635,8 +634,6 @@ header{
 
 }
 .descarga{
-    display: inline-block;
-    border: 1px solid #176B87;
     padding: 10px 35px;
     margin-bottom: 10px;
     color: #383737;
@@ -810,7 +807,7 @@ color: #FDFDFD;
 
     .header-content {
         flex-direction: column;
-        padding: 100px 30px 30px 30px;
+        padding: 100px 30px 30px;
     }
     
     .header-txt{
@@ -829,11 +826,11 @@ color: #FDFDFD;
     }
 
     .btn-1 {
-        margin: 0 0 20px 0;
+        margin: 0 0 20px;
     }
 
     .btn-2 {
-        margin: 0 0 20px 0;
+        margin: 0 0 20px;
     }
 
     .header-img{
@@ -919,7 +916,7 @@ color: #FDFDFD;
     }
 
     .social img{
-        margin: 8px 0 0 0;
+        margin: 8px 0 0;
     }
 
     .footer{
@@ -930,7 +927,7 @@ color: #FDFDFD;
     }
 
     .links h4 {
-        margin: 10px 0 10px 0;
+        margin: 10px 0;
     }
 
 
