@@ -16,6 +16,10 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         array (
             'PhpParser\\' => 10,
         ),
+        'M' => 
+        array (
+            'Maria\\Test\\' => 11,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -27,6 +31,10 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Maria\\Test\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -40,7 +48,6 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'MyProject\\Database' => __DIR__ . '/../..' . '/src/Database.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
