@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='estilo.css'>
+    <link rel='stylesheet' href='../estilo.css'>
     <link rel="icon" href="Nearbuylogo-removebg-preview.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <body>
     <header>
         <div style="width: 30%;">
-            <img src="Nearbuylogo-removebg-preview.png"  class="img-logo">
+            <img src="../Nearbuylogo-removebg-preview.png"  class="img-logo">
         </div>
         
         <nav>
@@ -175,6 +175,45 @@
                 window.onload = function() {
                     loadProducts();
                 }
+
+                document.getElementById('submit-product').addEventListener('click', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('product-name').value;
+    const description = document.getElementById('product-description').value;
+    const quantity = document.getElementById('product-quantity').value;
+    const price = document.getElementById('product-price').value;
+    const imageFile = document.getElementById('product-image').files[0];
+
+    if (name && description && quantity && price && imageFile) {
+        const formData = new FormData();
+        formData.append('nombre', name);
+        formData.append('descripcion', description);
+        formData.append('cantidad', quantity);
+        formData.append('precio', price);
+        formData.append('imagen', imageFile);
+
+        fetch('guardar_producto.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Producto guardado correctamente.');
+            } else {
+                alert('Error al guardar el producto: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al guardar el producto.');
+        });
+    } else {
+        alert('Por favor, rellene todos los campos.');
+    }
+});
+
+
     </script>
 
 </body>
