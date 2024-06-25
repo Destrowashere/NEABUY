@@ -46,6 +46,8 @@ body {
     
 }
 
+.footer
+
 .descarga:hover {
   transition: .4s ease-out;
   background: linear-gradient(90deg, hsla(197, 38%, 28%, 0.664), hsla(194, 35%, 19%, 0.699));
@@ -196,6 +198,7 @@ article {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+  
 }
 
 .footer .social {
@@ -684,6 +687,8 @@ table{
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .up {
