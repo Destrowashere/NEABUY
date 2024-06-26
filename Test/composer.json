@@ -2,7 +2,7 @@
     "name": "maria/test",
     "autoload": {
         "psr-4": {
-            "Maria\\Test\\": "src/"
+            "App\\": "src/"
         }
     },
     "require-dev": {
