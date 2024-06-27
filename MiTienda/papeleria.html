@@ -15,7 +15,36 @@
         <img src="../Nearbuylogo-removebg-preview.png" alt class="img-logo">
         <a href="../indexuse.html" class="enlace-inicio">Inicio</a>
         <h1 style="color: rgb(255, 255, 255);">Papeleria</h1>
+
+        <ul>
+            <div id="ctn-icon-search">
+             <i class="fas fa-search" id="icon-search"></i></div>
+        </ul>
+
+
     </header>
+
+    
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Que deseas buscarr?">
+    </div>
+
+    <ul id="box-search">
+        <li><a href="detalles/Binder.html"><i class="fas fa-search"></i>Binder Clips</a></li>
+        <li><a href="detalles/esfe.html"><i class="fas fa-search"></i> Kit de esferos</a></li>
+        <li><a href="detalles/tajalapiz.html"><i class="fas fa-search"></i>Tajalapiz de plastico</a></li>
+        <li><a href="detalles/tijeras.html"><i class="fas fa-search"></i>Tijeras</a></li>
+        <li><a href="detalles/maletas.html"><i class="fas fa-search"></i>Maletas</a></li>
+        <li><a href="detalles/regla.html"><i class="fas fa-search"></i>Reglas</a></li>
+        <li><a href="detalles/carpetas.html"><i class="fas fa-search"></i>Carpetas</a></li>
+        <li><a href="detalles/colores.html"><i class="fas fa-search"></i>Colores </a></li>
+        
+        </ul>
+
+
+
+        <div id="cover-ctn-search"></div>
+
     <section class="contenedor">
         <!-- Contenedor de elementos -->
         <div class="contenedor-items">
@@ -169,6 +198,66 @@
         <p class="Copyright"> NearBuy | &copy;2023</p>
       </section>
       <script>
+
+         // Buscador de contenido
+
+// Ejecutando funciones
+document.getElementById("icon-search").addEventListener("click", mostrar_buscador);
+document.getElementById("cover-ctn-search").addEventListener("click", ocultar_buscador);
+
+// Variables
+let bars_search = document.getElementById("ctn-bars-search");
+let cover_ctn_search = document.getElementById("cover-ctn-search");
+let inputSearch = document.getElementById("inputSearch");
+let box_search = document.getElementById("box-search");
+
+// Función para mostrar el buscador
+function mostrar_buscador(){
+    bars_search.style.top = "80px";
+    cover_ctn_search.style.display = "block";
+    inputSearch.focus();
+
+    if(inputSearch.value === ""){
+        box_search.style.display = "none"
+    }
+}
+
+// Función para ocultar buscador
+function ocultar_buscador(){
+    bars_search.style.top = "-90px";
+    cover_ctn_search.style.display = "none"; 
+    inputSearch.value = "";
+    box_search.style.display = "none";
+}
+
+// Creando filtrado de búsqueda
+document.getElementById("inputSearch").addEventListener("keyup", buscador_interno);
+
+function buscador_interno(){
+    let filter = inputSearch.value.toUpperCase();
+    let li = box_search.getElementsByTagName("li");
+
+    // Recorriendo elementos a filtrar mediante los "li"
+    for(let i = 0; i < li.length; i++){
+        let a = li[i].getElementsByTagName("a")[0];
+        let textValue = a.textContent || a.innerText;
+
+        if(textValue.toUpperCase().indexOf(filter) > -1){
+            li[i].style.display = "";
+            box_search.style.display = "block";
+
+            if(inputSearch.value === ""){
+                box_search.style.display = "none";
+            }
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
         function redirectToInstagram() {
             window.open("https://www.instagram.com/near_buy_/", "_blank");
         }

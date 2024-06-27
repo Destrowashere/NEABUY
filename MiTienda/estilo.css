@@ -13,6 +13,89 @@ header{
     background-position:center;
     
 }
+
+
+/*BUSCADOR*/
+/*buscador de contenido*/
+
+#ctn-icon-search{
+  position: absolute;
+  right: -190px;
+  height: 100%;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+}
+
+#ctn-icon-search i{
+  font-size: 25px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 300ms;
+}
+#ctn-icon-search i:hover{
+  color:#000000;
+}
+
+#ctn-bars-search{
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+  z-index: 9;
+  transition: all 600ms;
+  
+}
+
+#ctn-bars-search input{
+  display: block;
+  width: 500px;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+  outline: 0;
+ 
+}
+#box-search{
+  position: fixed;
+  top: 165px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1200px;
+  background-color: #FDFDFD;
+  z-index: 8;
+  overflow: hidden;
+  display: none;
+}
+
+
+#box-search li a{
+  display: block;
+  width: 1200px;
+  color: #000000;
+  padding: 12px 20px;
+}
+
+#box-search li a:hover{
+  background: #f3f3f3;
+}
+
+#box-search li a i{
+  margin-right: 10px;
+  color: #777777;
+}
+
+#cover-ctn-search{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 7;
+  display: none;
+}
+
 .img-logo {
     width: 250px;
     height: 100px;
